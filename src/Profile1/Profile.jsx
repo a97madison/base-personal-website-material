@@ -31,8 +31,9 @@ function Profile(props) {
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    // height: '100%',
     position: 'absolute',
+    marginTop: '100vh',
+    height: '100vh',
     top: '0px', bottom: '0px', left: '0px', right: '0px',
     backgroundColor: props.bgColour
   };
@@ -42,7 +43,6 @@ function Profile(props) {
     display: 'flex',
     flexDirection: 'row',
     border: '0.45vw solid white',
-    // borderRadius: '3%',
     position: 'relative',
     height: '100%',
     top: '0',
@@ -79,19 +79,6 @@ function Profile(props) {
           />
         </div>
       </div>
-
-      {/* <div className="Profile-link" style={profileLinkSectionStyle}>
-        <a
-          className="Page-text"
-          style={profileLinkStyle}
-          href="https://github.com/a97madison"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {props.fullName + '\'s GITHUB ACCOUNT!!'}
-        </a>
-      </div> */}
-      
     </div>
   );
 }

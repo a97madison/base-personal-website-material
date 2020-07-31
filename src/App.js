@@ -1,5 +1,7 @@
 import React from 'react';
 import Profile from './Profile1/Profile';
+import HomePage from './HomePage1/HomePage';
+
 import './App.css';
 
 function App() {
@@ -11,10 +13,14 @@ function App() {
   // social media information
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
   const githubLinkText = "https://github.com/a97madison";
+  const instagramLinkText1 = "https://www.instagram.com/anthony0cap/";
+  const instagramLinkText2 = "https://www.instagram.com/fly_sht_only_/";
   const twitterLinkText = "https://twitter.com/xanthony2018";
   const facebookLinkText = "https://www.facebook.com/anthonydmadison/";
   const twitchLinkText = "https://www.twitch.tv/legreatness123";
   const githubUsername = "a97madison";
+  const instagramUsername1 = "@anthony0cap";
+  const instagramUsername2 = "@fly_sht_only_";
   const twitterUsername = "@xanthony2018";
   const twitchUsername = "legreatness123";
   // const birthdate;
@@ -40,6 +46,8 @@ function App() {
     ["Email", emailAddressText],
     ["LinkedIn", linkedInLinkText],
     ["Github", [githubUsername, githubLinkText]],
+    ["Instagram", [instagramUsername1, instagramLinkText1]],
+    ["Instagram", [instagramUsername2, instagramLinkText2]],
     ["Twitter", [twitterUsername, twitterLinkText]],
     ["Facebook", facebookLinkText],
     ["Twitch", [twitchUsername, twitchLinkText]],
@@ -68,9 +76,18 @@ function App() {
     />
   );
 
+  const homePageObject = (
+    <HomePage
+      textColour="black"
+      textFont={"Times New Roman"}
+      fullName={fullNameText}
+    />
+  );
+
   return (
     <div className="App">
       {profileObject}
+      {homePageObject}
     </div>
   );
 }

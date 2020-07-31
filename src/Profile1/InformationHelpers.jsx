@@ -6,6 +6,7 @@ import Github from '../Images/Github.jpg';
 import Twitter from '../Images/Twitter.jpg';
 import Facebook from '../Images/Facebook.jpg';
 import Twitch from '../Images/Twitch.jpg';
+import Instagram from '../Images/Instagram.jpg';
 
 // import style constants
 import {singleInformationCellStyle} from './StyleConstants';
@@ -50,6 +51,9 @@ export function secondDivSocialMediaButtonHelper1(pair) {
             break;
         case "Twitch":
             icon = Twitch;
+            break;
+        case "Instagram":
+            icon = Instagram;
             break;
         default:
     }
@@ -137,6 +141,9 @@ export function myPairToStringFunction(pair) {
             secondDiv = secondDivSocialMediaButtonHelper1(pair);
             break;
         case "Twitch":
+            secondDiv = secondDivSocialMediaButtonHelper2(pair);
+            break;
+        case "Instagram":
             secondDiv = secondDivSocialMediaButtonHelper2(pair);
             break;
         case "City":
