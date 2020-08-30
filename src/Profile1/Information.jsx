@@ -1,15 +1,10 @@
 import React from 'react';
-// import style constants
-import {
-    informationStyle, 
-    scrollableInformationStyle, 
-    scrollableCellsStyle
-} from './StyleConstants';
-import {headerTextStyle} from './Profile';
 // import information helpers
 import {
     myPairToStringFunction
 } from './InformationHelpers';
+
+import './Information.css';
 
 /*
     This section of the profile contains all of the person's personal information that
@@ -19,11 +14,19 @@ function Information(props) {
 
     const informationCells = props.informationPairs.map(myPairToStringFunction)
 
+    // DEFINE STYLE CONSTANTS
+    const headerTextStyle = {
+        fontSize: '3vw',
+        color: props.headerTextColour,
+        fontFamily: props.headerFont
+    };
+
+    // RETURN INFORMATION DIV
     return (
-        <div className="Information" style={informationStyle}>
+        <div className="Information">
             <p style={headerTextStyle}> {"INFORMATION"} </p>
-            <div className="Information-scrollable" style={scrollableInformationStyle}>
-                <div className = "Scrollable-cells" style={scrollableCellsStyle}>
+            <div className="Scrollable-information">
+                <div className = "Scrollable-cells">
                     {informationCells}
                 </div>
             </div>

@@ -1,0 +1,12 @@
+.Profile-photo {
+    text-align: center;
+    width: 30%;
+    height: 100%;
+}
+
+.img {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    border: 0.45vw solid white;
+}

@@ -1,0 +1,18 @@
+.About-me {
+    text-align: center;
+    width: 35%;
+    height: 100%;
+    margin: 0px 15px 0ppx 10px;
+}
+
+.About-me-text {
+    /* redo this margin and height stuff */
+    margin: 10px max(10px, 2vw) 10px max(10px, 2vw);
+    border: 0.45vw solid white;
+    border-radius: 5%;
+    height: max(150px, 20vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

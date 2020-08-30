@@ -1,0 +1,21 @@
+.Profile {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 100vh;
+    top: 0px;
+    left: 0px; 
+    /* bottom: '0px', left: '0px', right: '0px', */
+}
+
+.Profile-sections {
+    margin: 0px 12vw 0px 12vw;
+    display: flex;
+    flex-direction: row;
+    border: 0.45vw solid white;
+    position: relative;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+}

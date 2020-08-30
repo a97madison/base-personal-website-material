@@ -1,5 +1,10 @@
 import React from 'react';
 import Profile from './Profile1/Profile';
+import HomePage from './HomePage1/HomePage';
+
+// import font
+import './Fonts/fonts.css';
+
 import './App.css';
 
 function App() {
@@ -11,10 +16,14 @@ function App() {
   // social media information
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
   const githubLinkText = "https://github.com/a97madison";
+  const instagramLinkText1 = "https://www.instagram.com/anthony0cap/";
+  const instagramLinkText2 = "https://www.instagram.com/fly_sht_only_/";
   const twitterLinkText = "https://twitter.com/xanthony2018";
   const facebookLinkText = "https://www.facebook.com/anthonydmadison/";
   const twitchLinkText = "https://www.twitch.tv/legreatness123";
   const githubUsername = "a97madison";
+  const instagramUsername1 = "@anthony0cap";
+  const instagramUsername2 = "@fly_sht_only_";
   const twitterUsername = "@xanthony2018";
   const twitchUsername = "legreatness123";
   // const birthdate;
@@ -31,15 +40,18 @@ function App() {
   const address = "330 Phillip Street, " + city;
   const cityGoogleMapsLink = "https://www.google.com/maps/place/Waterloo,+ON/@43.4823217,-80.6167598,12z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096";
   const addressGoogleMapsLink = "https://www.google.com/maps/place/330+Phillip+St,+Waterloo,+ON+N2L+3W9/@43.4765099,-80.5410853,17z/data=!3m1!4b1!4m5!3m4!1s0x882bf3ff483b4b3f:0x287217f6a1dad096!8m2!3d43.476506!4d-80.5388966";
-  const companyWebsiteLink = "https://about.linkedin.com/";
+  const companyWebsiteLink = "https://www.purefacts.com/";
 
   const informationPairs = [
     // ["Full Name", fullNameText],
     ["Age", age],
     ["Birthdate", birthdateText],
     ["Email", emailAddressText],
+    ["Brand", "Swish Studios"],
     ["LinkedIn", linkedInLinkText],
     ["Github", [githubUsername, githubLinkText]],
+    ["Instagram", [instagramUsername1, instagramLinkText1]],
+    ["Instagram", [instagramUsername2, instagramLinkText2]],
     ["Twitter", [twitterUsername, twitterLinkText]],
     ["Facebook", facebookLinkText],
     ["Twitch", [twitchUsername, twitchLinkText]],
@@ -47,10 +59,10 @@ function App() {
     ["Job Title", "Software Engineer"],
     ["City", [city, cityGoogleMapsLink]],
     ["Address", [address, addressGoogleMapsLink]],
-    ["Company", ["LinkedIn", companyWebsiteLink]]
+    ["Company", ["PureFacts", companyWebsiteLink]]
   ];
 
-  const headerFont = "Geneva";
+  const headerFont = "ModestoW01-Open";
   const pageFont = "Geneva"; //Helvetica
   const bgColour = "#f4f0e2";
 
@@ -68,9 +80,18 @@ function App() {
     />
   );
 
+  const homePageObject = (
+    <HomePage
+      textColour="black"
+      textFont={headerFont}
+      fullName={fullNameText.toUpperCase()}
+    />
+  );
+
   return (
     <div className="App">
       {profileObject}
+      {homePageObject}
     </div>
   );
 }

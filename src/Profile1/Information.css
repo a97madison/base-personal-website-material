@@ -1,0 +1,37 @@
+.Information {
+    text-align: center;
+    width: 35%;
+    height: 100%;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.Scrollable-information {
+    /* figure out margin and height */
+    text-align: left;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    margin: 10px max(10px, 2vw) 0px max(10px, 2vw);
+    border: 0.45vw solid white;
+    border-radius: 5%;
+    height: max(150px, 20vw);
+    align-items: center;
+}
+
+.Scrollable-cells {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.button {
+    background-color: transparent;
+    padding: 0px 0px 0px 0px;
+    margin: 4px 0px 0px 5px;
+}
+
+.Single-information-cell {
+    display: flex;
+    flex-direction: row;
+}
+
+

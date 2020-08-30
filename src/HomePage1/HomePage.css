@@ -1,0 +1,23 @@
+.Home-page {
+    background-color: gainsboro;
+    /* padding-bottom: 35vw; */
+    object-fit: fill;
+    text-align: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.Bg-image {
+    position: absolute;
+    object-fit: contain;
+    justify-content: center;
+    height: 30vw;
+    width: 30vw;
+    top: 30%;
+    left: 35vw;
+    z-index: 0;
+}
