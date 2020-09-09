@@ -57,9 +57,9 @@ function secondDivSocialMediaButtonHelper1(pair) {
     // icon style
     const iconStyle = {
         background: icon,
-        objectFit: 'fit',
-        height: '2.5vw',
-        width: '2.5vw',
+        objectFit: 'contain',
+        height: '5vmin',
+        width: '5vmin',
     };
 
     const buttonIcon = (
@@ -107,15 +107,17 @@ function secondDivBrandHelper(brandName) {
     // icon style
     const iconStyle = {
         background: icon,
-        objectFit: 'fit',
-        height: '2.5vw',
-        width: '2.5vw',
+        objectFit: 'fill',
+        height: '3.6vmin',
+        width: '3.6vmin',
     };
 
     return (
-        <button className="button" onClick={iconOnClick}>
-            <img src={icon} style={iconStyle} alt={"..."}></img>
-        </button>
+        <div className="Single-information-cell">
+            <button className="button" onClick={iconOnClick}>
+                <img src={icon} style={iconStyle} alt={"..."}></img>
+            </button>
+        </div>
     );
 }
 
@@ -129,7 +131,11 @@ function secondDivLinkHelper(informationWithLink, pageInfoTextStyle) {
 
 
 export function myPairToStringFunction(pair) {
-    const pageInfoTextStyle = null;
+    const pageInfoTextStyle = {
+        fontSize: '2.5vmin',
+        marginLeft: '0.6vmin'
+    };
+
     const firstDiv = (
         <p style={pageInfoTextStyle}> {pair[0] + ":"} </p>
     );
@@ -147,12 +153,15 @@ export function myPairToStringFunction(pair) {
             secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
             break;
         case "Email":
-            secondDiv = secondDivEmailHelper(pair[1]);
+            secondDiv = secondDivEmailHelper(pair[1], pageInfoTextStyle);
             break;
         case "Bookings":
-            secondDiv = secondDivEmailHelper(pair[1]);
+            secondDiv = secondDivEmailHelper(pair[1], pageInfoTextStyle);
             break;   
         case "Brand":
+            secondDiv = secondDivBrandHelper(pair[1]);
+            break;
+        case "Company":
             secondDiv = secondDivBrandHelper(pair[1]);
             break;
         case "LinkedIn":

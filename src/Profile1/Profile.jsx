@@ -13,28 +13,27 @@ import './Profile.css';
     this function are: fullName (string), 
 */
 function Profile(props) {
-  // FUCK... I JUST FOUND A BUG... WHEN U FUCK WITH THE DIMENSIONS, THE BACKGROUND GETS FUCKED UP
-  // style for outer Profile div
-
-  // DEFINE STYLE CONSTANTS
-  const [windowWidth, windowHeight] = useWindowSize();
-
-  const profileStyle = {
-    height: windowHeight,
-    width: windowWidth,
-    backgroundColor: props.bgColour
-  };
-
+  // props are: headerFont, pageFont, fullName, bgColour, headerTextColour, pageTextColour, 
+  // headerIntro, informationPairs, aboutMeText={aboutMeText}
+  
   return (
-    <div className="Profile" style={profileStyle}>
+    <div className="Profile">
       <ProfileHeader
         headerIntro={props.headerIntro}
+        headerFont={props.headerFont}
+        pageFont={props.pageFont}
+        headerTextColour={props.headerTextColour}
+        pageTextColour={props.pageTextColour}
       />
       
       <div>
         <div className="Profile-sections">
           <Information
             informationPairs={props.informationPairs}
+            headerFont={props.headerFont}
+            pageFont={props.pageFont}
+            headerTextColour={props.headerTextColour}
+            pageTextColour={props.pageTextColour}
           />
 
           <ProfilePhoto
@@ -44,6 +43,10 @@ function Profile(props) {
 
           <AboutMe
             aboutMeText={props.aboutMeText}
+            headerFont={props.headerFont}
+            pageFont={props.pageFont}
+            headerTextColour={props.headerTextColour}
+            pageTextColour={props.pageTextColour}
           />
         </div>
       </div>

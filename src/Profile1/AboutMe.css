@@ -5,14 +5,19 @@
     margin: 0px 15px 0ppx 10px;
 }
 
+.About-me-container {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    margin: 2.5vh max(10px, 3vmin) 0px max(10px, 3vmin);
+    border: 0.6vmin solid white;
+    border-radius: 5%;
+    height: 48vh;
+}
+
 .About-me-text {
     /* redo this margin and height stuff */
-    margin: 10px max(10px, 2vw) 10px max(10px, 2vw);
-    border: 0.45vw solid white;
+    text-align: left;
     border-radius: 5%;
-    height: max(150px, 20vw);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 0.6vmin;
 }
 

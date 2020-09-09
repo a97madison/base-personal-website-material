@@ -1,0 +1,38 @@
+.Work-experience-cell {
+    border: 0.25vh solid white;
+    height: 9.5vh;
+}
+
+.Cell-info {
+    height: 10vh;
+    margin-top: 0vh;
+    margin-left: 1vw;
+    text-align: left;
+}
+
+.Bullet-points {
+    height: 10vh;
+    justify-content: left;
+}
+
+.Logo-city-timeframe {
+    display: flex;
+    flex-direction: row;
+}
+
+.Company-image {
+    object-fit: contain; 
+    text-align: center;
+    height: 4.5vh;
+    width: 4.5vh;
+}
+
+.company-button {
+    position: relative;
+    top: -3vh;
+    background-color: white;
+    border: 0.3vmin gainsboro solid;
+    padding: 0px 0px 0px 0px;
+    height: 4.5vh;
+    width: 4.5vh;
+}

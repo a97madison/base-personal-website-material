@@ -7,16 +7,18 @@ import './AboutMe.css';
     about themselves.
 */
 function AboutMe(props) {
-
+    // props are: aboutMeText, headerFont, pageFont, headerTextColour, pageTextColour
+    
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '3vw',
+      fontSize: '4vmin',
       color: props.headerTextColour,
-      fontFamily: props.headerFont
+      fontFamily: props.headerFont,
+      height: '8vh'
     };
 
     const pageTextStyle = {
-      fontSize: '1.5vw',
+      fontSize: '2.5vmin',
       color: props.pageTextColour,
       fontFamily: props.pageFont
     };    
@@ -25,8 +27,8 @@ function AboutMe(props) {
     return (
         <div className="About-me">
           <p style={headerTextStyle}> {"ABOUT ME"} </p>
-          <div style={pageTextStyle}>
-            <p className-="About-me-text">
+          <div className="About-me-container" style={pageTextStyle}>
+            <p className="About-me-text">
               {props.aboutMeText}
             </p>
             </div>

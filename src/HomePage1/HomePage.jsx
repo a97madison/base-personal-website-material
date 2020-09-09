@@ -14,7 +14,8 @@ function HomePage(props) {
   
   // DEFINE STYLE CONSTANTS
   let homePageTextStyle = {
-    fontSize: '5vw',
+    fontSize: '6vmin',
+    marginTop: '14vh',
     color: props.textColour,
     fontFamily: props.textFont,
     zIndex: '2'
@@ -30,11 +31,12 @@ function HomePage(props) {
   // RETURN HOMEPAGE DIV
   return (
     <div>
-      <div className="Home-page" id="Home-page" style={homePageStyle}>
+      <div className="Home-page"> 
+       {/* id="Home-page" style={homePageStyle}> */}
         <p style={homePageTextStyle}>
           {props.fullName}
         </p>
-        <img className="Bg-image" src={SwishLogo}  alt={props.fullNam + "!"}></img>
+        <img className="Bg-image" src={SwishLogo}  alt={"..."}></img>
         {/* <div className="Home-page-content"> */}
 
       </div>

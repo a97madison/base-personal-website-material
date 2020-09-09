@@ -7,9 +7,8 @@ import '../ConstantStyles.css';
 /*
     This section of the profile is the header. Short sentence about self.
 */
-function ProfileHeader(props) {
-    // props are: headerIntro, headerFont, pageFont, headerTextColour, pageTextColour
-    
+function PortfolioHeader(props) {
+
     // DEFINE STYLE CONSTANTS 
     const headerTextStyle = {
         fontSize: '4vmin',
@@ -17,22 +16,18 @@ function ProfileHeader(props) {
         fontFamily: props.headerFont
     };
 
-    const pageTextStyle = {
-        fontSize: '2.5vmin',
-        color: props.pageTextColour,
-        fontFamily: props.pageFont
-      };      
-
     // RETURN PROFILEHEADER DIOV
     return (
         <div className="Header">
             {emptyHr}
-            <p style={headerTextStyle}> {"PROFILE"} </p>
-            <p style={pageTextStyle}> {props.headerIntro} </p>
             {emptyHr}
+            {emptyHr}
+            <p style={headerTextStyle}> {"PORTFOLIO"} </p>
+            {emptyHr}
+            {/* HORIZONTAL BREAK LINE */}
             {profileHr}
         </div>
     );
 }
 
-export default ProfileHeader;
+export default PortfolioHeader;

@@ -1,6 +1,11 @@
 import React from 'react';
 import Profile from './Profile1/Profile';
 import HomePage from './HomePage1/HomePage';
+import WorkExperience from './WorkExperience1/WorkExperience';
+import Education from './Education1/Education';
+import Portfolio from './Portfolio1/Portfolio';
+import Company from './Company1/Company';
+
 
 // import font
 import './Fonts/fonts.css';
@@ -37,9 +42,9 @@ function App() {
   const ageDate = new Date(ageDifMs); // miliseconds from epoch
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
   const city = "Waterloo, Ontario, Canada";
-  const address = "330 Phillip Street, " + city;
+  const address = "56 Willow Street, " + city;
   const cityGoogleMapsLink = "https://www.google.com/maps/place/Waterloo,+ON/@43.4823217,-80.6167598,12z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096";
-  const addressGoogleMapsLink = "https://www.google.com/maps/place/330+Phillip+St,+Waterloo,+ON+N2L+3W9/@43.4765099,-80.5410853,17z/data=!3m1!4b1!4m5!3m4!1s0x882bf3ff483b4b3f:0x287217f6a1dad096!8m2!3d43.476506!4d-80.5388966";
+  const addressGoogleMapsLink = "";
   const companyWebsiteLink = "https://www.purefacts.com/";
 
   const informationPairs = [
@@ -62,9 +67,75 @@ function App() {
     ["Company", ["PureFacts", companyWebsiteLink]]
   ];
 
+  const workExperienceCells = [
+    {
+      companyName:"LINKEDIN",
+      position:"iOS ENGINEER",
+      companyLink:"https://www.linkedin.com/",
+      city:"Sunnyvale, CA",
+      timeframe:"September 2019 - December 2019",
+      bulletPointsArray:["● Implemented all Objective-C code for detail screens on the profile page of LinkedIn’s iOS app, used object-oriented approach",
+                         "● Fixed various bugs throughout the sixteen weeks, improving the Profile page’s SWIFT/Obj-c code in the iOS app",
+                         "● Cleaned up dead code across Objective-C pods, refactoring or removing old code where new implementations are now used",
+                         "● Wrote unit tests, integration tests and functional tests for most of the Profile page code within LinkedIn’s iOS codebase"]
+    },
+    {
+      companyName:"INKLING",
+      position:"SOFTWARE ENGINEER",
+      companyLink:"https://www.inkling.com/",
+      city:"San Francisco, CA",
+      timeframe:"January 2018 - April 2018",
+      bulletPointsArray:["● Wrote feature-related code with SWIFT and React Native for different mobile applications Inkling provides to customers",
+                         "● Fixed bugs throughout a mobile app’s release, assisted with the web team’s backlog of front-end bugs using React with Redux",
+                         "● Helped decide which features were most important for the app to include; worked with PMs and design team on feature design"]
+    },
+    {
+      companyName:"COGNITIVE SYSTEMS CORPORATION",
+      position:"FULL-STACK DEVELOPER",
+      companyLink:"https://www.cognitivesystems.com/",
+      city:"Waterloo, ON",
+      timeframe:"May 2017 - August 2017",
+      bulletPointsArray:["● Implemented an internal web app that displayed various reports, making use of React, D3.js and Ruby on Rails",
+                         "● Constructed three widgets for internal and customer-side web apps using D3.js and React",
+                         "● Updated report dashboard and widgets, enabling on-screen elements to react dynamically when users manipulate the screen",
+                         "● Leveraged Ruby on Rails to solve flaws within web app"]
+    },
+    {
+      companyName:"CANADIAN INSTITUTE FOR HEALTH INFORMATION",
+      position:"FRONT-END DEVELOPER",
+      companyLink:"https://www.cihi.ca/en",
+      city:"Toronto, ON",
+      timeframe:"May 2016 - August 2016",
+      bulletPointsArray:["● Designed and implemented plots/diagrams for data visualization with D3.js, providing insight into large quantities of data",
+                         "● Implemented multiple features such as legends for diagrams, locational maps and various dynamic web app features",
+                         "● Analyzed web frameworks Bootstrap, React, AngularJS and Web Experience Toolkit in a comparison report of frameworks"]
+    },
+    {
+      companyName:"AXONIFY INC.",
+      position:"QUALITY ASSURANCE ANALYST",
+      companyLink:"https://axonify.com/",
+      city:"Waterloo, ON",
+      timeframe:"September 2015 - December 2015",
+      bulletPointsArray:["● Architected regression test plan and put effective testing measures in place for part of Axonify’s iOS and Android apps",
+                         "● Fixed straightforward bugs, found and allocated bugs in code-base, tested bug fixes, executed regression testing",
+                         "● Organized team meetings such as sprint planning and standups during month-long sprints"]
+    },
+    {
+      companyName:"PUREFACTS FINANCIAL SOLUTIONS",
+      position:"iOS ENGINEER",
+      companyLink:"https://www.purefacts.com/",
+      city:"Toronto, ON",
+      timeframe:"January 2015 - April 2015",
+      bulletPointsArray:["● Prepared complete set of test data through SQL procedures in MySQL, for use in testing and demos shown to customers",
+                         "● Tested products developed by coworkers and modernized software’s testing system by creating a complete test plan",
+                         "● Standardized new automation testing system using Ranorex to improve speed and quality of testing system"]
+    },
+  ];  
+
   const headerFont = "ModestoW01-Open";
   const pageFont = "Geneva"; //Helvetica
   const bgColour = "#f4f0e2";
+  const headerColour = "black";
 
   const profileObject = (
     <Profile
@@ -72,7 +143,7 @@ function App() {
       pageFont={pageFont}
       fullName={fullNameText}
       bgColour={bgColour} //"#284d34"
-      headerTextColour="grey"
+      headerTextColour={headerColour}
       pageTextColour="blue"
       headerIntro={headerIntroText}
       informationPairs={informationPairs}
@@ -82,9 +153,38 @@ function App() {
 
   const homePageObject = (
     <HomePage
-      textColour="black"
       textFont={headerFont}
-      fullName={fullNameText.toUpperCase()}
+      textColour={headerColour}
+      fullName={fullNameText}
+    />
+  );
+
+  const workExperienceObject = (
+    <WorkExperience
+      headerFont={headerFont}
+      headerTextColour={headerColour}
+      cellsProps={workExperienceCells}
+    />
+  );
+
+  const educationObject = (
+    <Education
+      headerFont={headerFont}
+      headerTextColour={headerColour}
+    />
+  );
+
+  const portfolioObject = (
+    <Portfolio
+      headerFont={headerFont}
+      headerTextColour={headerColour}
+    />
+  );
+
+  const companyObject = (
+    <Company
+      headerFont={headerFont}
+      headerTextColour={headerColour}
     />
   );
 
@@ -92,6 +192,10 @@ function App() {
     <div className="App">
       {profileObject}
       {homePageObject}
+      {workExperienceObject}
+      {educationObject}
+      {portfolioObject}
+      {companyObject}
     </div>
   );
 }

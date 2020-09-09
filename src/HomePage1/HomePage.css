@@ -1,12 +1,14 @@
 .Home-page {
-    background-color: gainsboro;
-    /* padding-bottom: 35vw; */
+    background: rgb(244,240,226);
+    background: linear-gradient(0deg, rgba(244,240,226,1) 31%, rgba(231,255,221,1) 100%);
     object-fit: fill;
     text-align: center;
-    /* justify-content: center; */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0px;
     left: 0px;
 }
@@ -14,10 +16,9 @@
 .Bg-image {
     position: absolute;
     object-fit: contain;
-    justify-content: center;
-    height: 30vw;
-    width: 30vw;
-    top: 30%;
-    left: 35vw;
+    text-align: center;
+    top: 30vh;
+    height: 60vh;
+    width: 60vh;
     z-index: 0;
 }

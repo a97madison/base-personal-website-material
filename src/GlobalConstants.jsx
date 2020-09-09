@@ -5,7 +5,8 @@ const emptyHrStyle = {
 };
   
 const profileHrStyle = {
-    border: '0.15vw solid white'
+    border: '0.4vmin solid white',
+    backgroundColor: 'white'
 };
 
 export const emptyHr = (

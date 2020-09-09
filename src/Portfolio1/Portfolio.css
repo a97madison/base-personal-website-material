@@ -1,24 +1,24 @@
-.Profile {
+.Portfolio {
+    background: rgb(211, 204, 204);
+    background: linear-gradient(0deg, rgba(211, 204, 204, 1) 31%, rgba(216, 245, 253,1) 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-top: 100vh;
+    margin-top: 400vh;
     height: 100%;
+    width: 100%;
     top: 0px;
-    left: 0px; 
-    background: rgb(244,223,223);
-    background: linear-gradient(0deg, rgba(244,223,223,1) 31%, rgba(244,240,226,1) 100%);
-    /* bottom: '0px', left: '0px', right: '0px', */
+    left: 0px;
 }
 
-.Profile-sections {
+.Portfolio-cells {
     margin: 0px 12vw 0px 12vw;
     display: flex;
     flex-direction: row;
     border: 0.6vmin solid white;
     position: relative;
-    height: 65vh;
+    height: 100%;
     top: 0px;
     bottom: 0px;
 }

@@ -1,0 +1,23 @@
+.Work-experience {
+    background: rgba(237,230,255);
+    background: linear-gradient(0deg, rgba(237,230,255,1) 31%, rgba(244,223,223,1) 100%);
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 200vh;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.Work-experience-cells {
+    margin: 0px 12vw 0px 12vw;
+    display: flex;
+    flex-direction: column;
+    border: 0.6vmin solid white;
+    height: 60vh;
+    top: 0px;
+    bottom: 0px;
+}

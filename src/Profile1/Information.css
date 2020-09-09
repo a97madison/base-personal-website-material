@@ -1,7 +1,6 @@
 .Information {
     text-align: center;
     width: 35%;
-    height: 100%;
     margin-bottom: 0px;
     margin-right: 0px;
 }
@@ -11,10 +10,10 @@
     text-align: left;
     overflow-x: scroll;
     overflow-y: scroll;
-    margin: 10px max(10px, 2vw) 0px max(10px, 2vw);
-    border: 0.45vw solid white;
+    margin: 2.5vh max(10px, 3vmin) 0px max(10px, 3vmin);
+    border: 0.6vmin solid white;
     border-radius: 5%;
-    height: max(150px, 20vw);
+    height: 48vh;
     align-items: center;
 }
 
@@ -24,14 +23,18 @@
 }
 
 .button {
-    background-color: transparent;
+    background-color: white;
+    border: 0.3vmin gainsboro solid;
     padding: 0px 0px 0px 0px;
-    margin: 4px 0px 0px 5px;
+    margin: 4px 5px 0px 5px;
+    height: 5vmin;
+    width: 5vmin;
 }
 
 .Single-information-cell {
     display: flex;
     flex-direction: row;
+    margin-left: 0.6vmin;
 }
 
 

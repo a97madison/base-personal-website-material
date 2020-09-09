@@ -1,0 +1,13 @@
+.Brand {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 31%, rgba(211, 204, 204, 1) 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 500vh;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
