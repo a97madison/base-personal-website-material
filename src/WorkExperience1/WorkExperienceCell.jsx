@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkedInLogo from '../Images/LinkedIn.jpg';
-import InklingLogo from '../Images/Inkling.jpg';
+import InklingLogo from '../Images/Inkling.png';
 import CSCLogo from '../Images/CSC.jpg';
 import CIHILogo from '../Images/CIHI.jpg';
 import AxonifyLogo from '../Images/Axonify.png';
@@ -21,28 +21,29 @@ function WorkExperienceCell(props) {
 
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '2vmin',
+      fontSize: '1.7vmin',
+      marginTop: '1vmin',
       color: props.headerTextColour,
       fontFamily: props.headerFont,
     };
 
     const bulletPointTextStyle = {
-      fontSize: '2vmin',
+      fontSize: '1.2vmin',
       color: props.pageTextColour,
       fontFamily: props.pageFont,
       textAlign: 'left',
       position: 'relative',
       left: '33vw',
-      top: '-11.9vh',
-      margin: '0.1vh 0px 0px 0px'
+      top: '-11.25vmin',
+      margin: '0.7vmin 0px 0px 0px'
     };
 
     const pageTextStyle = {
-      fontSize: '2vmin',
-      color: props.pageTextColour,
+      fontSize: '1.2vmin',
+      color: props.headerTextColour,
       fontFamily: props.pageFont,
-      marginLeft: '0.32vw',
-      marginTop: '-0.1vh',
+      marginLeft: '1vmin',
+      marginTop: '0.75vmin',
       textAlign: 'center'
     }
 
@@ -53,7 +54,7 @@ function WorkExperienceCell(props) {
         return InklingLogo;
       } else if (company == "COGNITIVE SYSTEMS CORPORATION") {
         return CSCLogo;
-      } else if (company == "CANADIAN INSTITUTE FOR HEALTH INFO.") {
+      } else if (company == "CANADIAN INSTITUTE FOR HEALTH INFORMATION") {
         return CIHILogo;
       } else if (company == "AXONIFY INC.") {
         return AxonifyLogo;
@@ -79,16 +80,16 @@ function WorkExperienceCell(props) {
   return (
     <div className="Work-experience-cell">
       <div className="Cell-info">
-        <p style={headerTextStyle}> {props.companyName} </p>
+        <div style={headerTextStyle}> {props.companyName} </div>
         <div className="Logo-city-timeframe">
-          <button className=".company-button" onClick={iconOnClick}>
+          <button className="Company-button" onClick={iconOnClick}>
             <img className="Company-image" src={img}  alt={"..."}></img>
           </button>
-          <p style={pageTextStyle}> {props.city + ","} </p>
-          <p style={pageTextStyle}> {props.timeframe} </p>
+          <div style={pageTextStyle}> {props.city + ","} </div>
+          <div style={pageTextStyle}> {props.timeframe} </div>
         </div>
       </div>
-      <div className="Bullet-points">
+      <div className="Work-experience-bullet-points">
         {bulletPointObjects}
       </div>
     </div>

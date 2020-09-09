@@ -132,10 +132,20 @@ function App() {
     },
   ];  
 
+  const educationProps = {
+    timeframe: "September 2013 - April 2019",
+    bulletPointsArray:["● Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
+                       "● Gained 3+ years of professional work experience as a front-end developer, native mobile engineer, and ios engineer through University of Waterloo's co-op program",
+                       "● In Computational Mathematics you learn to analyze data sets, formulae, and images in ways that help us understand the world around us and predict/influence the future",
+                       "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
+    schoolLink:"https://uwaterloo.ca/"
+  };
+
   const headerFont = "ModestoW01-Open";
   const pageFont = "Geneva"; //Helvetica
   const bgColour = "#f4f0e2";
   const headerColour = "black";
+  const pageColour = "blue";
 
   const profileObject = (
     <Profile
@@ -144,7 +154,7 @@ function App() {
       fullName={fullNameText}
       bgColour={bgColour} //"#284d34"
       headerTextColour={headerColour}
-      pageTextColour="blue"
+      pageTextColour={pageColour}
       headerIntro={headerIntroText}
       informationPairs={informationPairs}
       aboutMeText={aboutMeText}
@@ -163,6 +173,8 @@ function App() {
     <WorkExperience
       headerFont={headerFont}
       headerTextColour={headerColour}
+      pageFont={pageFont}
+      pageTextColour={pageColour}
       cellsProps={workExperienceCells}
     />
   );
@@ -171,6 +183,9 @@ function App() {
     <Education
       headerFont={headerFont}
       headerTextColour={headerColour}
+      pageFont={pageFont}
+      pageTextColour={pageColour}
+      educationProps={educationProps}
     />
   );
 
@@ -178,6 +193,7 @@ function App() {
     <Portfolio
       headerFont={headerFont}
       headerTextColour={headerColour}
+      cellsProps={workExperienceCells} // {portfolioCells}
     />
   );
 

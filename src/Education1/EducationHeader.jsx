@@ -22,8 +22,8 @@ function EducationHeader(props) {
             {emptyHr}
             {emptyHr}
             {emptyHr}
-            <p style={headerTextStyle}> {"EDUCATION"} </p>
             {emptyHr}
+            <p style={headerTextStyle}> {"EDUCATION"} </p>
             {/* HORIZONTAL BREAK LINE */}
             {profileHr}
         </div>

@@ -6,11 +6,13 @@
 .Cell-info {
     height: 10vh;
     margin-top: 0vh;
+    position: relative;
+    top: 0;
     margin-left: 1vw;
     text-align: left;
 }
 
-.Bullet-points {
+.Work-experience-bullet-points {
     height: 10vh;
     justify-content: left;
 }
@@ -21,18 +23,23 @@
 }
 
 .Company-image {
+    position: relative;
+    top: -0.5vmin;
+    left: -0.5vmin;
     object-fit: contain; 
     text-align: center;
-    height: 4.5vh;
-    width: 4.5vh;
+    justify-content: center;
+    background-color: white;
+    height: 5vmin;
+    width: 5vmin;
 }
 
-.company-button {
+.Company-button {
     position: relative;
-    top: -3vh;
-    background-color: white;
-    border: 0.3vmin gainsboro solid;
+    top: 0.5vmin;
+    border: 0.5vmin gainsboro solid;
     padding: 0px 0px 0px 0px;
-    height: 4.5vh;
-    width: 4.5vh;
+    margin: 0px 0px 0px 0px;
+    height: 5vmin;
+    width: 5vmin;
 }
