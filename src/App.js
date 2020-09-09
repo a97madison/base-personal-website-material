@@ -5,6 +5,7 @@ import WorkExperience from './WorkExperience1/WorkExperience';
 import Education from './Education1/Education';
 import Portfolio from './Portfolio1/Portfolio';
 import Company from './Company1/Company';
+import Sidebar from './Sidebar';
 
 // import font
 import './Fonts/fonts.css';
@@ -242,15 +243,35 @@ function App() {
     />
   );
 
+  const items = [
+    { name: 'home', label: 'Home Page' },
+    { name: 'profile', label: 'Profile' },
+    { name: 'work', label: 'Work Experience' },
+    { name: 'education', label: 'Education' },
+    { name: 'portfolio', label: 'Portfolio' },
+    { name: 'brand', label: 'Brand' }
+  ];  
+
+  const sidebarObject = (
+    <Sidebar 
+      font={headerFont}
+      textColour={headerColour}
+      items={items} 
+    />
+  );
+
   // RETURN APP COMPONENT
   return (
     <div className="App">
-      {profileObject}
-      {homePageObject}
-      {workExperienceObject}
-      {educationObject}
-      {portfolioObject}
-      {companyObject}
+      {sidebarObject}
+      <div className="Pages-container">
+        {profileObject}
+        {homePageObject}
+        {workExperienceObject}
+        {educationObject}
+        {portfolioObject}
+        {companyObject}
+      </div>
     </div>
   );
 }

@@ -11,14 +11,14 @@
     overflow-y: scroll;
     margin: 2vmin 2vmin 2vmin 2vmin;
     border: 0.6vmin solid darkgrey;
-    border-radius: 5%;
+    border-radius: 1%;
     height: 60vh;
 }
 
 .About-me-text {
     /* redo this margin and height stuff */
     text-align: left;
-    border-radius: 5%;
+    border-radius: 1%;
     margin-left: 0.6vmin;
 }
 

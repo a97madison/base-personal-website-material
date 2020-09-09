@@ -1,6 +1,7 @@
 .Header {
     margin: 0px 10px 0px 10px;
     height: 22vh;
+    z-index: 0;
 }
 
 

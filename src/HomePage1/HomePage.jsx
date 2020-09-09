@@ -14,7 +14,7 @@ function HomePage(props) {
   
   // DEFINE STYLE CONSTANTS
   let homePageTextStyle = {
-    fontSize: '6vmin',
+    fontSize: '5.8vmin',
     marginTop: '14vh',
     color: props.textColour,
     fontFamily: props.textFont,
@@ -30,9 +30,8 @@ function HomePage(props) {
 
   // RETURN HOMEPAGE DIV
   return (
-    <div>
+    <div id="home">
       <div className="Home-page"> 
-       {/* id="Home-page" style={homePageStyle}> */}
         <p style={homePageTextStyle}>
           {props.fullName}
         </p>

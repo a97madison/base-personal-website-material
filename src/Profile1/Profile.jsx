@@ -17,7 +17,7 @@ function Profile(props) {
   // headerIntro, informationPairs, aboutMeText={aboutMeText}
   
   return (
-    <div className="Profile">
+    <div id="profile" className="Profile">
       <ProfileHeader
         headerIntro={props.headerIntro}
         headerFont={props.headerFont}

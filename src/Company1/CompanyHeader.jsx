@@ -13,17 +13,14 @@ function CompanyHeader(props) {
     const headerTextStyle = {
         fontSize: '4vmin',
         color: props.headerTextColour,
-        fontFamily: props.headerFont
+        fontFamily: props.headerFont,
     };
 
     // RETURN COMPANY HEADER DIV
     return (
         <div className="Header">
             {emptyHr}
-            {emptyHr}
             <p style={headerTextStyle}> {"COMPANY"} </p>
-            {/* HORIZONTAL BREAK LINE */}
-            {profileHr}
         </div>
     );
 }

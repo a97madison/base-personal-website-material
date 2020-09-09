@@ -13,11 +13,12 @@
 }
 
 .Portfolio-cells {
-    margin: 0px 12vw 0px 12vw;
+    margin: 0px 10vw 0px 10vw;
     display: flex;
     flex-direction: column;
     position: relative;
     height: 75vh;
+    width: 80vw;
     top: 0px;
     bottom: 0px;
 }

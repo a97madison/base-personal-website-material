@@ -41,7 +41,7 @@ function WorkExperience(props) {
 
   // RETURN WORKEXPERIENCE DIV
   return (
-    <div className="Work-experience">
+    <div id="work" className="Work-experience">
       <WorkExperienceHeader 
         headerFont={props.headerFont}
         headerTextColour={props.headerTextColour}

@@ -4,19 +4,16 @@ import Collage from '../Images/Collage.png';
 
 import './Company.css';
 
-/*
-    This section of the website will be the main page.
-*/
 function Company(props) {
 
-  // RETURN PORTFOLIO DIV
+  // RETURN COMPANY DIV
   return (
-    <div className="Brand">
+    <div id="brand" className="Brand">
+      <img src={Collage} className="Collage-style"></img>
       <CompanyHeader 
         headerFont={props.headerFont}
         headerTextColour={props.headerTextColour}
       />
-      <img src={Collage} className="Collage-style"></img>
     </div>
   );
 }

@@ -39,7 +39,7 @@ function Portfolio(props) {
 
   // RETURN PORTFOLIO DIV
   return (
-    <div className="Portfolio">
+    <div id="portfolio" className="Portfolio">
       <PortfolioHeader 
         headerFont={props.headerFont}
         headerTextColour={props.headerTextColour}

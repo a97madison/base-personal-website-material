@@ -14,7 +14,8 @@ function Education(props) {
   const pageTextStyle = {
     position: 'relative',
     top: '5vh',
-    left: '0.6vw',
+    width: '100%',
+    textAlign: 'center',
     fontSize: '2vmin',
     color: props.headerTextColour,
     fontFamily: props.pageFont,
@@ -44,7 +45,7 @@ function Education(props) {
 
   // RETURN EDUCATION DIV
   return (
-    <div className="Education">
+    <div id="education" className="Education">
       <EducationHeader 
         headerFont={props.headerFont}
         headerTextColour={props.headerTextColour}

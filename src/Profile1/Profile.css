@@ -1,4 +1,6 @@
 .Profile {
+    background: rgb(244,223,223);
+    background: linear-gradient(0deg, rgba(244,223,223,1) 31%, rgba(244,240,226,1) 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -8,19 +10,16 @@
     width: 100vw;
     top: 0px;
     left: 0px; 
-    background: rgb(244,223,223);
-    background: linear-gradient(0deg, rgba(244,223,223,1) 31%, rgba(244,240,226,1) 100%);
-    /* bottom: '0px', left: '0px', right: '0px', */
 }
 
 .Profile-sections {
     margin: 0px 10vw 0px 10vw;
     display: flex;
     flex-direction: row;
-    border: 0.6vmin solid darkgrey;
+    border: 0.5vw solid darkgrey;
     position: relative;
     height: 73vh;
-    width: 76vw;
+    width: 79vw;
     top: 0px;
     bottom: 0px;
 }
