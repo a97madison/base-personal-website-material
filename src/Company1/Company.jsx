@@ -1,5 +1,6 @@
 import React from 'react';
 import CompanyHeader from './CompanyHeader';
+import Collage from '../Images/Collage.png';
 
 import './Company.css';
 
@@ -15,6 +16,7 @@ function Company(props) {
         headerFont={props.headerFont}
         headerTextColour={props.headerTextColour}
       />
+      <img src={Collage} className="Collage-style"></img>
     </div>
   );
 }

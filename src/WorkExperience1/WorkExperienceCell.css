@@ -1,11 +1,14 @@
 .Work-experience-cell {
-    border: 0.25vh solid white;
-    height: 9.5vh;
+    display: flex;
+    flex-direction: row;
+    border: 0.25vh solid darkgrey;
+    height: 11.5vh;
 }
 
-.Cell-info {
-    height: 10vh;
-    margin-top: 0vh;
+.Work-experience-cell-info {
+    height: 12vh;
+    width: 25vw;
+    margin: 0vmin 2vmin 0vmin 3vmin;
     position: relative;
     top: 0;
     margin-left: 1vw;
@@ -13,13 +16,19 @@
 }
 
 .Work-experience-bullet-points {
-    height: 10vh;
+    height: 12vh;
+    width: 55vw;
     justify-content: left;
 }
 
 .Logo-city-timeframe {
     display: flex;
     flex-direction: row;
+}
+
+.City-timeframe {
+    display: flex;
+    flex-direction: column;
 }
 
 .Company-image {

@@ -1,13 +1,13 @@
 .Profile-photo {
     margin-top: 15vh;
     text-align: center;
-    width: 30%;
+    width: 25vw;
     height: 100%;
 
 }
 
 .img {
-    height: 28vmin;
+    height: 20vmin;
     border-radius: 50%;
-    border: 0.6vmin solid white;
+    border: 0.6vmin solid darkgrey;
 }

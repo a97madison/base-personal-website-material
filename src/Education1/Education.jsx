@@ -12,11 +12,10 @@ function Education(props) {
 
   // DEFINE STYLE CONSTANTS
   const pageTextStyle = {
-    position: 'absolute',
-    top: '7%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    fontSize: '1.2vmin',
+    position: 'relative',
+    top: '5vh',
+    left: '0.6vw',
+    fontSize: '2vmin',
     color: props.headerTextColour,
     fontFamily: props.pageFont,
   }
@@ -26,7 +25,7 @@ function Education(props) {
     color: props.pageTextColour,
     fontFamily: props.pageFont,
     textAlign: 'left',
-    padding: '2.5vh 2.5vw 2.5vh 1vw',
+    padding: '4vh 0.2vw 4vh 2.5vw',
     position: 'relative',
     margin: '0.7vmin 0px 0px 0px'
   };

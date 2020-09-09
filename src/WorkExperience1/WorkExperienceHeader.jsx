@@ -21,8 +21,6 @@ function WorkExperienceHeader(props) {
         <div className="Header">
             {emptyHr}
             {emptyHr}
-            {emptyHr}
-            {emptyHr}
             <p style={headerTextStyle}> {"WORK EXPERIENCE"} </p>
             {/* HORIZONTAL BREAK LINE */}
             {profileHr}

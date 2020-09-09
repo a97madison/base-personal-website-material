@@ -13,12 +13,12 @@
 }
 
 .Education-info {
-    margin: 0px 12vw 0px 12vw;
+    margin: 0px 10vw 0px 10vw;
     display: flex;
     flex-direction: row;
-    border: 0.5vmin solid white;
+    border: 0.6vmin solid darkgrey;
     position: relative;
-    height: 65vh;
+    height: 76vh;
     padding: 0px 0px 0px 0px;
     top: 0px;
     bottom: 0px;
@@ -28,9 +28,9 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    margin: 0vmin 2vmin 0vmin 3vmin;
     height: 65vh;
     width: 35vw;
-    position: relative;
 }
 
 .Education-bullet-points {
@@ -38,9 +38,9 @@
     flex-direction: column;
     height: 65vh;
     position: relative;
-    width: 70vw;
+    width: 50vw;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .Education-image {
@@ -53,7 +53,31 @@
     justify-content: center;
     background-color: white;
     border-radius: 5%;
-    height: 45vh;
-    width: 45vh;
-    border: 1vmin solid white;
+    height: 50vh;
+    width: 50vh;
+    border: 0.4vmin solid white;
+}
+@media (min-height: 295px) {
+    .Education-image {
+        height: 40vh;
+        width: 40vh;
+    }
+}
+@media (min-height: 400px) {
+    .Education-image {
+        height: 28vh;
+        width: 28vh;
+    }
+}
+@media (min-height: 450px) {
+    .Education-image {
+        height: 22vh;
+        width: 22vh;
+    }
+}
+@media (min-height: 700px) {
+    .Education-image {
+        height: 18vh;
+        width: 18vh;
+    }
 }

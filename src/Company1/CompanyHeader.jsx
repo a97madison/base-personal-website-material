@@ -21,9 +21,7 @@ function CompanyHeader(props) {
         <div className="Header">
             {emptyHr}
             {emptyHr}
-            {emptyHr}
             <p style={headerTextStyle}> {"COMPANY"} </p>
-            {emptyHr}
             {/* HORIZONTAL BREAK LINE */}
             {profileHr}
         </div>

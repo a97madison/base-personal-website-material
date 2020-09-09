@@ -132,8 +132,8 @@ function secondDivLinkHelper(informationWithLink, pageInfoTextStyle) {
 
 export function myPairToStringFunction(pair) {
     const pageInfoTextStyle = {
-        fontSize: '2.5vmin',
-        marginLeft: '0.6vmin'
+        fontSize: '1.5vmin',
+        marginLeft: '0.1vmin'
     };
 
     const firstDiv = (

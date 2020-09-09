@@ -11,3 +11,18 @@
     top: 0px;
     left: 0px;
 }
+
+.Collage-style {
+    position: absolute;
+    top: 20vmin;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    object-fit: fill; 
+    text-align: center;
+    justify-content: center;
+    border-color: rgb(255, 255, 255);
+    border-color: linear-gradient(0deg, rgba(255, 255, 255, 1) 31%, rgba(211, 204, 204, 1) 100%);
+    border-radius: 1%;
+    height: 88vmin;
+    width: 100vmin;
+}

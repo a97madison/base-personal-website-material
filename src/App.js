@@ -6,14 +6,15 @@ import Education from './Education1/Education';
 import Portfolio from './Portfolio1/Portfolio';
 import Company from './Company1/Company';
 
-
 // import font
 import './Fonts/fonts.css';
 
+// import css
 import './App.css';
 
 function App() {
 
+  // DEFINE DATA VARIABLES
   const headerIntroText = "I am a software engineer.";
   const aboutMeText = "I'm a recent Math/CS grad from University of Waterloo and I have strong experience with writing object-oriented code and have strong work experience with frameworks like React and both full-stack and mobile development, along with other experience displayed on my resume.";
   const fullNameText = "Anthony Madison";
@@ -64,7 +65,6 @@ function App() {
     ["Job Title", "Software Engineer"],
     ["City", [city, cityGoogleMapsLink]],
     ["Address", [address, addressGoogleMapsLink]],
-    ["Company", ["PureFacts", companyWebsiteLink]]
   ];
 
   const workExperienceCells = [
@@ -73,7 +73,7 @@ function App() {
       position:"iOS ENGINEER",
       companyLink:"https://www.linkedin.com/",
       city:"Sunnyvale, CA",
-      timeframe:"September 2019 - December 2019",
+      timeframe:"Sept. 2019 - Dec. 2019",
       bulletPointsArray:["● Implemented all Objective-C code for detail screens on the profile page of LinkedIn’s iOS app, used object-oriented approach",
                          "● Fixed various bugs throughout the sixteen weeks, improving the Profile page’s SWIFT/Obj-c code in the iOS app",
                          "● Cleaned up dead code across Objective-C pods, refactoring or removing old code where new implementations are now used",
@@ -84,7 +84,7 @@ function App() {
       position:"SOFTWARE ENGINEER",
       companyLink:"https://www.inkling.com/",
       city:"San Francisco, CA",
-      timeframe:"January 2018 - April 2018",
+      timeframe:"Jan. 2018 - Apr. 2018",
       bulletPointsArray:["● Wrote feature-related code with SWIFT and React Native for different mobile applications Inkling provides to customers",
                          "● Fixed bugs throughout a mobile app’s release, assisted with the web team’s backlog of front-end bugs using React with Redux",
                          "● Helped decide which features were most important for the app to include; worked with PMs and design team on feature design"]
@@ -94,7 +94,7 @@ function App() {
       position:"FULL-STACK DEVELOPER",
       companyLink:"https://www.cognitivesystems.com/",
       city:"Waterloo, ON",
-      timeframe:"May 2017 - August 2017",
+      timeframe:"May 2017 - Aug. 2017",
       bulletPointsArray:["● Implemented an internal web app that displayed various reports, making use of React, D3.js and Ruby on Rails",
                          "● Constructed three widgets for internal and customer-side web apps using D3.js and React",
                          "● Updated report dashboard and widgets, enabling on-screen elements to react dynamically when users manipulate the screen",
@@ -105,7 +105,7 @@ function App() {
       position:"FRONT-END DEVELOPER",
       companyLink:"https://www.cihi.ca/en",
       city:"Toronto, ON",
-      timeframe:"May 2016 - August 2016",
+      timeframe:"May 2016 - Aug. 2016",
       bulletPointsArray:["● Designed and implemented plots/diagrams for data visualization with D3.js, providing insight into large quantities of data",
                          "● Implemented multiple features such as legends for diagrams, locational maps and various dynamic web app features",
                          "● Analyzed web frameworks Bootstrap, React, AngularJS and Web Experience Toolkit in a comparison report of frameworks"]
@@ -115,7 +115,7 @@ function App() {
       position:"QUALITY ASSURANCE ANALYST",
       companyLink:"https://axonify.com/",
       city:"Waterloo, ON",
-      timeframe:"September 2015 - December 2015",
+      timeframe:"Sept. 2015 - Dec. 2015",
       bulletPointsArray:["● Architected regression test plan and put effective testing measures in place for part of Axonify’s iOS and Android apps",
                          "● Fixed straightforward bugs, found and allocated bugs in code-base, tested bug fixes, executed regression testing",
                          "● Organized team meetings such as sprint planning and standups during month-long sprints"]
@@ -125,7 +125,7 @@ function App() {
       position:"iOS ENGINEER",
       companyLink:"https://www.purefacts.com/",
       city:"Toronto, ON",
-      timeframe:"January 2015 - April 2015",
+      timeframe:"Jan. 2015 - Apr. 2015",
       bulletPointsArray:["● Prepared complete set of test data through SQL procedures in MySQL, for use in testing and demos shown to customers",
                          "● Tested products developed by coworkers and modernized software’s testing system by creating a complete test plan",
                          "● Standardized new automation testing system using Ranorex to improve speed and quality of testing system"]
@@ -141,12 +141,48 @@ function App() {
     schoolLink:"https://uwaterloo.ca/"
   };
 
+  const portfolioCells = [
+    {
+      title: "Two player chess game web application",
+      time: "June 2020",
+      projectLink: "https://github.com/a97madison/chess-with-react-redux",
+      bulletPointsArray:["● Web app is built using React with Redux for local and global store of data alongside JavaScript, HTML, CSS and PHP.",
+                         "● N4js is used for type checking of React elements and all of the chess game logic implemented within React components.",
+                         "● Read source code and test app here: https://github.com/a97madison/chess-with-react-redux"],
+    },
+    {
+      title: "Personal website",
+      time: "August 2020",
+      projectLink: "https://www.instagram.com/anthony0cap/",
+      bulletPointsArray:["● This website is built entirely using React with Redux"],
+    },
+    {
+      title: "@cian.p's personal website",
+      time: "September 2020",
+      projectLink: "https://www.instagram.com/cian.p/",
+      bulletPointsArray:["● This website is built entirely using React with Redux"],
+    },
+    {
+      title: "Young Lung's personal website",
+      time: "September 2020",
+      projectLink: "https://www.instagram.com/younglungs98/",
+      bulletPointsArray:["● This website is built entirely using React with Redux"],
+    },
+    {
+      title: "Swish Studio's website",
+      time: "September 2020",
+      projectLink: "https://www.instagram.com/swish.studios/",
+      bulletPointsArray:["● This website is built entirely using React with Redux"],
+    }
+  ];
+
   const headerFont = "ModestoW01-Open";
   const pageFont = "Geneva"; //Helvetica
   const bgColour = "#f4f0e2";
-  const headerColour = "black";
-  const pageColour = "blue";
+  const headerColour = "darkgrey"; // #654321
+  const pageColour = "darkgrey"; // #654321
 
+  // DEFINE REACT OBJECTS
   const profileObject = (
     <Profile
       headerFont={headerFont}
@@ -164,7 +200,7 @@ function App() {
   const homePageObject = (
     <HomePage
       textFont={headerFont}
-      textColour={headerColour}
+      textColour={"black"}
       fullName={fullNameText}
     />
   );
@@ -193,8 +229,10 @@ function App() {
     <Portfolio
       headerFont={headerFont}
       headerTextColour={headerColour}
-      cellsProps={workExperienceCells} // {portfolioCells}
-    />
+      pageFont={pageFont}
+      pageTextColour={pageColour}
+      cellsProps={portfolioCells}
+  />
   );
 
   const companyObject = (
@@ -204,6 +242,7 @@ function App() {
     />
   );
 
+  // RETURN APP COMPONENT
   return (
     <div className="App">
       {profileObject}

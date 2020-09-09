@@ -26,10 +26,8 @@ function ProfileHeader(props) {
     // RETURN PROFILEHEADER DIOV
     return (
         <div className="Header">
-            {emptyHr}
             <p style={headerTextStyle}> {"PROFILE"} </p>
             <p style={pageTextStyle}> {props.headerIntro} </p>
-            {emptyHr}
             {profileHr}
         </div>
     );

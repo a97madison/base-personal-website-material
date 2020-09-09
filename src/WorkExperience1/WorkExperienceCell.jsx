@@ -17,34 +17,32 @@ function WorkExperienceCell(props) {
   // props are: companyName, companyLink, city, timeframe, bulletPointsArray, 
   // headerFont, pageFont, headerTextColour, pageTextColour
   
-  // cell variables are: compname, complogo, complink, city, startdate, enddate, array of bulletpoints
+  // cell variables are: compname, complogo, complink, city, timeframe, array of bulletpoints
 
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '1.7vmin',
+      fontSize: '1.62vmin',
       marginTop: '1vmin',
       color: props.headerTextColour,
       fontFamily: props.headerFont,
     };
 
     const bulletPointTextStyle = {
-      fontSize: '1.2vmin',
+      fontSize: '0.97vmin',
+      overflowWrap: 'normal',
       color: props.pageTextColour,
       fontFamily: props.pageFont,
       textAlign: 'left',
-      position: 'relative',
-      left: '33vw',
-      top: '-11.25vmin',
-      margin: '0.7vmin 0px 0px 0px'
+      margin: '0.2vmin 0px 0px 0px'
     };
 
     const pageTextStyle = {
-      fontSize: '1.2vmin',
+      fontSize: '1vmin',
       color: props.headerTextColour,
       fontFamily: props.pageFont,
-      marginLeft: '1vmin',
-      marginTop: '0.75vmin',
-      textAlign: 'center'
+      marginLeft: '0.4vmin',
+      marginTop: '0.5vmin',
+      textAlign: 'left'
     }
 
     function getImageFunction(company) {
@@ -70,7 +68,7 @@ function WorkExperienceCell(props) {
 
     function textToObjectFunction(text) {
       return (
-        <p style={bulletPointTextStyle}> {text} </p>
+        <div style={bulletPointTextStyle}> {text} </div>
       );
     } 
 
@@ -79,14 +77,16 @@ function WorkExperienceCell(props) {
   // RETURN WORKEXPERIENCE CELL DIV
   return (
     <div className="Work-experience-cell">
-      <div className="Cell-info">
+      <div className="Work-experience-cell-info">
         <div style={headerTextStyle}> {props.companyName} </div>
         <div className="Logo-city-timeframe">
           <button className="Company-button" onClick={iconOnClick}>
             <img className="Company-image" src={img}  alt={"..."}></img>
           </button>
-          <div style={pageTextStyle}> {props.city + ","} </div>
-          <div style={pageTextStyle}> {props.timeframe} </div>
+          <div className="City-timeframe">
+            <div style={pageTextStyle}> {props.timeframe} </div>
+            <div style={pageTextStyle}> {props.city} </div>
+          </div>
         </div>
       </div>
       <div className="Work-experience-bullet-points">

@@ -11,10 +11,10 @@ function AboutMe(props) {
     
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '4vmin',
+      fontSize: '2.5vmin',
       color: props.headerTextColour,
       fontFamily: props.headerFont,
-      height: '8vh'
+      height: '5vh'
     };
 
     const pageTextStyle = {

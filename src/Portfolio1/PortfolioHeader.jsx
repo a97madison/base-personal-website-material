@@ -21,9 +21,7 @@ function PortfolioHeader(props) {
         <div className="Header">
             {emptyHr}
             {emptyHr}
-            {emptyHr}
             <p style={headerTextStyle}> {"PORTFOLIO"} </p>
-            {emptyHr}
             {/* HORIZONTAL BREAK LINE */}
             {profileHr}
         </div>

@@ -5,6 +5,7 @@
     position: absolute;
     margin-top: 100vh;
     height: 100%;
+    width: 100vw;
     top: 0px;
     left: 0px; 
     background: rgb(244,223,223);
@@ -13,12 +14,13 @@
 }
 
 .Profile-sections {
-    margin: 0px 12vw 0px 12vw;
+    margin: 0px 10vw 0px 10vw;
     display: flex;
     flex-direction: row;
-    border: 0.6vmin solid white;
+    border: 0.6vmin solid darkgrey;
     position: relative;
-    height: 65vh;
+    height: 73vh;
+    width: 76vw;
     top: 0px;
     bottom: 0px;
 }
