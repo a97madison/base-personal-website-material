@@ -141,7 +141,7 @@ function App() {
                        "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
     schoolLink:"https://uwaterloo.ca/"
   };
-
+ 
   const portfolioCells = [
     {
       title: "Two player chess game web application",
