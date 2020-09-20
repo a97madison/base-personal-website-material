@@ -14,7 +14,7 @@ function ProfilePhoto(props) {
     // RETURN PROFILEPHOTO DIV
     return (
         <div className="Profile-photo">
-          <img className="img" src={profilePhoto} alt={props.fullName + "!"}></img>
+          <img className="Profile-img" src={profilePhoto} alt={props.fullName + "!"}></img>
           {emptyHr}
           {emptyHr}
         </div>

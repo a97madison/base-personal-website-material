@@ -6,8 +6,8 @@
 
 }
 
-.img {
-    height: 20vmin;
+.Profile-img {
+    height: 20vw;
     border-radius: 50%;
-    border: 0.6vmin solid darkgrey;
+    border: 0.25vh solid darkgrey;
 }

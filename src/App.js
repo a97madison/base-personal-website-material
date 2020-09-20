@@ -145,7 +145,7 @@ function App() {
   const portfolioCells = [
     {
       title: "Two player chess game web application",
-      time: "June 2020",
+      time: "Jun. 2020",
       projectLink: "https://github.com/a97madison/chess-with-react-redux",
       bulletPointsArray:["● Web app is built using React with Redux for local and global store of data alongside JavaScript, HTML, CSS and PHP.",
                          "● N4js is used for type checking of React elements and all of the chess game logic implemented within React components.",
@@ -153,25 +153,25 @@ function App() {
     },
     {
       title: "Personal website",
-      time: "August 2020",
+      time: "Aug. 2020",
       projectLink: "https://www.instagram.com/anthony0cap/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
     },
     {
       title: "@cian.p's personal website",
-      time: "September 2020",
+      time: "Sept. 2020",
       projectLink: "https://www.instagram.com/cian.p/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
     },
     {
       title: "Young Lung's personal website",
-      time: "September 2020",
+      time: "Sept. 2020",
       projectLink: "https://www.instagram.com/younglungs98/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
     },
     {
       title: "Swish Studio's website",
-      time: "September 2020",
+      time: "Sept. 2020",
       projectLink: "https://www.instagram.com/swish.studios/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
     }

@@ -14,11 +14,8 @@ function HomePage(props) {
   
   // DEFINE STYLE CONSTANTS
   let homePageTextStyle = {
-    fontSize: '5.8vmin',
-    marginTop: '14vh',
     color: props.textColour,
-    fontFamily: props.textFont,
-    zIndex: '2'
+    fontFamily: props.textFont
   };
 
   const [windowWidth, windowHeight] = useWindowSize();
@@ -32,7 +29,7 @@ function HomePage(props) {
   return (
     <div id="home">
       <div className="Home-page"> 
-        <p style={homePageTextStyle}>
+        <p className="Home-page-text" style={homePageTextStyle}>
           {props.fullName}
         </p>
         <img className="Bg-image" src={SwishLogo}  alt={"..."}></img>

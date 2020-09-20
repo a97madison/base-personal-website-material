@@ -21,28 +21,18 @@ function WorkExperienceCell(props) {
 
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '1.62vmin',
-      marginTop: '1vmin',
       color: props.headerTextColour,
       fontFamily: props.headerFont,
     };
 
     const bulletPointTextStyle = {
-      fontSize: '0.97vmin',
-      overflowWrap: 'normal',
       color: props.pageTextColour,
       fontFamily: props.pageFont,
-      textAlign: 'left',
-      margin: '0.2vmin 0px 0px 0px'
     };
 
     const pageTextStyle = {
-      fontSize: '1vmin',
       color: props.headerTextColour,
       fontFamily: props.pageFont,
-      marginLeft: '0.4vmin',
-      marginTop: '0.5vmin',
-      textAlign: 'left'
     }
 
     function getImageFunction(company) {
@@ -68,7 +58,7 @@ function WorkExperienceCell(props) {
 
     function textToObjectFunction(text) {
       return (
-        <div style={bulletPointTextStyle}> {text} </div>
+        <div className="Work-experience-page-text" style={bulletPointTextStyle}> {text} </div>
       );
     } 
 
@@ -77,20 +67,18 @@ function WorkExperienceCell(props) {
   // RETURN WORKEXPERIENCE CELL DIV
   return (
     <div className="Work-experience-cell">
+      <div className="Work-experience-cell-header" style={headerTextStyle}> {props.companyName} </div>
       <div className="Work-experience-cell-info">
-        <div style={headerTextStyle}> {props.companyName} </div>
-        <div className="Logo-city-timeframe">
+        <div className="Company-city-timeframe">
           <button className="Company-button" onClick={iconOnClick}>
             <img className="Company-image" src={img}  alt={"..."}></img>
           </button>
-          <div className="City-timeframe">
-            <div style={pageTextStyle}> {props.timeframe} </div>
-            <div style={pageTextStyle}> {props.city} </div>
-          </div>
+          <div className="Work-experience-page-text" style={pageTextStyle}> {props.timeframe} </div>
+          <div className="Work-experience-page-text" style={pageTextStyle}> {props.city} </div>
         </div>
-      </div>
-      <div className="Work-experience-bullet-points">
-        {bulletPointObjects}
+        <div>  
+          {bulletPointObjects}
+        </div>
       </div>
     </div>
   );

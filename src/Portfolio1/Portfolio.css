@@ -10,15 +10,16 @@
     width: 100%;
     top: 0px;
     left: 0px;
+    overflow-y: scroll;
 }
 
 .Portfolio-cells {
-    margin: 0px 10vw 0px 10vw;
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
     position: relative;
     height: 75vh;
-    width: 80vw;
+    width: 75vw;
     top: 0px;
     bottom: 0px;
 }

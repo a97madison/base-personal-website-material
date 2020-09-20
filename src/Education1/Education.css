@@ -13,15 +13,29 @@
 }
 
 .Education-info {
-    margin: 0px 10vw 0px 10vw;
+    font-size: 2vmin; /* adjust based on a-r */
+    margin-right: 20vw;
     display: flex;
     flex-direction: row;
-    border: 0.6vmin solid darkgrey;
+    border: 0.25vh solid darkgrey;
     position: relative;
     height: 76vh;
     padding: 0px 0px 0px 0px;
     top: 0px;
     bottom: 0px;
+}
+
+.Education-timeframe-text {
+    text-align: center;
+    position: relative;
+    top: 58vh;
+    width: 100%;
+}
+
+.Education-bullet-point-text {
+    text-align: left;
+    padding: 4vh 0.2vw 4vh 2.5vw;
+    margin: 0.7vmin 0px 0px 0px;
 }
 
 .Education-image-timeframe {
@@ -33,51 +47,41 @@
     width: 35vw;
 }
 
-.Education-bullet-points {
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    position: relative;
-    width: 50vw;
-    text-align: center;
-    justify-content: left;
-}
-
 .Education-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* adjust based on a-r */
+    left: 50%; /* adjust based on a-r */
+    transform: translate(-50%, -50%); /* adjust based on a-r */
     object-fit: contain; 
     text-align: center;
     justify-content: center;
     background-color: white;
     border-radius: 5%;
-    height: 50vh;
-    width: 50vh;
-    border: 0.4vmin solid white;
+    height: 50vmin; /* adjust based on a-r */
+    width: 50vmin; /* adjust based on a-r */
+    border: 0.25vh solid darkgrey;
 }
-@media (min-height: 295px) {
+
+.Education-bullet-points {
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 50vw;
+}
+
+@media (max-aspect-ratio: 3/2) {
     .Education-image {
-        height: 40vh;
-        width: 40vh;
+        height: 40vmin;
+        width: 40vmin;
     }
 }
-@media (min-height: 400px) {
+
+@media (max-aspect-ratio: 5/4) {
     .Education-image {
-        height: 28vh;
-        width: 28vh;
+        height: 27vmin;
+        width: 27vmin;
     }
-}
-@media (min-height: 450px) {
-    .Education-image {
-        height: 22vh;
-        width: 22vh;
-    }
-}
-@media (min-height: 700px) {
-    .Education-image {
-        height: 18vh;
-        width: 18vh;
+    .Education-timeframe-text {
+        top: 50vh;
     }
 }

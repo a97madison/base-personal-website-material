@@ -11,14 +11,11 @@ function AboutMe(props) {
     
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-      fontSize: '2.5vmin',
       color: props.headerTextColour,
       fontFamily: props.headerFont,
-      height: '5vh'
     };
 
     const pageTextStyle = {
-      fontSize: '2.5vmin',
       color: props.pageTextColour,
       fontFamily: props.pageFont
     };    
@@ -26,7 +23,7 @@ function AboutMe(props) {
     // RETURN ABOUTME DIV
     return (
         <div className="About-me">
-          <p style={headerTextStyle}> {"ABOUT ME"} </p>
+          <p className="Profile-sections-header-text" style={headerTextStyle}> {"ABOUT ME"} </p>
           <div className="About-me-container" style={pageTextStyle}>
             <p className="About-me-text">
               {props.aboutMeText}

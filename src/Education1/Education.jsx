@@ -12,23 +12,13 @@ function Education(props) {
 
   // DEFINE STYLE CONSTANTS
   const pageTextStyle = {
-    position: 'relative',
-    top: '5vh',
-    width: '100%',
-    textAlign: 'center',
-    fontSize: '2vmin',
     color: props.headerTextColour,
     fontFamily: props.pageFont,
-  }
+  };
 
   const bulletPointTextStyle = {
-    fontSize: '2vmin',
     color: props.pageTextColour,
     fontFamily: props.pageFont,
-    textAlign: 'left',
-    padding: '4vh 0.2vw 4vh 2.5vw',
-    position: 'relative',
-    margin: '0.7vmin 0px 0px 0px'
   };
 
   function iconOnClick() {
@@ -37,7 +27,7 @@ function Education(props) {
 
   function textToObjectFunction(text) {
     return (
-      <p style={bulletPointTextStyle}> {text} </p>
+      <p className="Education-bullet-point-text" style={bulletPointTextStyle}> {text} </p>
     );
   } 
 
@@ -54,7 +44,7 @@ function Education(props) {
       <div className="Education-info">
         <div className="Education-image-timeframe">
           <img className="Education-image" onClick={iconOnClick} src={Uwaterloo}  alt={"..."}></img>
-          <div style={pageTextStyle}> {education.timeframe} </div>
+          <div className="Education-timeframe-text" style={pageTextStyle}> {education.timeframe} </div>
         </div>
         <div className="Education-bullet-points">
           {bulletPointObjects}

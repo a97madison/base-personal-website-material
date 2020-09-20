@@ -12,7 +12,7 @@
 }
 
 .Work-experience-cells {
-    margin: 0px 10vw 0px 10vw;
+    margin: 0px 20vw 0px 5vw;
     display: flex;
     flex-direction: column;
     height: 73vh;

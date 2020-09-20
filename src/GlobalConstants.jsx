@@ -6,7 +6,6 @@ const emptyHrStyle = {
   
 const profileHrStyle = {
     border: '0.4vmin solid darkgrey',
-    marginRight: '10vw',
     backgroundColor: 'darkgrey'
 };
 

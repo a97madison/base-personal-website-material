@@ -26,29 +26,27 @@ function Profile(props) {
         pageTextColour={props.pageTextColour}
       />
       
-      <div>
-        <div className="Profile-sections">
-          <Information
-            informationPairs={props.informationPairs}
-            headerFont={props.headerFont}
-            pageFont={props.pageFont}
-            headerTextColour={props.headerTextColour}
-            pageTextColour={props.pageTextColour}
-          />
+      <div className="Profile-sections">
+        <Information
+          informationPairs={props.informationPairs}
+          headerFont={props.headerFont}
+          pageFont={props.pageFont}
+          headerTextColour={props.headerTextColour}
+          pageTextColour={props.pageTextColour}
+        />
 
-          <ProfilePhoto
-            bgColour={props.bgColour}
-            // photo itself should be passed as a prop.
-          />
+        <ProfilePhoto
+          bgColour={props.bgColour}
+          // photo itself should be passed as a prop.
+        />
 
-          <AboutMe
-            aboutMeText={props.aboutMeText}
-            headerFont={props.headerFont}
-            pageFont={props.pageFont}
-            headerTextColour={props.headerTextColour}
-            pageTextColour={props.pageTextColour}
-          />
-        </div>
+        <AboutMe
+          aboutMeText={props.aboutMeText}
+          headerFont={props.headerFont}
+          pageFont={props.pageFont}
+          headerTextColour={props.headerTextColour}
+          pageTextColour={props.pageTextColour}
+        />
       </div>
     </div>
   );

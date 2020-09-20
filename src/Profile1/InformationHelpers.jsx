@@ -8,18 +8,18 @@ import Instagram from '../Images/Instagram.jpg';
 import SwishLogo from '../Images/SwishLogo.png';
 
 // creates div for value text for simple key/value information cells
-function secondDivBaseHelper(text, pageInfoTextStyle) {
+function secondDivBaseHelper(text) {
     return (
-        <p style={pageInfoTextStyle}> {text} </p>
+        <p className="Page-info-text"> {text} </p>
     );
 }
 
 // creates div for email text for email info cell
-function secondDivEmailHelper(email, pageInfoTextStyle) {
+function secondDivEmailHelper(email) {
     return (
         
-        <p style={pageInfoTextStyle}> 
-            <a href = {"mailto: "+email} style={pageInfoTextStyle}>{email}</a>
+        <p className="Page-info-text"> 
+            <a href = {"mailto: "+email} className="Page-info-text">{email}</a>
         </p>
     );
 }
@@ -54,24 +54,21 @@ function secondDivSocialMediaButtonHelper1(pair) {
         default:
     }
 
-    // icon style
-    const iconStyle = {
-        background: icon,
-        objectFit: 'contain',
-        height: '5vmin',
-        width: '5vmin',
+    // image style
+    const imgStyle = {
+        background: icon
     };
 
     const buttonIcon = (
         <button className="button" onClick={iconOnClick}>
-            <img src={icon} style={iconStyle} alt={"..."}></img>
+            <img className="Social-img" src={icon} style={imgStyle} alt={"..."}></img>
         </button>
     );
 
     return buttonIcon;
 }
 
-function secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle) {
+function secondDivSocialMediaButtonHelper2(pair) {
       
     // show handle beside button
     const buttonIcon = secondDivSocialMediaButtonHelper1([pair[0], pair[1][1]]);
@@ -81,7 +78,7 @@ function secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle) {
     }
 
     let socialMediaHandle = (
-        <p style={pageInfoTextStyle} onClick={textOnClick}>
+        <p className="Page-info-text" onClick={textOnClick}>
             {"(" + pair[1][0] + ")"}
         </p>
     );
@@ -104,10 +101,10 @@ function secondDivBrandHelper(brandName) {
         default:
     }
 
-    // icon style
-    const iconStyle = {
+    // image style
+    const imgStyle = {
         background: icon,
-        objectFit: 'fill',
+        objectFit: 'cover',
         height: '3.6vmin',
         width: '3.6vmin',
     };
@@ -115,15 +112,15 @@ function secondDivBrandHelper(brandName) {
     return (
         <div className="Single-information-cell">
             <button className="button" onClick={iconOnClick}>
-                <img src={icon} style={iconStyle} alt={"..."}></img>
+                <img src={icon} style={imgStyle} alt={"..."}></img>
             </button>
         </div>
     );
 }
 
-function secondDivLinkHelper(informationWithLink, pageInfoTextStyle) {
+function secondDivLinkHelper(informationWithLink) {
     return (
-        <p style={pageInfoTextStyle}>
+        <p className="Page-info-text">
             <a href={informationWithLink[1]}>{informationWithLink[0]}</a>
         </p>
     );
@@ -131,32 +128,27 @@ function secondDivLinkHelper(informationWithLink, pageInfoTextStyle) {
 
 
 export function myPairToStringFunction(pair) {
-    const pageInfoTextStyle = {
-        fontSize: '1.5vmin',
-        marginLeft: '0.1vmin'
-    };
-
     const firstDiv = (
-        <p style={pageInfoTextStyle}> {pair[0] + ":"} </p>
+        <p className="Page-info-text"> {pair[0] + ":"} </p>
     );
 
     let secondDiv = null;
 
     switch(pair[0]) {
         case "Full Name":
-            secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivBaseHelper(pair[1]);
             break;
         case "Age":
-            secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivBaseHelper(pair[1]);
             break;
         case "Birthdate":
-            secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivBaseHelper(pair[1]);
             break;
         case "Email":
-            secondDiv = secondDivEmailHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivEmailHelper(pair[1]);
             break;
         case "Bookings":
-            secondDiv = secondDivEmailHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivEmailHelper(pair[1]);
             break;   
         case "Brand":
             secondDiv = secondDivBrandHelper(pair[1]);
@@ -168,34 +160,34 @@ export function myPairToStringFunction(pair) {
             secondDiv = secondDivSocialMediaButtonHelper1(pair);
             break;
         case "Github":
-            secondDiv = secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle);
+            secondDiv = secondDivSocialMediaButtonHelper2(pair);
             break;
         case "Twitter":
-            secondDiv = secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle);
+            secondDiv = secondDivSocialMediaButtonHelper2(pair);
             break;
         case "Facebook":
             secondDiv = secondDivSocialMediaButtonHelper1(pair);
             break;
         case "Twitch":
-            secondDiv = secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle);
+            secondDiv = secondDivSocialMediaButtonHelper2(pair);
             break;
         case "Instagram":
-            secondDiv = secondDivSocialMediaButtonHelper2(pair, pageInfoTextStyle);
+            secondDiv = secondDivSocialMediaButtonHelper2(pair);
             break;
         case "City":
-            secondDiv = secondDivLinkHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivLinkHelper(pair[1]);
             break;
         case "Address":
-            secondDiv = secondDivLinkHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivLinkHelper(pair[1]);
             break;
         case "Phone #":
-            secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivBaseHelper(pair[1]);
             break;
         case "Job Title":
-            secondDiv = secondDivBaseHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivBaseHelper(pair[1]);
             break;
         case "Company":
-            secondDiv = secondDivLinkHelper(pair[1], pageInfoTextStyle);
+            secondDiv = secondDivLinkHelper(pair[1]);
             break;
         default:
             secondDiv = secondDivBaseHelper(pair[1]);

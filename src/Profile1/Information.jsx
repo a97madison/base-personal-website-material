@@ -17,10 +17,8 @@ function Information(props) {
 
     // DEFINE STYLE CONSTANTS
     const headerTextStyle = {
-        fontSize: '2.5vmin',
         color: props.headerTextColour,
         fontFamily: props.headerFont,
-        height: '5vh'
     };
 
     const textStyle = {
@@ -30,11 +28,9 @@ function Information(props) {
     // RETURN INFORMATION DIV
     return (
         <div className="Information" style={textStyle}>
-            <p style={headerTextStyle}> {"INFORMATION"} </p>
+            <p className="Profile-sections-header-text" style={headerTextStyle}> {"INFORMATION"} </p>
             <div className="Scrollable-information">
-                <div className = "Scrollable-cells">
-                    {informationCells}
-                </div>
+                {informationCells}
             </div>
         </div>
     );

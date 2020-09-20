@@ -16,20 +16,13 @@ function PortfolioCell(props) {
   
     // DEFINE STYLE CONSTANTS
     const bulletPointTextStyle = {
-      fontSize: '1.45vmin',
-      overflowWrap: 'normal',
       color: props.pageTextColour,
       fontFamily: props.pageFont,
-      textAlign: 'left',
-      margin: '0.7vmin 0px 0px 0px'
     };
 
     const pageTextStyle = {
-      fontSize: '1.45vmin',
       color: props.headerTextColour,
       fontFamily: props.pageFont,
-      marginLeft: '1vmin',
-      textAlign: 'left'
     }
 
     function getImageFunction(title) {
@@ -54,7 +47,7 @@ function PortfolioCell(props) {
 
     function textToObjectFunction(text) {
       return (
-        <p style={bulletPointTextStyle}> {text} </p>
+        <p className="Portfolio-bullet-points" style={bulletPointTextStyle}> {text} </p>
       );
     } 
 
@@ -63,13 +56,16 @@ function PortfolioCell(props) {
   // RETURN PORTFOLIO CELL DIV
   return (
     <div className="Portfolio-cell">
-      <div className="Title-gif-date">
-        <div style={pageTextStyle}> {props.title} </div>
-        <img className="Project-image" onClick={iconOnClick} src={img}  alt={"..."}></img>
-        <div style={pageTextStyle}> {props.time} </div>
-      </div>
-      <div className="Portfolio-bullet-points">
-        {bulletPointObjects}
+      <div className="Portfolio-page-text" style={pageTextStyle}> {props.title} </div>
+  
+      <div className="Gif-date-bullet-points">
+        <div className="Gif-date">
+          <img className="Project-image" onClick={iconOnClick} src={img}  alt={"..."}></img>
+          <div className="Portfolio-page-text" style={pageTextStyle}> {props.time} </div>
+        </div>
+        <div>
+          {bulletPointObjects}
+        </div>
       </div>
     </div>
   );

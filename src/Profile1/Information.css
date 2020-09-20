@@ -6,29 +6,30 @@
 }
 
 .Scrollable-information {
-    /* figure out margin and height */
     text-align: left;
     overflow-x: scroll;
     overflow-y: scroll;
-    margin: 2vmin 2vmin 2vmin 2vmin;
-    border: 0.6vmin solid darkgrey;
+    border: 0.25vh solid darkgrey;
     border-radius: 1%;
     height: 60vh;
     align-items: center;
 }
 
-.Scrollable-cells {
-    width: 100%;
-    overflow-x: auto;
-}
-
 .button {
     background-color: white;
     border: 0.3vmin gainsboro solid;
+    border-radius: 10%;
     padding: 0px 0px 0px 0px;
     margin: 4px 5px 0px 5px;
     height: 5vmin;
     width: 5vmin;
+    object-fit: contain;
+}
+
+.Social-img {
+    object-fit: fill;
+    height: 3.6vmin;
+    width: 3.6vmin;
 }
 
 .Single-information-cell {
@@ -37,4 +38,48 @@
     margin-left: 0.6vmin;
 }
 
+.Page-info-text {
+    font-size: 1.5vmin;
+    margin-left: 0.1vmin;
+};
 
+@media (min-aspect-ratio: 5/4) {
+    .Page-info-text {
+        font-size: 2vh;
+    }
+    .button {
+        height: 6.5vh;
+        width: 6.5vh;
+
+    }
+    .Social-img {
+        height: 5vh;
+        width: 5vh;
+    }
+}
+@media (min-aspect-ratio: 5/3) {
+    .Page-info-text {
+        font-size: 2.5vh;
+    }
+    .button {
+        height: 8vh;
+        width: 8vh;        
+    }
+    .Social-img {
+        height: 6.5vh;
+        width: 6.5vh;
+    }
+}
+@media (min-aspect-ratio: 10/3) {
+    .Page-info-text {
+        font-size: 3.5vh;
+    }
+    .button {
+        height: 10vh;
+        width: 10vh;        
+    }
+    .Social-img {
+        height: 8vh;
+        width: 8vh;
+    }
+}

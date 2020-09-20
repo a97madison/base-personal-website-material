@@ -1,7 +1,6 @@
 .Home-page {
     background: rgb(244,240,226);
     background: linear-gradient(0deg, rgba(244,240,226,1) 31%, rgba(231,255,221,1) 100%);
-    object-fit: fill;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -9,16 +8,38 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0px;
-    left: 0px;
+}
+
+.Home-page-text {
+    font-size: 5vw;
+    margin: 10vh 20vw 0px 0px;
+    z-index: 2;
 }
 
 .Bg-image {
     position: absolute;
     object-fit: contain;
     text-align: center;
-    top: 30vh;
-    height: 60vh;
-    width: 60vh;
+    top: 20vh;
+    height: 75vmax;
+    width: 75vmax;
+    max-height: 75vh;
+    margin-right: 20vw;
     z-index: 1;
+}
+@media (min-aspect-ratio: 3/2) {
+    .Home-page-text {
+        font-size: 3.75vw
+    }
+}
+@media (min-aspect-ratio: 2/1) {
+    .Home-page-text {
+        font-size: 2.5vw
+    }
+}
+@media (max-aspect-ratio: 7/9) {
+    .Bg-image {
+        height: 75vmin;
+        width: 75vmin;
+    }
 }
