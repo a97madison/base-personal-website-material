@@ -4,23 +4,14 @@ import {emptyHr, profileHr} from '../GlobalConstants';
 
 import '../ConstantStyles.css';
 
-/*
-    This section of the profile is the header. Short sentence about self.
-*/
 function CompanyHeader(props) {
-
-    // DEFINE STYLE CONSTANTS 
-    const headerTextStyle = {
-        color: props.headerTextColour,
-        fontFamily: props.headerFont,
-    };
-
     // RETURN COMPANY HEADER DIV
     return (
         <div className="Header">
             {emptyHr}
-            {emptyHr}
-            <p style={headerTextStyle}> {"BRAND"} </p>
+            <p> {"COMPANY"} </p>
+            {/* HORIZONTAL BREAK LINE */}
+            {profileHr}
         </div>
     );
 }

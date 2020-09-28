@@ -1,85 +1,15 @@
-.Information {
-    text-align: center;
-    width: 25vw;
-    margin-bottom: 0px;
-    margin-right: 0px;
-}
-
-.Scrollable-information {
-    text-align: left;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    border: 0.25vh solid darkgrey;
-    border-radius: 1%;
-    height: 60vh;
-    align-items: center;
-}
-
-.button {
-    background-color: white;
-    border: 0.3vmin gainsboro solid;
-    border-radius: 10%;
-    padding: 0px 0px 0px 0px;
-    margin: 4px 5px 0px 5px;
-    height: 5vmin;
-    width: 5vmin;
-    object-fit: contain;
-}
-
-.Social-img {
+.Social-image {
     object-fit: fill;
-    height: 3.6vmin;
-    width: 3.6vmin;
+    height: 4.4vmin;
+    width: 4.4vmin;
+    border-radius: 7%;
+    z-index: 0;
 }
 
-.Single-information-cell {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0.6vmin;
-}
-
-.Page-info-text {
-    font-size: 1.5vmin;
-    margin-left: 0.1vmin;
-};
-
-@media (min-aspect-ratio: 5/4) {
-    .Page-info-text {
-        font-size: 2vh;
-    }
-    .button {
-        height: 6.5vh;
-        width: 6.5vh;
-
-    }
-    .Social-img {
-        height: 5vh;
-        width: 5vh;
-    }
-}
-@media (min-aspect-ratio: 5/3) {
-    .Page-info-text {
-        font-size: 2.5vh;
-    }
-    .button {
-        height: 8vh;
-        width: 8vh;        
-    }
-    .Social-img {
-        height: 6.5vh;
-        width: 6.5vh;
-    }
-}
-@media (min-aspect-ratio: 10/3) {
-    .Page-info-text {
-        font-size: 3.5vh;
-    }
-    .button {
-        height: 10vh;
-        width: 10vh;        
-    }
-    .Social-img {
-        height: 8vh;
-        width: 8vh;
-    }
+.Social-li {
+    border-radius: 7% !important;
+    margin-left: -4.4vmin !important;
+    height: 4.4vmin !important;
+    width: 4.4vmin !important;
+    z-index: 1;
 }

@@ -1,53 +1,38 @@
 import React from 'react';
-// todo: make gifs for each of these images
-import Chess from '../Images/Chess.png';
-import Personal from '../Images/Personal.png';
-import Cian from '../Images/Cian.png';
-import Seebs from '../Images/Seebs.png';
-import Swish from '../Images/Swish.png';
+import {makeButton} from '../GlobalHelpers';
 
 import './PortfolioCell.css';
+import '../ConstantStyles.css';
 
-/*
-    This section of the website will be for one Work Experience cell.
-*/
-function PortfolioCell(props) {
-  // props are: title, time, bulletPointsArray, headerFont, pageFont, headerTextColour, pageTextColour
+function PortfolioCell(props) {  
+  // DEFINE STYLE CONSTANTS
+  const portCellStyle = {
+    display: "flex",
+    flexDirection: "column",
+    borderBottom: "0.1vmin solid darkgrey"
+  };
+  const gifDateBulletPointsStyle = {
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: "5vmin"
+  };
+  const gifDateStyle = {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    width: "15vw"
+  };
+  const portBulletPointsStyle = {
+    overflowWrap: "normal",
+    margin: "0px 0px 0px 0px",
+    textAlign: "left",
+    width: "55vw"
+  };
+    const pressableObject = makeButton(props.title, props.projectLink, "Project");
   
-    // DEFINE STYLE CONSTANTS
-    const bulletPointTextStyle = {
-      color: props.pageTextColour,
-      fontFamily: props.pageFont,
-    };
-
-    const pageTextStyle = {
-      color: props.headerTextColour,
-      fontFamily: props.pageFont,
-    }
-
-    function getImageFunction(title) {
-      console.log(title);
-      if (title == "Two player chess game web application") {
-        return Chess;
-      } else if (title == "Personal website") {
-        return Personal;
-      } else if (title == "@cian.p's personal website") {
-        return Cian;
-      } else if (title == "Young Lung's personal website") {
-        return Seebs;
-      }
-      return Swish;
-    }
-  
-    const img = getImageFunction(props.title);
-
-    function iconOnClick() {
-      window.open(props.projectLink);
-    }
-
     function textToObjectFunction(text) {
       return (
-        <p className="Portfolio-bullet-points" style={bulletPointTextStyle}> {text} </p>
+        <p style={portBulletPointsStyle}> {text} </p>
       );
     } 
 
@@ -55,13 +40,13 @@ function PortfolioCell(props) {
 
   // RETURN PORTFOLIO CELL DIV
   return (
-    <div className="Portfolio-cell">
-      <div className="Portfolio-page-text" style={pageTextStyle}> {props.title} </div>
+    <div style={portCellStyle} className="Page-text-2">
+      <div className="Header-text-3"> {props.title} </div>
   
-      <div className="Gif-date-bullet-points">
-        <div className="Gif-date">
-          <img className="Project-image" onClick={iconOnClick} src={img}  alt={"..."}></img>
-          <div className="Portfolio-page-text" style={pageTextStyle}> {props.time} </div>
+      <div style={gifDateBulletPointsStyle}>
+        <div style={gifDateStyle}>
+          {pressableObject}
+          <div className="Page-text-2"> {props.time} </div>
         </div>
         <div>
           {bulletPointObjects}

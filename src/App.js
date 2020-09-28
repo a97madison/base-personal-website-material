@@ -11,16 +11,15 @@ import Sidebar from './Sidebar';
 import './Fonts/fonts.css';
 
 // import css
-import './App.css';
+import { withTheme } from '@material-ui/core';
 
 function App() {
 
   // DEFINE DATA VARIABLES
-  const headerIntroText = "I am a software engineer.";
+  const introText = "I am a software engineer.";
   const aboutMeText = "I'm a recent Math/CS grad from University of Waterloo and I have strong experience with writing object-oriented code and have strong work experience with frameworks like React and both full-stack and mobile development, along with other experience displayed on my resume.";
   const fullNameText = "Anthony Madison";
   const emailAddressText = "a97madison@gmail.com";
-  // social media information
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
   const githubLinkText = "https://github.com/a97madison";
   const instagramLinkText1 = "https://www.instagram.com/anthony0cap/";
@@ -33,7 +32,6 @@ function App() {
   const instagramUsername2 = "@fly_sht_only_";
   const twitterUsername = "@xanthony2018";
   const twitchUsername = "legreatness123";
-  // const birthdate;
   const birthdate = new Date(1997, 9, 31);
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const day = days[birthdate.getDay()];
@@ -54,7 +52,7 @@ function App() {
     ["Age", age],
     ["Birthdate", birthdateText],
     ["Email", emailAddressText],
-    ["Brand", "Swish Studios"],
+    ["Company", "Swish Studios"],
     ["LinkedIn", linkedInLinkText],
     ["Github", [githubUsername, githubLinkText]],
     ["Instagram", [instagramUsername1, instagramLinkText1]],
@@ -134,8 +132,7 @@ function App() {
   ];  
 
   const educationProps = {
-    timeframe: "September 2013 - April 2019",
-    bulletPointsArray:["● Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
+    bulletPointsArray:["● 2019 Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
                        "● Gained 3+ years of professional work experience as a front-end developer, native mobile engineer, and ios engineer through University of Waterloo's co-op program",
                        "● In Computational Mathematics you learn to analyze data sets, formulae, and images in ways that help us understand the world around us and predict/influence the future",
                        "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
@@ -178,68 +175,76 @@ function App() {
   ];
 
   const headerFont = "ModestoW01-Open";
-  const pageFont = "Geneva"; //Helvetica
   const bgColour = "#f4f0e2";
-  const headerColour = "darkgrey"; // #654321
-  const pageColour = "darkgrey"; // #654321
+  const appHeight = "90vh", appWidth = "80vw", sidebarWidth = "20vw";
+
+  // page colours
+  const color1 = "rgb(244,240,226)";
+  const color2 = "rgb(231,255,221)";
+  const color3 = "rgb(244,223,223)";
+  const color4 = "rgb(237,230,255)";
+  const color5 = "rgb(216, 245, 253)";
+  const color6 = "rgb(240, 230, 210)";
+  const color7 = "rgb(255, 255, 255)";
 
   // DEFINE REACT OBJECTS
+  const homePageObject = (
+    <HomePage
+      textFont={headerFont}
+      color1={color2}
+      color2={color1}
+      appHeight={appHeight}
+      appWidth={appWidth}
+      fullName={fullNameText}
+      introText={introText}
+    />
+  );
+
   const profileObject = (
     <Profile
-      headerFont={headerFont}
-      pageFont={pageFont}
+      color1={color3}
+      color2={color2}
+      appHeight={appHeight}
       fullName={fullNameText}
-      bgColour={bgColour} //"#284d34"
-      headerTextColour={headerColour}
-      pageTextColour={pageColour}
-      headerIntro={headerIntroText}
+      bgColour={bgColour}
       informationPairs={informationPairs}
       aboutMeText={aboutMeText}
     />
   );
 
-  const homePageObject = (
-    <HomePage
-      textFont={headerFont}
-      textColour={"black"}
-      fullName={fullNameText}
-    />
-  );
-
   const workExperienceObject = (
     <WorkExperience
-      headerFont={headerFont}
-      headerTextColour={headerColour}
-      pageFont={pageFont}
-      pageTextColour={pageColour}
+      color1={color4}
+      color2={color3}
+      appHeight={appHeight}
       cellsProps={workExperienceCells}
     />
   );
 
   const educationObject = (
     <Education
-      headerFont={headerFont}
-      headerTextColour={headerColour}
-      pageFont={pageFont}
-      pageTextColour={pageColour}
+      color1={color5}
+      color2={color4}
+      appHeight={appHeight}
       educationProps={educationProps}
     />
   );
 
   const portfolioObject = (
     <Portfolio
-      headerFont={headerFont}
-      headerTextColour={headerColour}
-      pageFont={pageFont}
-      pageTextColour={pageColour}
+      color1={color6}
+      color2={color5}
+      appHeight={appHeight}
+      appWidth={appWidth}
       cellsProps={portfolioCells}
-  />
+    />
   );
 
   const companyObject = (
     <Company
-      headerFont={headerFont}
-      headerTextColour={headerColour}
+      color1={color7}
+      color2={color6}
+      appWidth={appWidth}
     />
   );
 
@@ -249,22 +254,40 @@ function App() {
     { name: 'work', label: 'Work Experience' },
     { name: 'education', label: 'Education' },
     { name: 'portfolio', label: 'Portfolio' },
-    { name: 'brand', label: 'Brand' }
+    { name: 'company', label: 'Company' }
   ];  
 
   const sidebarObject = (
     <Sidebar 
-      font={headerFont}
-      textColour={headerColour}
       items={items} 
+      appHeight={appHeight}
+      appWidth={appWidth}
     />
   );
 
+  // DEFINE STYLE CONSTANTS
+  const appStyle = {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    margin: "0px 0px 0px 0px",
+    fontFamily: 'Geneva',
+    color: 'darkgrey'
+  };
+
+  const adContainerStyle = {
+    height: "10vh",
+    width: "100%",
+    position: "fixed",
+    top: "90vh",
+    backgroundColor: "white"
+  }
+
   // RETURN APP COMPONENT
   return (
-    <div className="App">
+    <div style={appStyle}>
       {sidebarObject}
-      <div className="Pages-container">
+      <div>
         {profileObject}
         {homePageObject}
         {workExperienceObject}
@@ -272,6 +295,7 @@ function App() {
         {portfolioObject}
         {companyObject}
       </div>
+    <div style={adContainerStyle}>{""}</div>
     </div>
   );
 }

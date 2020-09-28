@@ -1,24 +1,4 @@
-.Sidebar {
-  font-size: 0.7vw;
-  position: fixed;
-  top: 2vh;
-  bottom: 2vh;
-  right: 0px;
-  width: 19.9vw;
-  padding-left: 0vw;
-  padding-right: 0vw;
-  height: 96vh;
-  z-index: 1;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .Sidebar-list-item {
-  height: 16vh;
-  padding-left: 0vw;
-  padding-right: 0vw;
-}
-
-.Sidebar-text {
-  text-align: center;
-  font-size: 1.25vw;
+  height: 15vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.1) !important;
 }

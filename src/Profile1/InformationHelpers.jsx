@@ -1,16 +1,17 @@
 import React from 'react';
-import LinkedIn from '../Images/LinkedIn.jpg';
-import Github from '../Images/Github.jpg';
-import Twitter from '../Images/Twitter.jpg';
-import Facebook from '../Images/Facebook.jpg';
-import Twitch from '../Images/Twitch.jpg';
-import Instagram from '../Images/Instagram.jpg';
-import SwishLogo from '../Images/SwishLogo.png';
+import {makeButton} from '../GlobalHelpers';
+
+// DEFINE STYLE CONSTANTS
+const singleInfoCellStyle = {
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: "0.6vmin"
+};
 
 // creates div for value text for simple key/value information cells
 function secondDivBaseHelper(text) {
     return (
-        <p className="Page-info-text"> {text} </p>
+        <div style={singleInfoCellStyle} className="Page-text-1"> {text} </div>
     );
 }
 
@@ -18,118 +19,62 @@ function secondDivBaseHelper(text) {
 function secondDivEmailHelper(email) {
     return (
         
-        <p className="Page-info-text"> 
-            <a href = {"mailto: "+email} className="Page-info-text">{email}</a>
-        </p>
+        <div style={singleInfoCellStyle} className="Page-text-1"> 
+            <a href = {"mailto: "+email}>{email}</a>
+        </div>
     );
 }
 
-function secondDivSocialMediaButtonHelper1(pair) {
-    function iconOnClick() {
-        window.open(pair[1]);
-    }
-    
-// do this    // window.open("https://www.geeksforgeeks.org"); 
-
-    let icon = null;
-    switch (pair[0]) {
-        case "LinkedIn":
-            icon = LinkedIn;
-            break;
-        case "Github":
-            icon = Github;
-            break;
-        case "Twitter":
-            icon = Twitter;
-            break;
-        case "Facebook":
-            icon = Facebook;
-            break;
-        case "Twitch":
-            icon = Twitch;
-            break;
-        case "Instagram":
-            icon = Instagram;
-            break;
-        default:
-    }
-
-    // image style
-    const imgStyle = {
-        background: icon
-    };
-
-    const buttonIcon = (
-        <button className="button" onClick={iconOnClick}>
-            <img className="Social-img" src={icon} style={imgStyle} alt={"..."}></img>
-        </button>
+function secondDivSocialMediaButtonHelper1(pair) { 
+    // do this    // window.open("https://www.geeksforgeeks.org"); 
+    const pressableObject = makeButton(pair[0],pair[1],"Social");
+    return (
+        <div style={singleInfoCellStyle}>
+            {pressableObject}
+        </div>
     );
-
-    return buttonIcon;
 }
 
 function secondDivSocialMediaButtonHelper2(pair) {
-      
     // show handle beside button
-    const buttonIcon = secondDivSocialMediaButtonHelper1([pair[0], pair[1][1]]);
+    const pressableObject = secondDivSocialMediaButtonHelper1([pair[0], pair[1][1]]);
 
     function textOnClick() {
         window.open(pair[1][1]);
     }
 
-    let socialMediaHandle = (
-        <p className="Page-info-text" onClick={textOnClick}>
+    const socialMediaHandle = (
+        <div className="Page-text-1" onClick={textOnClick}>
             {"(" + pair[1][0] + ")"}
-        </p>
-    );
-    return (
-        <div className="Single-information-cell">
-            {buttonIcon}
-            {socialMediaHandle}
         </div>
-    )
+    );
+    return [
+        pressableObject,
+        socialMediaHandle
+    ];
 }
 
 function secondDivBrandHelper(brandName) {
-    function iconOnClick() {}
-
-    let icon = null;
-    switch(brandName) {
-        case "Swish Studios":
-            icon = SwishLogo;
-            break;
-        default:
-    }
-
-    // image style
-    const imgStyle = {
-        background: icon,
-        objectFit: 'cover',
-        height: '3.6vmin',
-        width: '3.6vmin',
-    };
-
+    const pressableObject = makeButton(brandName,"","Social");
     return (
-        <div className="Single-information-cell">
-            <button className="button" onClick={iconOnClick}>
-                <img src={icon} style={imgStyle} alt={"..."}></img>
-            </button>
+        <div style={singleInfoCellStyle}>
+            {pressableObject}
         </div>
     );
 }
 
 function secondDivLinkHelper(informationWithLink) {
     return (
-        <p className="Page-info-text">
+        <div style={singleInfoCellStyle} className="Page-text-1">
             <a href={informationWithLink[1]}>{informationWithLink[0]}</a>
-        </p>
+        </div>
     );
 }
 
 
 export function myPairToStringFunction(pair) {
     const firstDiv = (
-        <p className="Page-info-text"> {pair[0] + ":"} </p>
+        <div className="Page-text-1"> {pair[0] + ":"} </div>
     );
 
     let secondDiv = null;
@@ -195,8 +140,8 @@ export function myPairToStringFunction(pair) {
     }
 
     return (
-        <div className={"Information-cell-" + pair[0]}>
-            <div className="Single-information-cell">
+        <div className={"Information-cell"}>
+            <div style={singleInfoCellStyle}>
                 {firstDiv}
                 {secondDiv}
             </div>

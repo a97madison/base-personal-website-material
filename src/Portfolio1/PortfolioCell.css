@@ -1,57 +1,17 @@
-.Portfolio-cell {
-    display: flex;
-    flex-direction: column;
-    border: 0.25vh solid darkgrey;
-}
-
-.Portfolio-cell-info {
-    font-size: 1.45vmin;
-    height: 12.5vh;
-    width: 50%;
-    margin-top: 0vh;
-    position: relative;
-    top: 0;
-    text-align: left;
-}
-
-.Portfolio-bullet-points {
-    text-align: left;
-}
-
-.Gif-date-bullet-points {
-    display: flex;
-    flex-direction: row;
-}
-
-.Gif-date {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    width: 20vw;
-}
-
 .Project-image {
     object-fit: fill; 
     background-color: white;
-    height: 7vmin;
-    width: 7vmin;
-    margin-left: 1vmin;
-}
-
-.Portfolio-page-text {
-    text-align: left;
-    padding-left: 1vmin;
-}
-
-.Portfolio-bullet-points {
-    overflow-wrap: normal;
+    height: 6vmin;
+    width: 6vmin;
     margin: 0px 0px 0px 0px;
-    width: 55vw;
+    border-radius: 6%;
+    z-index: 0;
 }
 
-
-@media (max-aspect-ratio: 1/1) {
-    .Portfolio-cell-info {
-        font-size: 1.1vmin;
-    }
+.Project-li {
+    height: 6vmin !important;
+    width: 6vmin !important;
+    margin: -6vmin 0px 0px 0px !important;
+    border-radius: 6% !important;
+    z-index: 1;
 }

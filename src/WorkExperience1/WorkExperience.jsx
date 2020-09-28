@@ -3,13 +3,6 @@ import SwishLogo from '../Images/SwishLogo.png';
 import WorkExperienceHeader from './WorkExperienceHeader';
 import WorkExperienceCell from './WorkExperienceCell';
 
-import './WorkExperience.css';
-
-let headerFont = null;
-let pageFont = null;
-let headerTextColour = null;
-let pageTextColour = null;
-
 function workCellsToCellFunction(cellProps) {
   // return div for one work experience cell
   return (
@@ -19,35 +12,45 @@ function workCellsToCellFunction(cellProps) {
       city={cellProps.city}
       timeframe={cellProps.timeframe}
       bulletPointsArray={cellProps.bulletPointsArray}
-      headerFont={headerFont}
-      pageFont={pageFont}
-      headerTextColour={headerTextColour}
-      pageTextColour={pageTextColour}
     />
   );
 }
 
-/*
-    This section of the website will be for Work Experience.
-*/
 function WorkExperience(props) {
-  // props are: cellsProps, headerFont, pageFont, headerTextColour, pageTextColour
+  const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight;
+    
+  // DEFINE STYLE CONSTANTS
+  const workExperienceStyle = {
+    background: color1,
+    background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
+    display: "flex",
+    flexDirection: "column",
+    position: "absolute",
+    marginTop: "180vh",
+    height: appHeight,
+    width: "100%",
+    top: "0px",
+    left: "0px",
+    overflowY: "scroll"
+  };
 
-  headerFont = props.headerFont;
-  pageFont = props.pageFont;
-  headerTextColour = props.headerTextColour;
-  pageTextColour = props.pageTextColour;
+  const workExperienceCellsStyle = {
+    margin: "0px 20vw 0px 0px",
+    display: "flex",
+    flexDirection: "column",
+    borderBottom: "0.1vmin solid darkgrey",
+    bottom: "0px",
+    right: "0.4vmin"
+  };
+  
   const workExperienceCells = props.cellsProps.map(workCellsToCellFunction)
 
   // RETURN WORKEXPERIENCE DIV
   return (
-    <div id="work" className="Work-experience">
-      <WorkExperienceHeader 
-        headerFont={props.headerFont}
-        headerTextColour={props.headerTextColour}
-      />
+    <div id="work" style={workExperienceStyle}>
+      <WorkExperienceHeader />
 
-      <div className="Work-experience-cells">
+      <div style={workExperienceCellsStyle}>
         {workExperienceCells}
       </div>
     </div>

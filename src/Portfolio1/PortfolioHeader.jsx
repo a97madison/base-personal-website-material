@@ -9,18 +9,11 @@ import '../ConstantStyles.css';
 */
 function PortfolioHeader(props) {
 
-    // DEFINE STYLE CONSTANTS 
-    const headerTextStyle = {
-        color: props.headerTextColour,
-        fontFamily: props.headerFont
-    };
-
     // RETURN PROFILEHEADER DIOV
     return (
         <div className="Header">
             {emptyHr}
-            {emptyHr}
-            <p style={headerTextStyle}> {"PORTFOLIO"} </p>
+            <p> {"PORTFOLIO"} </p>
             {/* HORIZONTAL BREAK LINE */}
             {profileHr}
         </div>

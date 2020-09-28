@@ -2,13 +2,6 @@ import React from 'react';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioCell from './PortfolioCell';
 
-import './Portfolio.css';
-
-let headerFont = null;
-let pageFont = null;
-let headerTextColour = null;
-let pageTextColour = null;
-
 function portfolioCellsToCellFunction(cellProps) {
   // return div for one work experience cell
   return (
@@ -17,35 +10,44 @@ function portfolioCellsToCellFunction(cellProps) {
       time={cellProps.time}
       projectLink={cellProps.projectLink}
       bulletPointsArray={cellProps.bulletPointsArray}
-      headerFont={headerFont}
-      pageFont={pageFont}
-      headerTextColour={headerTextColour}
-      pageTextColour={pageTextColour}
     />
   );
 }
 
-/*
-    This section of the website will be for Work Experience.
-*/
 function Portfolio(props) {
-  // props are: cellsProps, headerFont, pageFont, headerTextColour, pageTextColour
-
-  headerFont = props.headerFont;
-  pageFont = props.pageFont;
-  headerTextColour = props.headerTextColour;
-  pageTextColour = props.pageTextColour;
+  const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight, appWidth = props.appWidth;
+  // DEFINE STYLE CONSTANTS
+  const portfolioStyle = {
+    background: color1,
+    background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    position: "absolute",
+    marginTop: "360vh",
+    height: appHeight,
+    width: "100%",
+    top: "0px",
+    left: "0px",
+    overflowY: "scroll"
+  };
+  const portfolioCellsStyle = {
+    display: "flex",
+    flexDirection: "column",
+    position: "relative",
+    margin: "0px 20vw 0px 0px",
+    borderBottom: "0.1vmin solid darkgrey",
+    top: "0px",
+    bottom: "0px"
+  };
   const portfolioCells = props.cellsProps.map(portfolioCellsToCellFunction)
 
   // RETURN PORTFOLIO DIV
   return (
-    <div id="portfolio" className="Portfolio">
-      <PortfolioHeader 
-        headerFont={props.headerFont}
-        headerTextColour={props.headerTextColour}
-      />
+    <div id="portfolio" style={portfolioStyle}>
+      <PortfolioHeader />
 
-      <div className="Portfolio-cells">
+      <div style={portfolioCellsStyle}>
         {portfolioCells}
       </div>
     </div>

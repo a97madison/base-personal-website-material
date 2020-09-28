@@ -1,82 +1,17 @@
-.Work-experience-cell {
-    display: flex;
-    flex-direction: column;
-    border: 0.1vmin solid darkgrey;
-    height: 11.5vh;
-}
-
-.Work-experience-cell-info {
-    display: flex;
-    flex-direction: row;
-    /* height: 12vh; */
-    /* margin: 0vmin 2vmin 0vmin 3vmin; */
-    position: relative;
-    top: 0;
-    margin-left: 1vw;
-    text-align: left;
-}
-
-.Logo-city-timeframe {
-    display: flex;
-    flex-direction: row;
-}
-
-.Company-city-timeframe {
-    display: flex;
-    flex-direction: column;
-    width: 15vw;
-}
-
 .Company-image {
-    position: relative;
-    top: -0.5vmin;
-    left: -0.5vmin;
-    object-fit: contain; 
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    height: 5vmin;
-    width: 5vmin;
+    margin-left: 0px;
+    padding-left: 0px;
+    object-fit: fill; 
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 6%;
+    z-index: 0;
 }
 
-.Company-button {
-    justify-content: left;
-    border: 0.5vmin gainsboro solid;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    height: 5vmin;
-    width: 5vmin;
-}
-
-.Work-experience-page-text {
-    font-size: 1.4vmin;
-    overflow-wrap: normal;
-    text-align: left;
-    margin-left: 0.1vmin;
-    margin-top: 0.2vmin;
-}
-
-.Work-experience-cell-header {
-    font-size: 1.62vmin;
-    padding-left: 1vmin;
-    margin-top: 0.5vmin;
-    text-align: left;
-}
-
-@media (max-aspect-ratio: 31/20) {
-    .Work-experience-page-text {
-        font-size: 1.3vmin;
-    }
-}
-
-@media (max-aspect-ratio: 10/7) {
-    .Work-experience-page-text {
-        font-size: 1vmin;
-    }
-}
-
-@media (max-aspect-ratio: 10/9) {
-    .Work-experience-page-text {
-        font-size: 0.9vmin;
-    }
+.Company-li {
+    margin-top: -6vmin !important;
+    height: 6vmin !important;
+    width: 6vmin !important;
+    border-radius: 6% !important;
+    z-index: 1;
 }

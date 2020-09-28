@@ -1,33 +1,63 @@
 import React from 'react';
-import Uwaterloo from '../Images/UWaterloo.jpg';
+import {makeButton} from '../GlobalHelpers';
 import EducationHeader from './EducationHeader';
 
 import './Education.css';
+import '../ConstantStyles.css';
 
-/*
-    This section of the website will be the main page.
-*/
 function Education(props) {
-  let education = props.educationProps;
+  const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight, education = props.educationProps;
 
   // DEFINE STYLE CONSTANTS
-  const pageTextStyle = {
-    color: props.headerTextColour,
-    fontFamily: props.pageFont,
+  const educationStyle = {
+    background: color1,
+    background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
+    display: "flex",
+    flexDirection: "column",
+    position: "absolute",
+    marginTop: "270vh",
+    height: appHeight,
+    width: "100%",
+    top: "0px",
+    left: "0px"
+  };
+  const educationInfoStyle = {
+    marginRight: "20vw",
+    display: "flex",
+    flexDirection: "row",
+    height: "100%",
+    top: "0px",
+    bottom: "0px"
+  };
+  const educationBulletPointParentStyle = {
+    height: "25%",
+    display: "table",
+    textAlign: "left"
+  };
+  const educationBulletPointTextStyle = {
+    display: "table-cell",
+    verticalAlign: "middle",
+    margin: "0px 0px 0px 0px"
+  };
+  const educationImageParentStyle = {
+    position: "relative",
+    width: "40%"
+  };
+  const educationBulletPointsStyle = {
+    display: "table",
+    height: "100%",
+    width: "50vw"
   };
 
-  const bulletPointTextStyle = {
-    color: props.pageTextColour,
-    fontFamily: props.pageFont,
-  };
-
-  function iconOnClick() {
-    window.open(education.schoolLink);
-  }
+  const pressableObject = makeButton("UWaterloo", education.schoolLink, "Education")
 
   function textToObjectFunction(text) {
     return (
-      <p className="Education-bullet-point-text" style={bulletPointTextStyle}> {text} </p>
+      <div style={educationBulletPointParentStyle}> 
+        <p style={educationBulletPointTextStyle}> 
+          {text} 
+        </p>
+      </div>
     );
   } 
 
@@ -35,19 +65,17 @@ function Education(props) {
 
   // RETURN EDUCATION DIV
   return (
-    <div id="education" className="Education">
-      <EducationHeader 
-        headerFont={props.headerFont}
-        headerTextColour={props.headerTextColour}
-      />
+    <div id="education" style={educationStyle}>
+      <EducationHeader />
 
-      <div className="Education-info">
-        <div className="Education-image-timeframe">
-          <img className="Education-image" onClick={iconOnClick} src={Uwaterloo}  alt={"..."}></img>
-          <div className="Education-timeframe-text" style={pageTextStyle}> {education.timeframe} </div>
+      <div style={educationInfoStyle} className="Page-text-1">
+        <div style={educationImageParentStyle}>
+          {pressableObject}
         </div>
-        <div className="Education-bullet-points">
-          {bulletPointObjects}
+        <div>
+          <div style={educationBulletPointsStyle}>
+            {bulletPointObjects}
+          </div>
         </div>
       </div>
     </div>

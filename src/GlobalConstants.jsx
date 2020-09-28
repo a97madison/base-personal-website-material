@@ -5,8 +5,10 @@ const emptyHrStyle = {
 };
   
 const profileHrStyle = {
-    border: '0.4vmin solid darkgrey',
-    backgroundColor: 'darkgrey'
+    border: '0.1vmin solid darkgrey',
+    backgroundColor: 'darkgrey',
+    marginBottom: '0px',
+    paddingTop: "0.2vh",
 };
 
 export const emptyHr = (

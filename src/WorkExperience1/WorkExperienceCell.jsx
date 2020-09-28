@@ -1,64 +1,43 @@
 import React from 'react';
-import LinkedInLogo from '../Images/LinkedIn.jpg';
-import InklingLogo from '../Images/Inkling.png';
-import CSCLogo from '../Images/CSC.jpg';
-import CIHILogo from '../Images/CIHI.jpg';
-import AxonifyLogo from '../Images/Axonify.png';
-import PurefactsLogo from '../Images/Purefacts.png';
-
-
+import {makeButton} from '../GlobalHelpers';
 
 import './WorkExperienceCell.css';
+import '../ConstantStyles.css';
 
-/*
-    This section of the website will be for one Work Experience cell.
-*/
 function WorkExperienceCell(props) {
-  // props are: companyName, companyLink, city, timeframe, bulletPointsArray, 
-  // headerFont, pageFont, headerTextColour, pageTextColour
-  
-  // cell variables are: compname, complogo, complink, city, timeframe, array of bulletpoints
-
     // DEFINE STYLE CONSTANTS
-    const headerTextStyle = {
-      color: props.headerTextColour,
-      fontFamily: props.headerFont,
+    const weCellStyle = {
+      display: "flex",
+      flexDirection: "column",
+      borderBottom: "0.1vmin solid darkgrey"
+    };
+    const weCellInfoStyle = {
+      display: "flex",
+      flexDirection: "row",
+      paddingLeft: "5vmin",
+      textAlign: "left"
+    }
+    const logoCityTimeframeStyle = {
+      display: "flex",
+      flexDirection: "row",
+    }
+    const cityTimeframeStyle = {
+      display: "flex",
+      flexDirection: "column",
+      width: "15vw"
+    };
+    const wePageTextStyle = {
+      overflowWrap: "normal",
+      textAlign: "left",
+      marginLeft: "0.1vmin",
+      marginTop: "0.2vmin"  
     };
 
-    const bulletPointTextStyle = {
-      color: props.pageTextColour,
-      fontFamily: props.pageFont,
-    };
-
-    const pageTextStyle = {
-      color: props.headerTextColour,
-      fontFamily: props.pageFont,
-    }
-
-    function getImageFunction(company) {
-      if (company == "LINKEDIN") {
-        return LinkedInLogo;
-      } else if (company == "INKLING") {
-        return InklingLogo;
-      } else if (company == "COGNITIVE SYSTEMS CORPORATION") {
-        return CSCLogo;
-      } else if (company == "CANADIAN INSTITUTE FOR HEALTH INFORMATION") {
-        return CIHILogo;
-      } else if (company == "AXONIFY INC.") {
-        return AxonifyLogo;
-      }
-      return PurefactsLogo;
-    }
-  
-    const img = getImageFunction(props.companyName);
-
-    function iconOnClick() {
-      window.open(props.companyLink);
-    }
+    const pressableObject = makeButton(props.companyName, props.companyLink, "Company");
 
     function textToObjectFunction(text) {
       return (
-        <div className="Work-experience-page-text" style={bulletPointTextStyle}> {text} </div>
+        <div style={wePageTextStyle}> {text} </div>
       );
     } 
 
@@ -66,15 +45,13 @@ function WorkExperienceCell(props) {
 
   // RETURN WORKEXPERIENCE CELL DIV
   return (
-    <div className="Work-experience-cell">
-      <div className="Work-experience-cell-header" style={headerTextStyle}> {props.companyName} </div>
-      <div className="Work-experience-cell-info">
-        <div className="Company-city-timeframe">
-          <button className="Company-button" onClick={iconOnClick}>
-            <img className="Company-image" src={img}  alt={"..."}></img>
-          </button>
-          <div className="Work-experience-page-text" style={pageTextStyle}> {props.timeframe} </div>
-          <div className="Work-experience-page-text" style={pageTextStyle}> {props.city} </div>
+    <div style={weCellStyle} className="Page-text-2">
+      <div className="Header-text-3"> {props.companyName} </div>
+      <div style={weCellInfoStyle}>
+        <div style={cityTimeframeStyle}>
+          {pressableObject}
+          <div style={wePageTextStyle}> {props.timeframe} </div>
+          <div style={wePageTextStyle}> {props.city} </div>
         </div>
         <div>  
           {bulletPointObjects}

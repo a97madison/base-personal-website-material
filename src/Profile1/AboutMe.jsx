@@ -1,32 +1,24 @@
 import React from 'react';
 
-import './AboutMe.css';
+import '../ConstantStyles.css';
 
-/*
-    This section of the profile contains the person's paragraph that gives a main description
-    about themselves.
-*/
 function AboutMe(props) {
-    // props are: aboutMeText, headerFont, pageFont, headerTextColour, pageTextColour
-    
+    const sectionStyle = props.sectionStyle, sectionParentStyle = props.sectionParentStyle, aboutMeText = props.aboutMeText;
+
     // DEFINE STYLE CONSTANTS
-    const headerTextStyle = {
-      color: props.headerTextColour,
-      fontFamily: props.headerFont,
+    const aboutMeTextStyle = {
+      textAlign: "left",
+      marginLeft: "0.6vmin",
+      marginRight: "0.6vmin"
     };
-
-    const pageTextStyle = {
-      color: props.pageTextColour,
-      fontFamily: props.pageFont
-    };    
-
+    
     // RETURN ABOUTME DIV
     return (
-        <div className="About-me">
-          <p className="Profile-sections-header-text" style={headerTextStyle}> {"ABOUT ME"} </p>
-          <div className="About-me-container" style={pageTextStyle}>
-            <p className="About-me-text">
-              {props.aboutMeText}
+        <div style={sectionStyle}>
+          <div style={sectionParentStyle}>
+            <p className="Header-text-2"> {"ABOUT ME"} </p>
+            <p style={aboutMeTextStyle} className="Page-text-1">
+              {aboutMeText}
             </p>
             </div>
         </div>

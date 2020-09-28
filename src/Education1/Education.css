@@ -1,87 +1,27 @@
-.Education {
-    background: rgb(216, 245, 253);
-    background: linear-gradient(0deg, rgba(216, 245, 253,1) 31%, rgba(237,230,255,1) 100%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 300vh;
-    height: 100%;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-}
-
-.Education-info {
-    font-size: 2vmin; /* adjust based on a-r */
-    margin-right: 20vw;
-    display: flex;
-    flex-direction: row;
-    border: 0.25vh solid darkgrey;
-    position: relative;
-    height: 76vh;
-    padding: 0px 0px 0px 0px;
-    top: 0px;
-    bottom: 0px;
-}
-
-.Education-timeframe-text {
-    text-align: center;
-    position: relative;
-    top: 58vh;
-    width: 100%;
-}
-
-.Education-bullet-point-text {
-    text-align: left;
-    padding: 4vh 0.2vw 4vh 2.5vw;
-    margin: 0.7vmin 0px 0px 0px;
-}
-
-.Education-image-timeframe {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin: 0vmin 2vmin 0vmin 3vmin;
-    height: 65vh;
-    width: 35vw;
-}
-
 .Education-image {
     position: absolute;
-    top: 50%; /* adjust based on a-r */
-    left: 50%; /* adjust based on a-r */
-    transform: translate(-50%, -50%); /* adjust based on a-r */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     object-fit: contain; 
     text-align: center;
     justify-content: center;
     background-color: white;
-    border-radius: 5%;
-    height: 50vmin; /* adjust based on a-r */
-    width: 50vmin; /* adjust based on a-r */
-    border: 0.25vh solid darkgrey;
+    border: 0.4vmin white solid;
+    border-radius: 4%;
+    aspect-ratio: 1/1;
+    width: 75%;
+    height: auto;
+    z-index: 0;
 }
 
-.Education-bullet-points {
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    width: 50vw;
-}
-
-@media (max-aspect-ratio: 3/2) {
-    .Education-image {
-        height: 40vmin;
-        width: 40vmin;
-    }
-}
-
-@media (max-aspect-ratio: 5/4) {
-    .Education-image {
-        height: 27vmin;
-        width: 27vmin;
-    }
-    .Education-timeframe-text {
-        top: 50vh;
-    }
+.Education-li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4% !important;
+    width: 23vw !important;
+    height: 23vw !important;
+    z-index: 1;
 }
