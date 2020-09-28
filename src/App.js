@@ -11,27 +11,17 @@ import Sidebar from './Sidebar';
 import './Fonts/fonts.css';
 
 // import css
-import { withTheme } from '@material-ui/core';
 
 function App() {
 
   // DEFINE DATA VARIABLES
-  const introText = "I am a software engineer.";
-  const aboutMeText = "I'm a recent Math/CS grad from University of Waterloo and I have strong experience with writing object-oriented code and have strong work experience with frameworks like React and both full-stack and mobile development, along with other experience displayed on my resume.";
+  const introText = "React / iOS / Full-Stack / Native Mobile Software Engineer, Designer";
+  const aboutMeText = "I am a recent Math/CS grad from University of Waterloo and I have a variety of experience working and becoming knowledgeable in software development. During my time at LinkedIn, I was an iOS Engineer on the Profile Page Team and one project I completed was a code migration for Profile Page cards, which you can see on the profile page of the mobile application. While I was a co-op student at Inkling, I assisted with the pilot release of the company's React Native (native mobile) mobile app. Don't hesitate to contact me if my skills can help solve any of your problems!";
   const fullNameText = "Anthony Madison";
   const emailAddressText = "a97madison@gmail.com";
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
   const githubLinkText = "https://github.com/a97madison";
-  const instagramLinkText1 = "https://www.instagram.com/anthony0cap/";
-  const instagramLinkText2 = "https://www.instagram.com/fly_sht_only_/";
-  const twitterLinkText = "https://twitter.com/xanthony2018";
-  const facebookLinkText = "https://www.facebook.com/anthonydmadison/";
-  const twitchLinkText = "https://www.twitch.tv/legreatness123";
   const githubUsername = "a97madison";
-  const instagramUsername1 = "@anthony0cap";
-  const instagramUsername2 = "@fly_sht_only_";
-  const twitterUsername = "@xanthony2018";
-  const twitchUsername = "legreatness123";
   const birthdate = new Date(1997, 9, 31);
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const day = days[birthdate.getDay()];
@@ -42,10 +32,7 @@ function App() {
   const ageDate = new Date(ageDifMs); // miliseconds from epoch
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
   const city = "Waterloo, Ontario, Canada";
-  const address = "56 Willow Street, " + city;
   const cityGoogleMapsLink = "https://www.google.com/maps/place/Waterloo,+ON/@43.4823217,-80.6167598,12z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096";
-  const addressGoogleMapsLink = "";
-  const companyWebsiteLink = "https://www.purefacts.com/";
 
   const informationPairs = [
     // ["Full Name", fullNameText],
@@ -55,15 +42,8 @@ function App() {
     ["Company", "Swish Studios"],
     ["LinkedIn", linkedInLinkText],
     ["Github", [githubUsername, githubLinkText]],
-    ["Instagram", [instagramUsername1, instagramLinkText1]],
-    ["Instagram", [instagramUsername2, instagramLinkText2]],
-    ["Twitter", [twitterUsername, twitterLinkText]],
-    ["Facebook", facebookLinkText],
-    ["Twitch", [twitchUsername, twitchLinkText]],
     ["Phone #", "1-(226)-808-9619"],
-    ["Job Title", "Software Engineer"],
     ["City", [city, cityGoogleMapsLink]],
-    ["Address", [address, addressGoogleMapsLink]],
   ];
 
   const workExperienceCells = [
@@ -133,7 +113,7 @@ function App() {
 
   const educationProps = {
     bulletPointsArray:["● 2019 Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
-                       "● Gained 3+ years of professional work experience as a front-end developer, native mobile engineer, and ios engineer through University of Waterloo's co-op program",
+                       "● Gained 3+ years of professional work experience as a ios engineer, full-stack developer and native mobile engineer through University of Waterloo's co-op program",
                        "● In Computational Mathematics you learn to analyze data sets, formulae, and images in ways that help us understand the world around us and predict/influence the future",
                        "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
     schoolLink:"https://uwaterloo.ca/"
@@ -154,29 +134,28 @@ function App() {
       projectLink: "https://www.instagram.com/anthony0cap/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
     },
-    {
-      title: "@cian.p's personal website",
-      time: "Sept. 2020",
-      projectLink: "https://www.instagram.com/cian.p/",
-      bulletPointsArray:["● This website is built entirely using React with Redux"],
-    },
-    {
-      title: "Young Lung's personal website",
-      time: "Sept. 2020",
-      projectLink: "https://www.instagram.com/younglungs98/",
-      bulletPointsArray:["● This website is built entirely using React with Redux"],
-    },
-    {
-      title: "Swish Studio's website",
-      time: "Sept. 2020",
-      projectLink: "https://www.instagram.com/swish.studios/",
-      bulletPointsArray:["● This website is built entirely using React with Redux"],
-    }
+    // {
+    //   title: "@cian.p's personal website",
+    //   time: "Sept. 2020",
+    //   projectLink: "https://www.instagram.com/cian.p/",
+    //   bulletPointsArray:["● This website is built entirely using React with Redux"],
+    // },
+    // {
+    //   title: "Young Lung's personal website",
+    //   time: "Sept. 2020",
+    //   projectLink: "https://www.instagram.com/younglungs98/",
+    //   bulletPointsArray:["● This website is built entirely using React with Redux"],
+    // },
+    // {
+    //   title: "Swish Studio's website",
+    //   time: "Sept. 2020",
+    //   projectLink: "https://www.instagram.com/swish.studios/",
+    //   bulletPointsArray:["● This website is built entirely using React with Redux"],
+    // }
   ];
 
   const headerFont = "ModestoW01-Open";
-  const bgColour = "#f4f0e2";
-  const appHeight = "90vh", appWidth = "80vw", sidebarWidth = "20vw";
+  const appHeight = "90vh", appWidth = "80vw";
 
   // page colours
   const color1 = "rgb(244,240,226)";
@@ -205,8 +184,6 @@ function App() {
       color1={color3}
       color2={color2}
       appHeight={appHeight}
-      fullName={fullNameText}
-      bgColour={bgColour}
       informationPairs={informationPairs}
       aboutMeText={aboutMeText}
     />
@@ -295,7 +272,7 @@ function App() {
         {portfolioObject}
         {companyObject}
       </div>
-    <div style={adContainerStyle}>{""}</div>
+    <div style={adContainerStyle}></div>
     </div>
   );
 }

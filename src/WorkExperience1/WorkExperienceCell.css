@@ -2,16 +2,16 @@
     margin-left: 0px;
     padding-left: 0px;
     object-fit: fill; 
-    height: 6vmin;
-    width: 6vmin;
+    height: 5.5vmin;
+    width: 5.5vmin;
     border-radius: 6%;
     z-index: 0;
 }
 
 .Company-li {
-    margin-top: -6vmin !important;
-    height: 6vmin !important;
-    width: 6vmin !important;
+    margin-top: -5.5vmin !important;
+    height: 5.5vmin !important;
+    width: 5.5vmin !important;
     border-radius: 6% !important;
     z-index: 1;
 }

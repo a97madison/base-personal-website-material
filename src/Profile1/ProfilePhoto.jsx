@@ -1,6 +1,5 @@
 import React from 'react';
 import profilePhoto from '../Images/profilePhoto.png';
-import {emptyHr} from '../GlobalConstants';
 
 // import './ProfilePhoto.css';
 
@@ -24,8 +23,6 @@ function ProfilePhoto(props) {
     return (
         <div style={profilePhotoStyle}>
           <img style={profileImgStyle} src={profilePhoto} alt={"..."}></img>
-          {/* {emptyHr} */}
-          {/* {emptyHr} */}
         </div>
     );
 }

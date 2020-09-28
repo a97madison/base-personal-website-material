@@ -5,7 +5,7 @@ import ProfilePhoto from './ProfilePhoto';
 import AboutMe from './AboutMe';
 
 function Profile(props) {
-  const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight, fullName = props.fullName, informationPairs = props.informationPairs, aboutMeText = props.aboutMeText;
+  const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight, informationPairs = props.informationPairs, aboutMeText = props.aboutMeText;
 
   // DEFINE STYLE CONSTANTS 
   const profileStyle = {
@@ -55,7 +55,7 @@ function Profile(props) {
         <Information
           sectionStyle={sectionStyle}
           sectionParentStyle={sectionParentStyle}
-          informationPairs={props.informationPairs}
+          informationPairs={informationPairs}
         />
 
         <ProfilePhoto
@@ -66,7 +66,7 @@ function Profile(props) {
         <AboutMe
           sectionStyle={sectionStyle}
           sectionParentStyle={sectionParentStyle}
-          aboutMeText={props.aboutMeText}
+          aboutMeText={aboutMeText}
         />
       </div>
     </div>

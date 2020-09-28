@@ -8,8 +8,6 @@ import '../ConstantStyles.css';
 function HomePage(props) {
   const color1 = props.color1, color2 = props.color2, fullName = props.fullName, introText = props.introText, textFont = props.textFont, appHeight = props.appHeight, appWidth = props.appWidth;
 
-  const bgImageURL = "url('../Images/profilePhoto.png')"
-  
   // DEFINE STYLE CONSTANTS
   const homePageStyle = {
     background: color1,

@@ -14,7 +14,7 @@ function Information(props) {
         textAlign: "left"
     }
     
-    const informationCells = props.informationPairs.map(myPairToStringFunction)
+    const informationCells = informationPairs.map(myPairToStringFunction)
     // RETURN INFORMATION DIV
     return (
         <div style={sectionStyle}>

@@ -2,6 +2,7 @@
     object-fit: fill;
     height: 4.4vmin;
     width: 4.4vmin;
+    margin-top: 1em;
     border-radius: 7%;
     z-index: 0;
 }
@@ -9,7 +10,20 @@
 .Social-li {
     border-radius: 7% !important;
     margin-left: -4.4vmin !important;
+    margin-right: -4.4vmin !important;
+    margin-top: 1em !important;
     height: 4.4vmin !important;
     width: 4.4vmin !important;
     z-index: 1;
+}
+
+.Pressable-li-1 {
+    margin-left: 4.5vmin !important;
+    border-radius: 3% !important;
+    text-align: left !important;
+}
+
+.Pressable-li-2 {
+    border-radius: 3% !important;
+    text-align: left !important;
 }

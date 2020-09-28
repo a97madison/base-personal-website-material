@@ -1,6 +1,8 @@
 import React from 'react';
 import CompanyHeader from './CompanyHeader';
 
+import '../ConstantStyles.css';
+
 function Company(props) {
   const color1 = props.color1, color2 = props.color2, appWidth = props.appWidth;
   
@@ -20,7 +22,7 @@ function Company(props) {
 
   const companyTextStyle = {
     position: "absolute",
-    top: "42vh",
+    top: "45vh",
     left: "0px",
     width: appWidth,
     textAlign: "center"
@@ -30,7 +32,7 @@ function Company(props) {
   return (
     <div id="company" style={companyStyle}>
       <CompanyHeader />
-      <div style={companyTextStyle} className="Page-text-1">{"COMING SOON!"}</div>
+      <div style={companyTextStyle} className="Page-text-1">{"COMING SOON"}</div>
     </div>
   );
 }

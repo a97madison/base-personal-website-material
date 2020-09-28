@@ -1,6 +1,4 @@
 import React from 'react';
-// import style constants
-import {emptyHr, profileHr} from '../GlobalConstants';
 
 import '../ConstantStyles.css';
 
@@ -11,10 +9,7 @@ function WorkExperienceHeader(props) {
     // RETURN PROFILEHEADER DIOV
     return (
         <div className="Header">
-            {emptyHr}
             <p> {"WORK EXPERIENCE"} </p>
-            {/* HORIZONTAL BREAK LINE */}
-            {profileHr}
         </div>
     );
 }

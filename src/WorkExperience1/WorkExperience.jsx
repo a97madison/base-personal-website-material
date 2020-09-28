@@ -1,5 +1,4 @@
 import React from 'react';
-import SwishLogo from '../Images/SwishLogo.png';
 import WorkExperienceHeader from './WorkExperienceHeader';
 import WorkExperienceCell from './WorkExperienceCell';
 

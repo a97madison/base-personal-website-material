@@ -1,35 +1,37 @@
 import React from 'react';
-import {makeButton} from '../GlobalHelpers';
+import {makePressableObject, makePressableText} from '../GlobalHelpers';
+
+import '../ConstantStyles.css';
 
 // DEFINE STYLE CONSTANTS
 const singleInfoCellStyle = {
     display: "flex",
     flexDirection: "row",
+    textAlign: "left",
     marginLeft: "0.6vmin"
 };
 
 // creates div for value text for simple key/value information cells
 function secondDivBaseHelper(text) {
     return (
-        <div style={singleInfoCellStyle} className="Page-text-1"> {text} </div>
+        <p style={singleInfoCellStyle} className="Page-text-1"> {text} </p>
     );
 }
 
 // creates div for email text for email info cell
 function secondDivEmailHelper(email) {
     return (
-        
         <div style={singleInfoCellStyle} className="Page-text-1"> 
-            <a href = {"mailto: "+email}>{email}</a>
+            {makePressableText(email, email, "2")}
         </div>
     );
 }
 
 function secondDivSocialMediaButtonHelper1(pair) { 
     // do this    // window.open("https://www.geeksforgeeks.org"); 
-    const pressableObject = makeButton(pair[0],pair[1],"Social");
+    const pressableObject = makePressableObject(pair[0],pair[1],"Social");
     return (
-        <div style={singleInfoCellStyle}>
+        <div style={singleInfoCellStyle}> 
             {pressableObject}
         </div>
     );
@@ -38,26 +40,28 @@ function secondDivSocialMediaButtonHelper1(pair) {
 function secondDivSocialMediaButtonHelper2(pair) {
     // show handle beside button
     const pressableObject = secondDivSocialMediaButtonHelper1([pair[0], pair[1][1]]);
-
-    function textOnClick() {
-        window.open(pair[1][1]);
-    }
-
-    const socialMediaHandle = (
-        <div className="Page-text-1" onClick={textOnClick}>
-            {"(" + pair[1][0] + ")"}
+    const pressableText = (
+        <div style={singleInfoCellStyle}>
+            {makePressableText("(" + pair[1][0] + ")", pair[1][1], "1")}
         </div>
     );
-    return [
-        pressableObject,
-        socialMediaHandle
-    ];
+    const socialMedia2Style = {
+        display: "flex",
+        flexDirection: "row"
+    };
+
+    return (
+        <div style={socialMedia2Style}>
+            {pressableObject}
+            {pressableText}
+        </div>
+    );
 }
 
 function secondDivBrandHelper(brandName) {
-    const pressableObject = makeButton(brandName,"","Social");
+    const pressableObject = makePressableObject(brandName,"","Social");
     return (
-        <div style={singleInfoCellStyle}>
+        <div style={singleInfoCellStyle}> 
             {pressableObject}
         </div>
     );
@@ -66,7 +70,7 @@ function secondDivBrandHelper(brandName) {
 function secondDivLinkHelper(informationWithLink) {
     return (
         <div style={singleInfoCellStyle} className="Page-text-1">
-            <a href={informationWithLink[1]}>{informationWithLink[0]}</a>
+            {makePressableText(informationWithLink[0], informationWithLink[1], "2")}
         </div>
     );
 }
@@ -74,7 +78,7 @@ function secondDivLinkHelper(informationWithLink) {
 
 export function myPairToStringFunction(pair) {
     const firstDiv = (
-        <div className="Page-text-1"> {pair[0] + ":"} </div>
+        <p className="Page-text-1"> {pair[0] + ":"} </p>
     );
 
     let secondDiv = null;

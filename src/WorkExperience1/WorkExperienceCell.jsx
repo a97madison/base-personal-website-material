@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeButton} from '../GlobalHelpers';
+import {makePressableObject} from '../GlobalHelpers';
 
 import './WorkExperienceCell.css';
 import '../ConstantStyles.css';
@@ -17,10 +17,6 @@ function WorkExperienceCell(props) {
       paddingLeft: "5vmin",
       textAlign: "left"
     }
-    const logoCityTimeframeStyle = {
-      display: "flex",
-      flexDirection: "row",
-    }
     const cityTimeframeStyle = {
       display: "flex",
       flexDirection: "column",
@@ -32,12 +28,27 @@ function WorkExperienceCell(props) {
       marginLeft: "0.1vmin",
       marginTop: "0.2vmin"  
     };
+    const weBulletPointParentStyle = {
+      display: "table",
+      textAlign: "left"
+    };
+    const weBulletPointTextStyle = {
+      display: "table-cell",
+      verticalAlign: "middle",
+      margin: "0px 0px 0px 0px"
+    };
+    const weBulletPointsStyle = {
+      display: "table",
+      height: "100%", 
+    }
 
-    const pressableObject = makeButton(props.companyName, props.companyLink, "Company");
+    const pressableObject = makePressableObject(props.companyName, props.companyLink, "Company");
 
     function textToObjectFunction(text) {
       return (
-        <div style={wePageTextStyle}> {text} </div>
+        <div style={weBulletPointParentStyle}>
+          <div style={weBulletPointTextStyle}> {text} </div>
+        </div>
       );
     } 
 
@@ -53,7 +64,7 @@ function WorkExperienceCell(props) {
           <div style={wePageTextStyle}> {props.timeframe} </div>
           <div style={wePageTextStyle}> {props.city} </div>
         </div>
-        <div>  
+        <div style={weBulletPointsStyle}> 
           {bulletPointObjects}
         </div>
       </div>

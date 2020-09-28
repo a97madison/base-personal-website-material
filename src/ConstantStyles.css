@@ -1,7 +1,7 @@
 .Header {
     font-size: 4vmin;
-    margin: -1px 20vw 0px 0px;
-    height: 15vh;
+    margin: 2vh 20vw 0px 0px;
+    border-bottom: 0.4vmin solid darkgrey;
     z-index: 0;
     font-family: 'ModestoW01-Open';
 }
@@ -11,7 +11,7 @@
 }
 
 .Page-text-2 {
-    font-size: 1.3vmin;
+    font-size: 2vmin;
     font-family: 'Geneva';
 }
 
@@ -22,7 +22,7 @@
 }
 
 .Header-text-3 {
-    font-size: 1.4vmin;
+    font-size: 2vmin;
     font-family: 'ModestoW01-Open';
     padding-left: 5vmin;
     margin-top: 0.5vmin;
@@ -34,28 +34,37 @@
     display: table-cell;
 }
 
-
-
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 39/20) {
     .Page-text-2 {
-        font-size: 1vmin;
+        font-size: 1.6vmin;
+    }
+    .Header-text-3 {
+        font-size: 1.6vmin;
     }
 }
-
-@media (max-aspect-ratio: 31/20) {
+@media (max-aspect-ratio: 33/20) {
+    .Page-text-2 {
+        font-size: 1.4vmin;
+    }
     .Header-text-3 {
-        font-size: 1.3vmin;
+        font-size: 1.4vmin;
     }
 }
 
 @media (max-aspect-ratio: 10/7) {
+    .Page-text-2 {
+        font-size: 1.1vmin;
+    }
     .Header-text-3 {
-        font-size: 1vmin;
+        font-size: 1.1vmin;
     }
 }
 
-@media (max-aspect-ratio: 10/9) {
-    .Header-text-3 {
-        font-size: 0.9vmin;
+/* @media (max-aspect-ratio: 10/9) {
+    .Page-text-2 {
+        font-size: 1.4vmin;
     }
-}
+    .Header-text-3 {
+        font-size: 1.vmin;
+    }
+} */

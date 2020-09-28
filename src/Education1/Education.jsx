@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeButton} from '../GlobalHelpers';
+import {makePressableObject} from '../GlobalHelpers';
 import EducationHeader from './EducationHeader';
 
 import './Education.css';
@@ -49,7 +49,7 @@ function Education(props) {
     width: "50vw"
   };
 
-  const pressableObject = makeButton("UWaterloo", education.schoolLink, "Education")
+  const pressableObject = makePressableObject("UWaterloo", education.schoolLink, "Education")
 
   function textToObjectFunction(text) {
     return (

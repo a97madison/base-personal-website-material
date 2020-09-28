@@ -2,6 +2,8 @@ import React from 'react';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioCell from './PortfolioCell';
 
+import '../ConstantStyles.css';
+
 function portfolioCellsToCellFunction(cellProps) {
   // return div for one work experience cell
   return (
@@ -41,7 +43,12 @@ function Portfolio(props) {
     bottom: "0px"
   };
   const portfolioCells = props.cellsProps.map(portfolioCellsToCellFunction)
-
+  const portfolioTextStyle = {
+    marginTop: "2.2vh",
+    width: appWidth,
+    textAlign: "center"
+  };
+  
   // RETURN PORTFOLIO DIV
   return (
     <div id="portfolio" style={portfolioStyle}>
@@ -50,6 +57,8 @@ function Portfolio(props) {
       <div style={portfolioCellsStyle}>
         {portfolioCells}
       </div>
+
+      <div style={portfolioTextStyle} className="Page-text-1">{"MORE COMING SOON"}</div>
     </div>
   );
 }

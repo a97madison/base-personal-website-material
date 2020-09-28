@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeButton} from '../GlobalHelpers';
+import {makePressableObject} from '../GlobalHelpers';
 
 import './PortfolioCell.css';
 import '../ConstantStyles.css';
@@ -28,7 +28,7 @@ function PortfolioCell(props) {
     textAlign: "left",
     width: "55vw"
   };
-    const pressableObject = makeButton(props.title, props.projectLink, "Project");
+    const pressableObject = makePressableObject(props.title, props.projectLink, "Project");
   
     function textToObjectFunction(text) {
       return (
