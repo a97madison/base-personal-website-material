@@ -4,7 +4,7 @@ import HomePage from './HomePage1/HomePage';
 import WorkExperience from './WorkExperience1/WorkExperience';
 import Education from './Education1/Education';
 import Portfolio from './Portfolio1/Portfolio';
-import Company from './Company1/Company';
+// import Company from './Company1/Company';
 import Sidebar from './Sidebar';
 
 // import font
@@ -15,7 +15,7 @@ import './Fonts/fonts.css';
 function App() {
 
   // DEFINE DATA VARIABLES
-  const introText = "React / iOS / Full-Stack / Native Mobile Software Engineer, Designer";
+  const introText = "React / iOS / Full-Stack / Native Mobile Software Engineer";
   const aboutMeText = "I am a recent Math/CS grad from University of Waterloo and I have a variety of experience working and becoming knowledgeable in software development. During my time at LinkedIn, I was an iOS Engineer on the Profile Page Team and one project I completed was a code migration for Profile Page cards, which you can see on the profile page of the mobile application. While I was a co-op student at Inkling, I assisted with the pilot release of the company's React Native (native mobile) mobile app. Don't hesitate to contact me if my skills can help solve any of your problems!";
   const fullNameText = "Anthony Madison";
   const emailAddressText = "a97madison@gmail.com";
@@ -35,11 +35,10 @@ function App() {
   const cityGoogleMapsLink = "https://www.google.com/maps/place/Waterloo,+ON/@43.4823217,-80.6167598,12z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096";
 
   const informationPairs = [
-    // ["Full Name", fullNameText],
     ["Age", age],
     ["Birthdate", birthdateText],
     ["Email", emailAddressText],
-    ["Company", "Swish Studios"],
+    // ["Company", "Swish Studio"],
     ["LinkedIn", linkedInLinkText],
     ["Github", [githubUsername, githubLinkText]],
     ["Phone #", "1-(226)-808-9619"],
@@ -146,12 +145,12 @@ function App() {
     //   projectLink: "https://www.instagram.com/younglungs98/",
     //   bulletPointsArray:["● This website is built entirely using React with Redux"],
     // },
-    // {
-    //   title: "Swish Studio's website",
-    //   time: "Sept. 2020",
-    //   projectLink: "https://www.instagram.com/swish.studios/",
-    //   bulletPointsArray:["● This website is built entirely using React with Redux"],
-    // }
+    {
+      title: "Swish Studio's website",
+      time: "Sept. 2020",
+      projectLink: "https://www.swishstudio2020.com/",
+      bulletPointsArray:[],
+    }
   ];
 
   const headerFont = "ModestoW01-Open";
@@ -217,13 +216,13 @@ function App() {
     />
   );
 
-  const companyObject = (
-    <Company
-      color1={color7}
-      color2={color6}
-      appWidth={appWidth}
-    />
-  );
+  // const companyObject = (
+  //   <Company
+  //     color1={color7}
+  //     color2={color6}
+  //     appWidth={appWidth}
+  //   />
+  // );
 
   const items = [
     { name: 'home', label: 'Home Page' },
@@ -231,7 +230,7 @@ function App() {
     { name: 'work', label: 'Work Experience' },
     { name: 'education', label: 'Education' },
     { name: 'portfolio', label: 'Portfolio' },
-    { name: 'company', label: 'Company' }
+    // { name: 'company', label: 'Company' }
   ];  
 
   const sidebarObject = (
@@ -270,7 +269,7 @@ function App() {
         {workExperienceObject}
         {educationObject}
         {portfolioObject}
-        {companyObject}
+        {/* {companyObject} */}
       </div>
     <div style={adContainerStyle}></div>
     </div>

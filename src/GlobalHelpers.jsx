@@ -72,7 +72,7 @@ export function makePressableObject(name, link, buttonClass) {
       return Facebook;
     } else if (name === "Instagram") {
       return Instagram;
-    } else if (name === "Swish Studios") {
+    } else if (name === "Swish Studios" || name == "Swish Studio's website") {
       return SwishLogo;
     } // else if (name == "@cian.p's personal website") {
       // return Cian;
