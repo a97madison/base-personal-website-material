@@ -12,6 +12,7 @@ function portfolioCellsToCellFunction(cellProps) {
       time={cellProps.time}
       projectLink={cellProps.projectLink}
       bulletPointsArray={cellProps.bulletPointsArray}
+      linksArray={cellProps.linksArray}
     />
   );
 }
@@ -25,22 +26,16 @@ function Portfolio(props) {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    position: "absolute",
-    marginTop: "360vh",
     height: appHeight,
+    marginBottom: "10vh",
     width: "100%",
-    top: "0px",
     left: "0px",
-    overflowY: "scroll"
   };
   const portfolioCellsStyle = {
     display: "flex",
     flexDirection: "column",
-    position: "relative",
     margin: "0px 20vw 0px 0px",
-    borderBottom: "0.1vmin solid darkgrey",
-    top: "0px",
-    bottom: "0px"
+    right: "0.4vmin"
   };
   const portfolioCells = props.cellsProps.map(portfolioCellsToCellFunction)
   const portfolioTextStyle = {
@@ -48,7 +43,7 @@ function Portfolio(props) {
     width: appWidth,
     textAlign: "center"
   };
-  
+
   // RETURN PORTFOLIO DIV
   return (
     <div id="portfolio" style={portfolioStyle}>
@@ -56,9 +51,9 @@ function Portfolio(props) {
 
       <div style={portfolioCellsStyle}>
         {portfolioCells}
+        <div style={portfolioTextStyle} className="Page-text-1">{"MORE COMING SOON"}</div>
       </div>
 
-      <div style={portfolioTextStyle} className="Page-text-1">{"MORE COMING SOON"}</div>
     </div>
   );
 }

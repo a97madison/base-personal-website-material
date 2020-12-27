@@ -6,7 +6,7 @@ import LinkedInLogo from './Images/LinkedIn.jpg';
 import InklingLogo from './Images/Inkling.png';
 import CSCLogo from './Images/CSC.jpg';
 import CIHILogo from './Images/CIHI.jpg';
-import AxonifyLogo from './Images/Axonify.png';
+import VisionaireLogo from './Images/Visionaire.jpg';
 import PurefactsLogo from './Images/Purefacts.png';
 import Uwaterloo from './Images/UWaterloo.jpg';
 // todo: make gifs for each of these images
@@ -32,7 +32,7 @@ function onButtonItemClick(link) {
 export function makePressableText(text, link, liType) {
   return (
     <ListItem className={"Pressable-li-" + liType} onClick={() => onButtonItemClick(link)} button>
-      <ListItemText> 
+      <ListItemText>
         <div className={"Page-text-1"}>{text}</div>
       </ListItemText>
     </ListItem>
@@ -40,7 +40,7 @@ export function makePressableText(text, link, liType) {
 }
 
 export function makePressableObject(name, link, buttonClass) {
-  
+
   function getImage(name) {
     if (name === "LINKEDIN") {
       return LinkedInLogo;
@@ -50,9 +50,9 @@ export function makePressableObject(name, link, buttonClass) {
       return CSCLogo;
     } else if (name === "CANADIAN INSTITUTE FOR HEALTH INFORMATION") {
       return CIHILogo;
-    } else if (name === "AXONIFY INC.") {
-      return AxonifyLogo;
-    } else if (name === "PUREFACTS") {
+    } else if (name === "VISIONAIRE 3D") {
+      return VisionaireLogo;
+    } else if (name === "PUREFACTS FINANCIAL SOLUTIONS") {
       return PurefactsLogo;
     } else if (name === "UWaterloo") {
       return Uwaterloo;

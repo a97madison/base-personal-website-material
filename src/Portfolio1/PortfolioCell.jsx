@@ -4,7 +4,7 @@ import {makePressableObject} from '../GlobalHelpers';
 import './PortfolioCell.css';
 import '../ConstantStyles.css';
 
-function PortfolioCell(props) {  
+function PortfolioCell(props) {
   // DEFINE STYLE CONSTANTS
   const portCellStyle = {
     display: "flex",
@@ -29,20 +29,30 @@ function PortfolioCell(props) {
     width: "55vw"
   };
     const pressableObject = makePressableObject(props.title, props.projectLink, "Project");
-  
+
     function textToObjectFunction(text) {
       return (
         <p style={portBulletPointsStyle}> {text} </p>
       );
-    } 
+    }
+
+    function textToLinkFunction(text) {
+      return (
+        <p style={portBulletPointsStyle}>
+          {"● "}
+          <a href={text}> {text} </a>
+        </p>
+      )
+    }
 
     const bulletPointObjects = props.bulletPointsArray.map(textToObjectFunction);
+    const linkObjects = props.linksArray.map(textToLinkFunction);
 
   // RETURN PORTFOLIO CELL DIV
   return (
     <div style={portCellStyle} className="Page-text-2">
       <div className="Header-text-3"> {props.title} </div>
-  
+
       <div style={gifDateBulletPointsStyle}>
         <div style={gifDateStyle}>
           {pressableObject}
@@ -50,6 +60,7 @@ function PortfolioCell(props) {
         </div>
         <div>
           {bulletPointObjects}
+          {linkObjects}
         </div>
       </div>
     </div>

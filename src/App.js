@@ -47,6 +47,16 @@ function App() {
 
   const workExperienceCells = [
     {
+      companyName:"VISIONAIRE 3D",
+      position:"iOS Engineer",
+      companyLink:"https://visionaire3d.com/",
+      city:"Toronto, ON",
+      timeframe:"Oct. 2020 - Present",
+      bulletPointsArray:["● Completed the entire first version of their SWIFT iOS application “STYLR” by the end of November with one other engineer",
+                         "● Implemented entire Profile tab in app, implemented detail pages, collection views, data manipulation, etc through rest of app",
+                         "● Stylr is a 3D visualization app targeting the real estate industry; users showcase interior design concepts"]
+    },
+    {
       companyName:"LINKEDIN",
       position:"iOS ENGINEER",
       companyLink:"https://www.linkedin.com/",
@@ -89,26 +99,16 @@ function App() {
                          "● Analyzed web frameworks Bootstrap, React, AngularJS and Web Experience Toolkit in a comparison report of frameworks"]
     },
     {
-      companyName:"AXONIFY INC.",
-      position:"QUALITY ASSURANCE ANALYST",
-      companyLink:"https://axonify.com/",
-      city:"Waterloo, ON",
-      timeframe:"Sept. 2015 - Dec. 2015",
-      bulletPointsArray:["● Architected regression test plan and put effective testing measures in place for part of Axonify’s iOS and Android apps",
-                         "● Fixed straightforward bugs, found and allocated bugs in code-base, tested bug fixes, executed regression testing",
-                         "● Organized team meetings such as sprint planning and standups during month-long sprints"]
-    },
-    {
       companyName:"PUREFACTS FINANCIAL SOLUTIONS",
       position:"iOS ENGINEER",
       companyLink:"https://www.purefacts.com/",
       city:"Toronto, ON",
       timeframe:"Jan. 2015 - Apr. 2015",
-      bulletPointsArray:["● Prepared complete set of test data through SQL procedures in MySQL, for use in testing and demos shown to customers",
+      bulletPointsArray:["● Completed the entire first version of their SWIFT iOS application “STYLR” by the end of November with one other engineer",
                          "● Tested products developed by coworkers and modernized software’s testing system by creating a complete test plan",
                          "● Standardized new automation testing system using Ranorex to improve speed and quality of testing system"]
     },
-  ];  
+  ];
 
   const educationProps = {
     bulletPointsArray:["● 2019 Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
@@ -117,21 +117,22 @@ function App() {
                        "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
     schoolLink:"https://uwaterloo.ca/"
   };
- 
+
   const portfolioCells = [
     {
       title: "Two player chess game web application",
       time: "Jun. 2020",
       projectLink: "https://github.com/a97madison/chess-with-react-redux",
       bulletPointsArray:["● Web app is built using React with Redux for local and global store of data alongside JavaScript, HTML, CSS and PHP.",
-                         "● N4js is used for type checking of React elements and all of the chess game logic implemented within React components.",
-                         "● Read source code and test app here: https://github.com/a97madison/chess-with-react-redux"],
+                         "● N4js is used for type checking of React elements and all of the chess game logic implemented within React components."],
+      linksArray:["https://github.com/a97madison/chess-with-react-redux"]
     },
     {
       title: "Personal website",
       time: "Aug. 2020",
       projectLink: "https://www.instagram.com/anthony0cap/",
       bulletPointsArray:["● This website is built entirely using React with Redux"],
+      linksArray:[]
     },
     // {
     //   title: "@cian.p's personal website",
@@ -150,6 +151,7 @@ function App() {
       time: "Sept. 2020",
       projectLink: "https://www.swishstudio2020.com/",
       bulletPointsArray:[],
+      linksArray:["https://swishstudio2020.com"]
     }
   ];
 
@@ -231,11 +233,11 @@ function App() {
     { name: 'education', label: 'Education' },
     { name: 'portfolio', label: 'Portfolio' },
     // { name: 'company', label: 'Company' }
-  ];  
+  ];
 
   const sidebarObject = (
-    <Sidebar 
-      items={items} 
+    <Sidebar
+      items={items}
       appHeight={appHeight}
       appWidth={appWidth}
     />
@@ -248,7 +250,7 @@ function App() {
     flexDirection: "column",
     margin: "0px 0px 0px 0px",
     fontFamily: 'Geneva',
-    color: 'darkgrey'
+    color: 'grey'
   };
 
   const adContainerStyle = {
@@ -259,13 +261,19 @@ function App() {
     backgroundColor: "white"
   }
 
+  const mainSectionStyle = {
+    position: "relative",
+    // display: "flex",
+    // flexDirection: "row"
+  }
+
   // RETURN APP COMPONENT
   return (
     <div style={appStyle}>
       {sidebarObject}
-      <div>
-        {profileObject}
+      <div style={mainSectionStyle}>
         {homePageObject}
+        {profileObject}
         {workExperienceObject}
         {educationObject}
         {portfolioObject}

@@ -14,11 +14,8 @@ function Education(props) {
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     display: "flex",
     flexDirection: "column",
-    position: "absolute",
-    marginTop: "270vh",
     height: appHeight,
     width: "100%",
-    top: "0px",
     left: "0px"
   };
   const educationInfoStyle = {
@@ -53,13 +50,13 @@ function Education(props) {
 
   function textToObjectFunction(text) {
     return (
-      <div style={educationBulletPointParentStyle}> 
-        <p style={educationBulletPointTextStyle}> 
-          {text} 
+      <div style={educationBulletPointParentStyle}>
+        <p style={educationBulletPointTextStyle}>
+          {text}
         </p>
       </div>
     );
-  } 
+  }
 
   const bulletPointObjects = education.bulletPointsArray.map(textToObjectFunction);
 
