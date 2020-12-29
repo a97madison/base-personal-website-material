@@ -9,14 +9,13 @@ function ProfilePhoto(props) {
         marginTop: "9vh",
         justifyContent: "center",
         width: "25vw",
-        // border: "0.1vmin solid blue"
     }
 
     const profileImgStyle = {
         height: "20vw",
         width: "auto",
         borderRadius: "50%",
-        border: "0.25vh solid darkgrey"    
+        border: "0.25vh solid darkgrey"
     }
 
     // RETURN PROFILEPHOTO DIV

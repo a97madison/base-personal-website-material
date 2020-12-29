@@ -7,6 +7,7 @@ import '../ConstantStyles.css';
 const singleInfoCellStyle = {
     display: "flex",
     flexDirection: "row",
+    position: "relative",
     textAlign: "left",
     marginLeft: "0.6vmin"
 };
@@ -21,17 +22,17 @@ function secondDivBaseHelper(text) {
 // creates div for email text for email info cell
 function secondDivEmailHelper(email) {
     return (
-        <div style={singleInfoCellStyle} className="Page-text-1"> 
+        <div style={singleInfoCellStyle} className="Page-text-1">
             {makePressableText(email, email, "2")}
         </div>
     );
 }
 
-function secondDivSocialMediaButtonHelper1(pair) { 
-    // do this    // window.open("https://www.geeksforgeeks.org"); 
+function secondDivSocialMediaButtonHelper1(pair) {
+    // do this    // window.open("https://www.geeksforgeeks.org");
     const pressableObject = makePressableObject(pair[0],pair[1],"Social");
     return (
-        <div style={singleInfoCellStyle}> 
+        <div style={singleInfoCellStyle}>
             {pressableObject}
         </div>
     );
@@ -39,19 +40,17 @@ function secondDivSocialMediaButtonHelper1(pair) {
 
 function secondDivSocialMediaButtonHelper2(pair) {
     // show handle beside button
-    const pressableObject = secondDivSocialMediaButtonHelper1([pair[0], pair[1][1]]);
-    const pressableText = (
-        <div style={singleInfoCellStyle}>
-            {makePressableText("(" + pair[1][0] + ")", pair[1][1], "1")}
-        </div>
-    );
+    const newPair = [pair[0], pair[1][1]];
+    const pressableObject = makePressableObject(newPair[0], newPair[1], "Social");
+    const pressableText = makePressableText("(" + pair[1][0] + ")", pair[1][1], "1");
+
     const socialMedia2Style = {
         display: "flex",
         flexDirection: "row"
     };
 
     return (
-        <div style={socialMedia2Style}>
+        <div style={singleInfoCellStyle}>
             {pressableObject}
             {pressableText}
         </div>
@@ -61,7 +60,7 @@ function secondDivSocialMediaButtonHelper2(pair) {
 function secondDivBrandHelper(brandName) {
     const pressableObject = makePressableObject(brandName,"","Social");
     return (
-        <div style={singleInfoCellStyle}> 
+        <div style={singleInfoCellStyle}>
             {pressableObject}
         </div>
     );
@@ -98,7 +97,7 @@ export function myPairToStringFunction(pair) {
             break;
         case "Bookings":
             secondDiv = secondDivEmailHelper(pair[1]);
-            break;   
+            break;
         case "Brand":
             secondDiv = secondDivBrandHelper(pair[1]);
             break;
@@ -140,7 +139,7 @@ export function myPairToStringFunction(pair) {
             break;
         default:
             secondDiv = secondDivBaseHelper(pair[1]);
-        
+
     }
 
     return (

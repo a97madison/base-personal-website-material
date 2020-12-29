@@ -39,7 +39,7 @@ function HomePage(props) {
   // RETURN HOMEPAGE DIV
   return (
     <div id="home">
-      <div style={homePageStyle}> 
+      <div style={homePageStyle}>
         <div style={homePageParentStyle}>
           <p style={homePageTextStyle}>{fullName}</p>
           <div style={introTextStyle} className="Page-text-1">{introText}</div>

@@ -13,13 +13,13 @@ function Profile(props) {
     background: "linear-gradient(0deg, " + color1 + ", " + color2 + " 100%)",
     display: "flex",
     flexDirection: "column",
-    height: appHeight,
+    minHeight: appHeight,
     width: "100%"
   };
   const profileSectionsStyle = {
     display: "flex",
     marginRight: "20vw",
-    height: "75vh",
+    minHeight: "75vh",
     marginBottom: "3vh",
     flexDirection: "row",
     justifyContent: "center",
@@ -34,7 +34,7 @@ function Profile(props) {
   const sectionParentStyle = {
     overflowX: "scroll",
     overflowY: "scroll",
-    padding: "10px",
+    padding: "4px",
     border: "0.25vmin solid darkgrey",
     borderRadius: "1%",
     height: "85%",

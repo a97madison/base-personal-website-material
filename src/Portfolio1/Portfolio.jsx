@@ -26,7 +26,7 @@ function Portfolio(props) {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    height: appHeight,
+    minHeight: appHeight,
     marginBottom: "10vh",
     width: "100%",
     left: "0px",
