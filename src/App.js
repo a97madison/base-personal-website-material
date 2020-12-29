@@ -15,7 +15,7 @@ import './Fonts/fonts.css';
 function App() {
 
   // DEFINE DATA VARIABLES
-  const introText = "React / iOS / Full-Stack / Native Mobile Software Engineer";
+  const introText = "IOS / React / Full-Stack / Native Mobile Software Engineer";
   const aboutMeText = "I am a recent Math/CS grad from University of Waterloo and I have a variety of experience working and becoming knowledgeable in software development. During my time at LinkedIn, I was an iOS Engineer on the Profile Page Team and one project I completed was a code migration for Profile Page cards, which you can see on the profile page of the mobile application. While I was a co-op student at Inkling, I assisted with the pilot release of the company's React Native (native mobile) mobile app. Don't hesitate to contact me if my skills can help solve any of your problems!";
   const fullNameText = "Anthony Madison";
   const emailAddressText = "a97madison@gmail.com";
@@ -111,8 +111,8 @@ function App() {
   ];
 
   const educationProps = {
-    bulletPointsArray:["● 2019 Honours Bachelor of Mathematics graduate, Computational Math major and Computer Science minor, CO-OP",
-                       "● Gained 3+ years of professional work experience as a ios engineer, full-stack developer and native mobile engineer through University of Waterloo's co-op program",
+    headerText: "2019 Honours Bachelor of Mathematics, Computational Math major and Computer Science minor, CO-OP",
+    bulletPointsArray:["● Gained 3+ years of professional work experience as a ios engineer, full-stack developer and native mobile engineer through University of Waterloo's co-op program",
                        "● In Computational Mathematics you learn to analyze data sets, formulae, and images in ways that help us understand the world around us and predict/influence the future",
                        "● In Computer Science you study computers and computational systems. Computer scientists deal mostly with software and software systems; their theory, design, development, and application."],
     schoolLink:"https://uwaterloo.ca/"

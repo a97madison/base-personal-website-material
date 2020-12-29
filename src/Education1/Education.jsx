@@ -14,17 +14,15 @@ function Education(props) {
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     display: "flex",
     flexDirection: "column",
-    height: appHeight,
+    minHeight: appHeight,
     width: "100%",
-    left: "0px"
+    left: "0px",
+    overflowY: "scroll"
   };
   const educationInfoStyle = {
     marginRight: "20vw",
     display: "flex",
     flexDirection: "row",
-    height: "100%",
-    top: "0px",
-    bottom: "0px"
   };
   const educationBulletPointParentStyle = {
     height: "25%",
@@ -34,19 +32,30 @@ function Education(props) {
   const educationBulletPointTextStyle = {
     display: "table-cell",
     verticalAlign: "middle",
+    height: "auto",
     margin: "0px 0px 0px 0px"
   };
   const educationImageParentStyle = {
     position: "relative",
-    width: "40%"
+    width: "40%",
+    marginTop: "9%"
   };
   const educationBulletPointsStyle = {
     display: "table",
     height: "100%",
-    width: "50vw"
+    width: "90%",
+    margin: "5vh 5% 5vh 5%"
   };
 
   const pressableObject = makePressableObject("UWaterloo", education.schoolLink, "Education")
+
+  function headerFunction(text) {
+    return (
+      <div className="Header-text-2">
+          <p> {text} </p>
+      </div>
+    )
+  }
 
   function textToObjectFunction(text) {
     return (
@@ -58,6 +67,7 @@ function Education(props) {
     );
   }
 
+  const headerObject = headerFunction(education.headerText)
   const bulletPointObjects = education.bulletPointsArray.map(textToObjectFunction);
 
   // RETURN EDUCATION DIV
@@ -71,6 +81,7 @@ function Education(props) {
         </div>
         <div>
           <div style={educationBulletPointsStyle}>
+            {headerObject}
             {bulletPointObjects}
           </div>
         </div>
