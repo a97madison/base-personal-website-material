@@ -1,68 +1,72 @@
 .Header {
-    font-size: 4vmin;
-    margin: 2vh 20vw 0px 0px;
-    border-bottom: 0.4vmin solid darkgrey;
-    z-index: 0;
-    font-family: 'ModestoW01-Open';
+  display: inline-grid;
+  align-items: center;
+  font-size: 4vmin;
+  margin: 0 20vw 0 0;
+  height: 17.8vh;
+  border-bottom: 0.4vh solid rgba(0, 0, 0, 0.1) !important;
+  font-family: 'ModestoW01-Open';
 }
 
 .Page-text-1 {
-    font-size: 2.15vmin;
+  font-size: 2.15vmin;
+  display: flex;
+  align-items: center;
 }
 
 .Page-text-2 {
-    font-size: 2vmin;
-    font-family: 'Geneva';
+  font-size: 2vmin;
+  font-family: 'Geneva';
 }
 
 .Header-text-2 {
-    font-size: 1.25vw;
-    font-family: 'ModestoW01-Open';
-    text-align: 'center';
+  font-size: 1.25vw;
+  font-family: 'ModestoW01-Open';
+  text-align: 'center';
 }
 
 .Header-text-3 {
-    font-size: 2vmin;
-    font-family: 'ModestoW01-Open';
-    padding-left: 5vmin;
-    margin-top: 0.5vmin;
-    margin-bottom: 0.5vmin;
-    text-align: left;
+  font-size: 2vmin;
+  font-family: 'ModestoW01-Open';
+  padding-left: 5vmin;
+  margin-top: 0.5vmin;
+  margin-bottom: 0.5vmin;
+  text-align: left;
 }
 
 .Header-2-container {
-    display: table-cell;
+  display: table-cell;
 }
 
 @media (max-aspect-ratio: 39/20) {
-    .Page-text-2 {
-        font-size: 1.6vmin;
-    }
-    .Header-text-3 {
-        font-size: 1.6vmin;
-    }
+  .Page-text-2 {
+    font-size: 1.6vmin;
+  }
+  .Header-text-3 {
+    font-size: 1.6vmin;
+  }
 }
 @media (max-aspect-ratio: 33/20) {
-    .Page-text-2 {
-        font-size: 1.4vmin;
-    }
-    .Header-text-3 {
-        font-size: 1.4vmin;
-    }
+  .Page-text-2 {
+    font-size: 1.4vmin;
+  }
+  .Header-text-3 {
+    font-size: 1.4vmin;
+  }
 }
 @media (max-aspect-ratio: 10/7) {
-    .Page-text-2 {
-        font-size: 1.1vmin;
-    }
-    .Header-text-3 {
-        font-size: 1.1vmin;
-    }
-    .Page-text-1 {
-      font-size: 1.6vmin;
-    }
+  .Page-text-2 {
+    font-size: 1.1vmin;
+  }
+  .Header-text-3 {
+    font-size: 1.1vmin;
+  }
+  .Page-text-1 {
+    font-size: 1.6vmin;
+  }
 }
 @media (max-aspect-ratio: 30/29) {
-    .Page-text-1 {
-        font-size: 1.25vmin;
-    }
+  .Page-text-1 {
+    font-size: 1.25vmin;
+  }
 }

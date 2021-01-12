@@ -28,25 +28,30 @@ function PortfolioCell(props) {
     textAlign: "left",
     width: "55vw"
   };
-    const pressableObject = makePressableObject(props.title, props.projectLink, "Project");
 
-    function textToObjectFunction(text) {
-      return (
-        <p style={portBulletPointsStyle}> {text} </p>
-      );
-    }
+  const pressableObject = makePressableObject(props.title, props.projectLink, "Project");
 
-    function textToLinkFunction(text) {
-      return (
-        <p style={portBulletPointsStyle}>
-          {"● "}
-          <a href={text}> {text} </a>
-        </p>
-      )
-    }
+  function textToObjectFunction(textObject) {
+    const key = textObject[1]
+    const text = textObject[0]
+    return (
+      <p key={key} style={portBulletPointsStyle} className="Page-text-1"> {text} </p>
+    );
+  }
 
-    const bulletPointObjects = props.bulletPointsArray.map(textToObjectFunction);
-    const linkObjects = props.linksArray.map(textToLinkFunction);
+  function textToLinkFunction(textObject) {
+    const key = textObject[1]
+    const text = textObject[0]
+    return (
+      <p key={key} style={portBulletPointsStyle} className="Page-text-1">
+        {"● "}
+        <a href={text}> {text} </a>
+      </p>
+    )
+  }
+
+  const bulletPointObjects = props.bulletPointsArray.map(textToObjectFunction);
+  const linkObjects = props.linksArray.map(textToLinkFunction);
 
   // RETURN PORTFOLIO CELL DIV
   return (

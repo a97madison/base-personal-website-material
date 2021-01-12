@@ -1,6 +1,5 @@
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
 // import images
 import LinkedInLogo from './Images/LinkedIn.jpg';
 import InklingLogo from './Images/Inkling.png';
@@ -25,72 +24,54 @@ import Instagram from './Images/Instagram.jpg';
 
 import './ConstantStyles.css';
 
-function onButtonItemClick(link) {
-  window.open(link);
-}
-
-export function makePressableText(text, link, liType) {
-  return (
-    <ListItem className={"Pressable-li-" + liType} onClick={() => onButtonItemClick(link)} button>
-      <ListItemText>
-        <div className={"Page-text-1"}>{text}</div>
-      </ListItemText>
-    </ListItem>
-  );
+export function getImage(name) {
+  if (name === "LINKEDIN") {
+    return LinkedInLogo;
+  } else if (name === "INKLING") {
+    return InklingLogo;
+  } else if (name === "COGNITIVE SYSTEMS CORPORATION") {
+    return CSCLogo;
+  } else if (name === "CANADIAN INSTITUTE FOR HEALTH INFORMATION") {
+    return CIHILogo;
+  } else if (name === "VISIONAIRE 3D") {
+    return VisionaireLogo;
+  } else if (name === "PUREFACTS FINANCIAL SOLUTIONS") {
+    return PurefactsLogo;
+  } else if (name === "UWaterloo") {
+    return Uwaterloo;
+  } else if (name === "Two player chess game web application") {
+    return Chess;
+  } else if (name === "Personal website") {
+    return Personal;
+  } else if (name === "LinkedIn") {
+    return LinkedIn;
+  } else if (name === "Github") {
+    return Github;
+  } else if (name === "Twitter") {
+    return Twitter;
+  } else if (name === "Twitch") {
+    return Twitch;
+  } else if (name === "Facebook") {
+    return Facebook;
+  } else if (name === "Instagram") {
+    return Instagram;
+  } else if (name === "Swish Studios" || name === "Swish Studio's website") {
+    return SwishLogo;
+  }
+  return Swish;
 }
 
 export function makePressableObject(name, link, buttonClass) {
-
-  function getImage(name) {
-    if (name === "LINKEDIN") {
-      return LinkedInLogo;
-    } else if (name === "INKLING") {
-      return InklingLogo;
-    } else if (name === "COGNITIVE SYSTEMS CORPORATION") {
-      return CSCLogo;
-    } else if (name === "CANADIAN INSTITUTE FOR HEALTH INFORMATION") {
-      return CIHILogo;
-    } else if (name === "VISIONAIRE 3D") {
-      return VisionaireLogo;
-    } else if (name === "PUREFACTS FINANCIAL SOLUTIONS") {
-      return PurefactsLogo;
-    } else if (name === "UWaterloo") {
-      return Uwaterloo;
-    } else if (name === "Two player chess game web application") {
-      return Chess;
-    } else if (name === "Personal website") {
-      return Personal;
-    } else if (name === "LinkedIn") {
-      return LinkedIn;
-    } else if (name === "Github") {
-      return Github;
-    } else if (name === "Twitter") {
-      return Twitter;
-    } else if (name === "Twitch") {
-      return Twitch;
-    } else if (name === "Facebook") {
-      return Facebook;
-    } else if (name === "Instagram") {
-      return Instagram;
-    } else if (name === "Swish Studios" || name == "Swish Studio's website") {
-      return SwishLogo;
-    } // else if (name == "@cian.p's personal website") {
-      // return Cian;
-    // } else if (name == "Young Lung's personal website") {
-    //   return Seebs;
-    // }
-    return Swish;
-  }
 
   // image constant uses getImage helper
   const buttonImg = getImage(name);
 
   const imgClassName = buttonClass + "-image";
   const liClassName = buttonClass + "-li";
-  // return button (list item) div
+
   // BUTTONCLASS-image and BUTTONCLASS-li style defined in appropiate css file
   return [
-      (<img className={imgClassName} src={buttonImg} alt={"..."}></img>),
-      (<ListItem className={liClassName} onClick={() => onButtonItemClick(link)} key={name} button></ListItem>)
+    (<img key={"image"} className={imgClassName} src={buttonImg} alt={"..."}></img>),
+    (<ListItem key={"text"} className={liClassName} onClick={() => window.open(link)} button></ListItem>)
   ];
 }

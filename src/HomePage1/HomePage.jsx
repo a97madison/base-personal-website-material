@@ -10,15 +10,13 @@ function HomePage(props) {
 
   // DEFINE STYLE CONSTANTS
   const homePageStyle = {
-    background: color1,
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     height: appHeight,
-    width: "100%"
+    width: "100vw"
   };
   const homePageParentStyle = {
     display: "flex",
     alignItems: "center",
-    margin: "auto",
     position: "absolute",
     height: appHeight
   }
@@ -30,9 +28,9 @@ function HomePage(props) {
     left: "0"
   };
   const introTextStyle = {
+    display: "block",
     width: appWidth,
-    position: "absolute",
-    left: "0",
+    alignItems: "center",
     paddingTop: "10vw"
   };
 

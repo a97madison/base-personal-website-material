@@ -9,27 +9,21 @@ function Profile(props) {
 
   // DEFINE STYLE CONSTANTS
   const profileStyle = {
-    background: color1,
     background: "linear-gradient(0deg, " + color1 + ", " + color2 + " 100%)",
     display: "flex",
     flexDirection: "column",
     minHeight: appHeight,
-    width: "100%"
+    width: "100vw"
   };
   const profileSectionsStyle = {
     display: "flex",
     marginRight: "20vw",
-    minHeight: "75vh",
-    marginBottom: "3vh",
-    flexDirection: "row",
+    height: "70vh",
+    marginBlock: "1vh",
     justifyContent: "center",
-    border: "1%"
   };
   const sectionStyle = {
-    textAlign: "center",
-    position: "relative",
     width: "25vw",
-    height: "100%"
   };
   const sectionParentStyle = {
     overflowX: "scroll",
@@ -37,11 +31,9 @@ function Profile(props) {
     padding: "4px",
     border: "0.25vmin solid darkgrey",
     borderRadius: "1%",
-    height: "85%",
+    height: "62vh",
     marginTop: "3vh",
     marginBottom: "3vh",
-    textAlign: "center",
-    alignItems: "center"
   };
 
   // return div for Profile

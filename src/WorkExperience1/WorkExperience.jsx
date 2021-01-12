@@ -6,6 +6,7 @@ function workCellsToCellFunction(cellProps) {
   // return div for one work experience cell
   return (
     <WorkExperienceCell
+      key={cellProps.key}
       companyName={cellProps.companyName}
       companyLink={cellProps.companyLink}
       city={cellProps.city}
@@ -20,18 +21,18 @@ function WorkExperience(props) {
 
   // DEFINE STYLE CONSTANTS
   const workExperienceStyle = {
-    background: color1,
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     display: "flex",
     flexDirection: "column",
     minHeight: appHeight,
-    width: "100%",
+    width: "100vw",
     left: "0px",
     overflowY: "scroll"
   };
 
   const workExperienceCellsStyle = {
     margin: "0px 20vw 5vh 0px",
+    minHeight: "80vh",
     display: "flex",
     flexDirection: "column",
     borderBottom: "0.1vmin solid darkgrey",

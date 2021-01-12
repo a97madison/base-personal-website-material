@@ -1,17 +1,17 @@
 .Company-image {
-    margin-left: 0px;
-    padding-left: 0px;
-    object-fit: fill; 
-    height: 5.5vmin;
-    width: 5.5vmin;
-    border-radius: 6%;
-    z-index: 0;
+  margin-left: 0px;
+  padding-left: 0px;
+  object-fit: fill;
+  height: 5.5vmin;
+  width: 5.5vmin;
+  border-radius: 1%;
+  z-index: 0;
 }
 
 .Company-li {
-    margin-top: -5.5vmin !important;
-    height: 5.5vmin !important;
-    width: 5.5vmin !important;
-    border-radius: 6% !important;
-    z-index: 1;
+  margin-top: -5.5vmin !important;
+  height: 5.5vmin !important;
+  width: 5.5vmin !important;
+  border-radius: 1% !important;
+  z-index: 1;
 }

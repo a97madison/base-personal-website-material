@@ -10,19 +10,19 @@ function Education(props) {
 
   // DEFINE STYLE CONSTANTS
   const educationStyle = {
-    background: color1,
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     display: "flex",
     flexDirection: "column",
     minHeight: appHeight,
-    width: "100%",
+    width: "100vw",
     left: "0px",
     overflowY: "scroll"
   };
   const educationInfoStyle = {
     marginRight: "20vw",
+    marginBlock: "1vh",
     display: "flex",
-    flexDirection: "row",
+    height: "70vh"
   };
   const educationBulletPointParentStyle = {
     height: "25%",
@@ -38,13 +38,12 @@ function Education(props) {
   const educationImageParentStyle = {
     position: "relative",
     width: "40%",
-    marginTop: "9%"
   };
   const educationBulletPointsStyle = {
     display: "table",
-    height: "100%",
+    height: "70vh",
     width: "90%",
-    margin: "5vh 5% 5vh 5%"
+    margin: "1vh 5%"
   };
 
   const pressableObject = makePressableObject("UWaterloo", education.schoolLink, "Education")
@@ -52,14 +51,17 @@ function Education(props) {
   function headerFunction(text) {
     return (
       <div className="Header-text-2">
-          <p> {text} </p>
+        <p> {text} </p>
       </div>
-    )
+    );
   }
 
-  function textToObjectFunction(text) {
+  function textToObjectFunction(textObject) {
+    const key = textObject[1]
+    const text = textObject[0]
+
     return (
-      <div style={educationBulletPointParentStyle}>
+      <div key={key} style={educationBulletPointParentStyle}>
         <p style={educationBulletPointTextStyle}>
           {text}
         </p>

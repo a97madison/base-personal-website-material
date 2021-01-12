@@ -8,6 +8,7 @@ function portfolioCellsToCellFunction(cellProps) {
   // return div for one work experience cell
   return (
     <PortfolioCell
+      key={cellProps.key}
       title={cellProps.title}
       time={cellProps.time}
       projectLink={cellProps.projectLink}
@@ -21,14 +22,13 @@ function Portfolio(props) {
   const color1 = props.color1, color2 = props.color2, appHeight = props.appHeight, appWidth = props.appWidth;
   // DEFINE STYLE CONSTANTS
   const portfolioStyle = {
-    background: color1,
     background: "linear-gradient(0deg, " + color1 + " 31%, " + color2 + "100%)",
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
     minHeight: appHeight,
     marginBottom: "10vh",
-    width: "100%",
+    width: "100vw",
     left: "0px",
   };
   const portfolioCellsStyle = {
@@ -41,6 +41,7 @@ function Portfolio(props) {
   const portfolioTextStyle = {
     marginTop: "2.2vh",
     width: appWidth,
+    display: "block",
     textAlign: "center"
   };
 

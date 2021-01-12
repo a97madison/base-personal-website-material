@@ -1,72 +1,64 @@
-.Social-image {
-      object-fit: fit;
-      margin: auto;
-      position: absolute;
-      height: 80% !important;
-      aspect-ratio: 1 !important;
-      border-radius: 7% !important;;
-      z-index: 0;
-}
-
 .Social-li {
-    object-fit: fit;
-    margin: auto !important;
-    position: absolute !important;
-    height: 80% !important;
-    border-radius: 7% !important;
-    aspect-ratio: 1 !important;
-    z-index: 1;
+  height: 100% !important;
+  width: auto !important;
+  border-radius: 1% !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
 }
 
-.Pressable-li-1 {
-    margin-left: 4.2vmin !important;
-    margin-right: 0px !important;
-    height: 80% !important;
-    border-radius: 3% !important;
-    text-align: left !important;
+.Social-image {
+  float: left;
+  display: inline-block;
+  height: 1.27em !important;
+  width: 1.27em !important;
+  width: auto !important;
 }
 
-.Pressable-li-2 {
-    border-radius: 3% !important;
-    text-align: left !important;
+.Social-image-container {
+  border-radius: 1% !important;
+  padding-left: 0px !important;
 }
 
-@media (max-aspect-ratio: 39/20) {
-    /* .Social-image {
-      height: 2.0vmin;
-      width: 2.0vmin;
-    }
-    .Social-li {
-      margin-left: -2.0vmin !important;
-      margin-right: -2.0vmin !important;
-    } */
-    .Pressable-li-1 {
-        margin-left: 2.1vmin !important;
-    }
+.Pressable-li {
+  border-radius: 1% !important;
+  text-align: left !important;
+  padding: 0 !important;
 }
-@media (max-aspect-ratio: 33/20) {
-    /* .Social-image {
-      height: 1.8vmin;
-      width: 1.8vmin;
-    }
-    .Social-li {
-      margin-left: -1.8vmin !important;
-      margin-right: -1.8vmin !important;
-    } */
-    .Pressable-li-1 {
-        margin-left: 1.9vmin !important;
-    }
+
+.About-me-icon-parent {
+  position: relative;
+  display: inline-block;
+  float: left !important;
+  width: auto;
 }
-@media (max-aspect-ratio: 10/7) {
-    /* .Social-image {
-      height: 1.5vmin;
-      width: 1.5vmin;
-    }
-    .Social-li {
-      margin-left: -1.5vmin !important;
-      margin-right: -1.5vmin !important;
-    } */
-    .Pressable-li-1 {
-        margin-left: 1.6vmin !important;
-    }
+
+.Social-media-button {
+  width: auto !important;
+  display: inline-flex !important;
+  float: left !important;
+  border-radius: 1% !important;
+  padding: 0 !important;
+  margin-left: 2px !important;
+  padding: 0.45vmin !important;
+}
+
+.Social-media-button-container {
+  display: inline-flex;
+}
+
+.Social-media-icon {
+  display: inline-flex;
+}
+
+.Social-media-icon-text {
+  display: flex;
+  height: 67%;
+}
+
+.Profile-text {
+  margin-block: 0.7em;
+}
+
+.Profile-text-2 {
+  margin-block: calc(0.7em - 0.45vmin);
 }
