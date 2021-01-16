@@ -22,6 +22,8 @@ function App() {
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
   const githubLinkText = "https://github.com/a97madison";
   const githubUsername = "a97madison";
+  const personalCompanyLinkText = "https://swishstudio2020.com"
+  const personalCompanyName = "Swish Studio"
   const birthdate = new Date(1997, 9, 31);
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const day = days[birthdate.getDay()];
@@ -42,6 +44,7 @@ function App() {
     ["Github", githubLinkText, githubUsername, "github"],
     ["Phone #", "1-(226)-808-9619", "phoneNumber"],
     ["City", [city, cityGoogleMapsLink], "city"],
+    ["Personal Company", personalCompanyLinkText, personalCompanyName, "swish"]
   ];
 
   const workExperienceCells = [

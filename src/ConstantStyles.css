@@ -26,12 +26,72 @@
 }
 
 .Header-text-3 {
+  display: flex;
+  justify-content: center;
   font-size: 2vmin;
-  font-family: 'ModestoW01-Open';
-  padding-left: 5vmin;
   margin-top: 0.5vmin;
   margin-bottom: 0.5vmin;
   text-align: left;
+}
+
+.Cell-style {
+  display: flex;
+  padding-bottom: 5px;
+  flex-direction: column;
+  border-bottom: 0.1vmin solid darkgrey;
+}
+
+.Cell-header-info-text {
+  padding-left: 10px;
+}
+
+.Cell-info {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.Cell-icon-container {
+  padding-right: 5px;
+}
+
+.Cell-image {
+  float: left;
+  display: inline-block;
+  height: 6em !important;
+  width: 6em !important;
+}
+
+.Cell-bullet-points-container {
+  display: flex;
+  align-items: center;
+}
+
+.Cell-bullet-points {
+  display: table;
+}
+
+.Cell-bullet-point-parent {
+  display: table;
+  text-align: left;
+}
+
+.Cell-bullet-point-text {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0px 0px 0px 0px;
+}
+
+.Pressable-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1% !important;
+  padding-left: 0px !important;
+}
+
+.Pressable-icon {
+  display: inline-flex;
 }
 
 .Header-2-container {

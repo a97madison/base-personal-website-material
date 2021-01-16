@@ -12,6 +12,7 @@ function ProfilePhoto(props) {
 
   const profileImgStyle = {
     height: "20vw",
+    maxHeight: "94%",
     borderRadius: "50%",
     border: "0.25vh solid darkgrey"
   }

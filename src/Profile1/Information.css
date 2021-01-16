@@ -11,12 +11,6 @@
   display: inline-block;
   height: 1.27em !important;
   width: 1.27em !important;
-  width: auto !important;
-}
-
-.Social-image-container {
-  border-radius: 1% !important;
-  padding-left: 0px !important;
 }
 
 .Pressable-li {
@@ -32,13 +26,12 @@
   width: auto;
 }
 
-.Social-media-button {
+.Pressable-button {
   width: auto !important;
   display: inline-flex !important;
   float: left !important;
-  border-radius: 1% !important;
-  padding: 0 !important;
-  margin-left: 2px !important;
+  border-radius: 2% !important;
+  padding-block: 0 !important;
   padding: 0.45vmin !important;
 }
 
@@ -46,11 +39,7 @@
   display: inline-flex;
 }
 
-.Social-media-icon {
-  display: inline-flex;
-}
-
-.Social-media-icon-text {
+.Social-icon-text {
   display: flex;
   height: 67%;
 }

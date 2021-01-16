@@ -11,8 +11,6 @@ import Uwaterloo from './Images/UWaterloo.jpg';
 // todo: make gifs for each of these images
 import Chess from './Images/Chess.gif';
 import Personal from './Images/Personal.gif';
-// import Cian from './Images/Cian.png';
-// import Seebs from './Images/Seebs.png';
 import Swish from './Images/Swish.png';
 import LinkedIn from './Images/LinkedIn.jpg';
 import Github from './Images/Github.jpg';
@@ -55,23 +53,46 @@ export function getImage(name) {
     return Facebook;
   } else if (name === "Instagram") {
     return Instagram;
-  } else if (name === "Swish Studios" || name === "Swish Studio's website") {
-    return SwishLogo;
+  } else if (name === "Swish Studio's website") {
+    return Swish;
   }
-  return Swish;
+  return SwishLogo;
 }
 
-export function makePressableObject(name, link, buttonClass) {
-
+export function makePressableObject(text, imageName, link, pressableType) {
   // image constant uses getImage helper
-  const buttonImg = getImage(name);
+  const buttonImg = getImage(imageName);
+  const iconText = text.length > 0? "(" + text + ")" : "";
 
-  const imgClassName = buttonClass + "-image";
-  const liClassName = buttonClass + "-li";
+  const imageClassName = pressableType + "-image"
 
-  // BUTTONCLASS-image and BUTTONCLASS-li style defined in appropiate css file
-  return [
-    (<img key={"image"} className={imgClassName} src={buttonImg} alt={"..."}></img>),
-    (<ListItem key={"text"} className={liClassName} onClick={() => window.open(link)} button></ListItem>)
-  ];
+  const imageObject = (
+    <div key={"image"} className={"Pressable-image-container"}>
+      <img className={imageClassName} src={buttonImg} alt={"..."}></img>
+    </div>
+  );
+  const textObject = (
+    <div key="text" className={"Social-icon-text"}>
+        <div> {iconText} </div>
+    </div>
+  );
+  const objects = [imageObject, textObject];
+
+  return (
+    <ListItem className="Pressable-button" onClick={() => window.open(link)} button>
+      <div key={1} className="Pressable-icon">
+        {objects}
+      </div>
+    </ListItem>
+  );
+}
+
+export function textToObjectFunction(textObject) {
+  const key = textObject[1]
+  const text = textObject[0]
+  return (
+    <div key={key} className="Cell-bullet-point-parent">
+      <div className="Cell-bullet-point-text"> {text} </div>
+    </div>
+  );
 }

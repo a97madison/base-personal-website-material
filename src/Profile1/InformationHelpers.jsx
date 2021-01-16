@@ -12,7 +12,7 @@ const singleInfoCellStyle = {
 
 function makePressableText(text, link, liType) {
   return (
-    <ListItem className={"Social-media-button"} onClick={() => window.open(link)} button>
+    <ListItem className={"Pressable-button"} onClick={() => window.open(link)} button>
       <div>{text}</div>
     </ListItem>
   );
@@ -36,7 +36,6 @@ function secondDivEmailHelper(email) {
 
 function makeSocialMediaObject(name, company) {
   // image constant uses getImage helper
-  // if length of pair array is 3, show handle beside button
   const buttonImg = getImage(company);
   const text = name.length > 0? "(" + name + ")" : "";
 
@@ -59,26 +58,19 @@ function makeSocialMediaObject(name, company) {
   );
 }
 
-function secondDivSocialMediaButtonHelper(pair) {
+function secondDivSocialButtonHelper(pair) {
+  const text = pair.length === 4 ? pair[pair.length-2] : ""
+  const imageName =  pair[0]
   const link = pair[1]
-  const name = pair.length === 4 ? pair[pair.length-2] : ""
-  const company = pair[0]
+  const pressableType = "Social"
+  const pressableObject = makePressableObject(text,imageName,link,pressableType)
 
-  const imageDiv = makeSocialMediaObject(name,company)
+  const socialListItemStyle = {
+    marginLeft: "2px !important"
+  }
 
   return (
-    <div key={1} className="Profile-text-2">
-      <ListItem className="Social-media-button" onClick={() => window.open(link)} button>
-        {imageDiv}
-      </ListItem>
-    </div>
-  );
-}
-
-function secondDivBrandHelper(brandName) {
-  const pressableObject = makePressableObject(brandName,"","Social");
-  return (
-    <div key={1} style={singleInfoCellStyle}>
+    <div key={1} style={socialListItemStyle} className="Profile-text-2">
       {pressableObject}
     </div>
   );
@@ -117,28 +109,28 @@ export function myPairToStringFunction(pair) {
       secondDiv = secondDivEmailHelper(pair[1]);
       break;
     case "Brand":
-      secondDiv = secondDivBrandHelper(pair[1]);
+    secondDiv = secondDivSocialButtonHelper(pair);
       break;
-    case "Company":
-      secondDiv = secondDivBrandHelper(pair[1]);
+    case "Personal Company":
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "LinkedIn":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "Github":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "Twitter":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "Facebook":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "Twitch":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "Instagram":
-      secondDiv = secondDivSocialMediaButtonHelper(pair);
+      secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "City":
       secondDiv = secondDivLinkHelper(pair[1]);

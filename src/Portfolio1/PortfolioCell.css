@@ -1,17 +1,14 @@
 .Project-image {
-  object-fit: fill;
-  background-color: transparent;
-  height: 6vmin;
-  width: 6vmin;
-  margin: 0px 0px 0px 0px;
-  border-radius: 1%;
-  z-index: 0;
+  float: left;
+  display: inline-block;
+  height: 6em !important;
+  width: 6em !important;
 }
 
 .Project-li {
-  height: 6vmin !important;
-  width: 6vmin !important;
-  margin: -6vmin 0px 0px 0px !important;
+  height: 4em !important;
+  width: 4em !important;
+  margin: -4.4em 0px 0px 0px !important;
   border-radius: 1% !important;
   z-index: 1;
 }

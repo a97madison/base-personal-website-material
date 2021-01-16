@@ -1,27 +1,15 @@
 .Education-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: contain;
-  text-align: center;
-  justify-content: center;
-  background-color: white;
-  border: 0.4vmin white solid;
-  border-radius: 1%;
-  aspect-ratio: 1/1;
-  width: 75%;
-  height: auto;
-  z-index: 0;
+  float: left;
+  display: inline-block;
+  height: 30vmin;
+  width: 30vmin;
 }
 
-.Education-li {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 1% !important;
-  width: 23vw !important;
-  height: 23vw !important;
-  z-index: 1;
+.Education-information {
+  display: flex;
+}
+
+.Education-header {
+  font-size: 4vmin;
+  font-family: 'ModestoW01-Open';
 }

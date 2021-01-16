@@ -19,38 +19,35 @@ function Education(props) {
     overflowY: "scroll"
   };
   const educationInfoStyle = {
+    display: "flex",
+    flexDirection: "column",
     marginRight: "20vw",
     marginBlock: "1vh",
-    display: "flex",
     height: "70vh"
   };
   const educationBulletPointParentStyle = {
-    height: "25%",
+    height: "20%",
     display: "table",
     textAlign: "left"
   };
   const educationBulletPointTextStyle = {
-    display: "table-cell",
     verticalAlign: "middle",
     height: "auto",
     margin: "0px 0px 0px 0px"
   };
   const educationImageParentStyle = {
-    position: "relative",
-    width: "40%",
+    paddingInline: "20px"
   };
   const educationBulletPointsStyle = {
-    display: "table",
-    height: "70vh",
-    width: "90%",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
     margin: "1vh 5%"
   };
 
-  const pressableObject = makePressableObject("UWaterloo", education.schoolLink, "Education")
-
   function headerFunction(text) {
     return (
-      <div className="Header-text-2">
+      <div className="Education-header">
         <p> {text} </p>
       </div>
     );
@@ -61,10 +58,8 @@ function Education(props) {
     const text = textObject[0]
 
     return (
-      <div key={key} style={educationBulletPointParentStyle}>
-        <p style={educationBulletPointTextStyle}>
-          {text}
-        </p>
+      <div key={key} style={educationBulletPointTextStyle}>
+        <p> {text} </p>
       </div>
     );
   }
@@ -72,19 +67,27 @@ function Education(props) {
   const headerObject = headerFunction(education.headerText)
   const bulletPointObjects = education.bulletPointsArray.map(textToObjectFunction);
 
+  const text = ""
+  const imageName = "UWaterloo"
+  const link = education.schoolLink
+  const pressableType = "Education"
+  const pressableObject = makePressableObject(text,imageName,link,pressableType)
+
   // RETURN EDUCATION DIV
   return (
     <div id="education" style={educationStyle}>
       <EducationHeader />
 
       <div style={educationInfoStyle} className="Page-text-1">
-        <div style={educationImageParentStyle}>
-          {pressableObject}
-        </div>
-        <div>
-          <div style={educationBulletPointsStyle}>
-            {headerObject}
-            {bulletPointObjects}
+        {headerObject}
+        <div className="Education-information">
+          <div style={educationImageParentStyle}>
+            {pressableObject}
+          </div>
+          <div>
+            <div style={educationBulletPointsStyle}>
+              {bulletPointObjects}
+            </div>
           </div>
         </div>
       </div>
