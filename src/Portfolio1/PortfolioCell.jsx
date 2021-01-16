@@ -1,7 +1,6 @@
 import React from 'react';
 import {makePressableObject, textToObjectFunction} from '../GlobalHelpers';
 
-import './PortfolioCell.css';
 import '../ConstantStyles.css';
 
 function PortfolioCell(props) {

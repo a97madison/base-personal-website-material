@@ -4,7 +4,7 @@
   font-size: 4vmin;
   margin: 0 20vw 0 0;
   height: 17.8vh;
-  border-bottom: 0.4vh solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 0.4vh solid rgba(0, 0, 0, 0.1);
   font-family: 'ModestoW01-Open';
 }
 
@@ -58,8 +58,8 @@
 .Cell-image {
   float: left;
   display: inline-block;
-  height: 6em !important;
-  width: 6em !important;
+  height: 6em;
+  border-radius: 4.5%;
 }
 
 .Cell-bullet-points-container {
@@ -86,8 +86,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1% !important;
-  padding-left: 0px !important;
+  border-radius: 4.5%;
+  padding-left: 0px;
 }
 
 .Pressable-icon {

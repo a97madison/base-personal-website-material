@@ -10,9 +10,10 @@ const singleInfoCellStyle = {
   marginLeft: "0.6vmin"
 };
 
-function makePressableText(text, link, liType) {
+function makePressableText(text, link) {
+
   return (
-    <ListItem className={"Pressable-button"} onClick={() => window.open(link)} button>
+    <ListItem className={"Information-button"} onClick={() => window.open(link)} button>
       <div>{text}</div>
     </ListItem>
   );
@@ -27,9 +28,10 @@ function secondDivBaseHelper(text) {
 
 // creates div for email text for email info cell
 function secondDivEmailHelper(email) {
+  const emailLink = "mailto:" + email
   return (
     <div key={1} style={singleInfoCellStyle} className="Profile-text-2">
-      {makePressableText(email, email, "2")}
+      {makePressableText(email, emailLink)}
     </div>
   );
 }
@@ -79,7 +81,7 @@ function secondDivSocialButtonHelper(pair) {
 function secondDivLinkHelper(informationWithLink) {
   return (
     <div key={1} style={singleInfoCellStyle} className="Profile-text-2">
-      {makePressableText(informationWithLink[0], informationWithLink[1], "2")}
+      {makePressableText(informationWithLink[0], informationWithLink[1])}
     </div>
   );
 }

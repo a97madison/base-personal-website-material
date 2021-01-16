@@ -1,7 +1,6 @@
 import React from 'react';
 import {makePressableObject, textToObjectFunction} from '../GlobalHelpers';
 
-import './WorkExperienceCell.css';
 import '../ConstantStyles.css';
 
 function WorkExperienceCell(props) {

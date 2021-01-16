@@ -140,7 +140,7 @@ function App() {
       key:"personalSite",
       title: "Personal website",
       time: "Aug. 2020",
-      projectLink: "https://www.instagram.com/anthony0cap/",
+      projectLink: "http://localhost:3000/",
       bulletPointsArray:[["● This website is built entirely using React with Redux",0]],
       linksArray:[]
     },

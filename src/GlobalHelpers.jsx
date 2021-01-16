@@ -76,10 +76,12 @@ export function makePressableObject(text, imageName, link, pressableType) {
         <div> {iconText} </div>
     </div>
   );
+
   const objects = [imageObject, textObject];
+  const className = pressableType === "Social" ? "Information-button" : "Pressable-button";
 
   return (
-    <ListItem className="Pressable-button" onClick={() => window.open(link)} button>
+    <ListItem className={className} onClick={() => window.open(link)} button>
       <div key={1} className="Pressable-icon">
         {objects}
       </div>

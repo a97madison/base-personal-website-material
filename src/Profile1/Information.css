@@ -1,38 +1,25 @@
-.Social-li {
-  height: 100% !important;
-  width: auto !important;
-  border-radius: 1% !important;
-  padding-left: 2px !important;
-  padding-right: 2px !important;
-}
-
 .Social-image {
   float: left;
   display: inline-block;
-  height: 1.27em !important;
-  width: 1.27em !important;
-}
-
-.Pressable-li {
-  border-radius: 1% !important;
-  text-align: left !important;
-  padding: 0 !important;
-}
-
-.About-me-icon-parent {
-  position: relative;
-  display: inline-block;
-  float: left !important;
-  width: auto;
+  height: 1.27em;
+  width: 1.27em;
+  border-radius: 4.5%;
 }
 
 .Pressable-button {
   width: auto !important;
   display: inline-flex !important;
   float: left !important;
-  border-radius: 2% !important;
-  padding-block: 0 !important;
-  padding: 0.45vmin !important;
+  border-radius: 4.5% !important;
+  padding: 8px !important;
+}
+
+.Information-button {
+  width: auto !important;
+  display: inline-flex !important;
+  float: left !important;
+  border-radius: 4.5% !important;
+  padding: 2.5px !important;
 }
 
 .Social-media-button-container {
@@ -49,5 +36,5 @@
 }
 
 .Profile-text-2 {
-  margin-block: calc(0.7em - 0.45vmin);
+  margin-block: calc(0.7em - 2.5px);
 }

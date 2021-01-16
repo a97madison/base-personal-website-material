@@ -30,7 +30,7 @@ function Profile(props) {
     overflowY: "scroll",
     padding: "4px",
     border: "0.25vmin solid darkgrey",
-    borderRadius: "1%",
+    borderRadius: "4.5%",
     height: "62vh",
     marginTop: "3vh",
     marginBottom: "3vh",
