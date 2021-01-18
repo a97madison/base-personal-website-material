@@ -5,7 +5,7 @@ $zero: 0;
 
 $window-height: 100vh;
 $window-width: 100vw;
-$const-main-height: 90vh;
+$const-main-height: 100vh;
 $const-main-width: 80vw;
 
 // media aspect ratio
@@ -46,7 +46,7 @@ $const-portfolio-cell-padding-bottom: 5px;
 
 // dimensions
 $const-sidebar-item-height: $const-main-height / $number-of-sections;
-$const-profile-main-height: 70vh;
+$const-profile-main-height: $const-main-height - 20vh;
 $const-header-height: $const-sidebar-item-height - .2vh;
 $const-cell-image-height: 6em;
 $const-profile-section-width: 25vw;
