@@ -1,0 +1,42 @@
+@import '../StyleConstants';
+@import '../ConstantStyles';
+
+.portfolio {
+  @extend %constPortfolioColor;
+  display: flex;
+  flex-direction: column;
+  left: $zero;
+  margin-bottom: 10vh;
+  min-height: $const-main-height;
+  text-align: center;
+  width: $window-width;
+}
+
+.portfolio-cells {
+  display: flex;
+  flex-direction: column;
+  margin-right: $const-main-margin-right;
+  right: $const-cells-right;
+}
+
+.portfolio-text {
+  @extend .page-text-1;
+  display: block;
+  margin-top: $const-portfolio-text-margin-top;
+  text-align: center;
+  width: $const-main-width;
+}
+
+.portfolio-cell {
+  @extend .page-text-2;
+  border-bottom: $const-detail-border-width solid $const-detail-border-color;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $const-portfolio-cell-padding-bottom;
+}
+
+.porfolio-bullet-points {
+  margin: $zero;
+  overflow-wrap: normal;
+  text-align: left;
+}

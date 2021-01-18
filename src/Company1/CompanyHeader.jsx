@@ -1,12 +1,14 @@
 import React from 'react';
 
-import '../ConstantStyles.css';
+import '../ConstantStyles.scss';
+
+import * as Constants from '../JsxConstants';
 
 function CompanyHeader(props) {
   // RETURN COMPANY HEADER DIV
   return (
-    <div className="Header">
-      <p> {"COMPANY"} </p>
+    <div className="header">
+      <p> {Constants.companyText} </p>
     </div>
   );
 }

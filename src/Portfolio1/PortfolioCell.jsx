@@ -1,33 +1,24 @@
 import React from 'react';
 import {makePressableObject, textToObjectFunction} from '../GlobalHelpers';
 
-import '../ConstantStyles.css';
+import * as Constants from '../JsxConstants';
+
+import './Portfolio.scss';
+import '../ConstantStyles.scss';
 
 function PortfolioCell(props) {
-  // DEFINE STYLE CONSTANTS
-  const portCellStyle = {
-    display: "flex",
-    paddingBottom: "5px",
-    flexDirection: "column",
-    borderBottom: "0.1vmin solid darkgrey"
-  };
-  const portBulletPointsStyle = {
-    overflowWrap: "normal",
-    margin: "0px 0px 0px 0px",
-    textAlign: "left",
-  };
 
-  const text = ""
-  const imageName = props.title
-  const link = props.projectLink
-  const pressableType = "Cell"
-  const pressableObject = makePressableObject(text,imageName,link,pressableType)
+  const text = Constants.emptyText;
+  const imageName = props.title;
+  const link = props.projectLink;
+  const pressableType = Constants.cellPressableType;
+  const pressableObject = makePressableObject(text,imageName,link,pressableType);
 
   function textToLinkFunction(textObject) {
     const key = textObject[1]
     const text = textObject[0]
     return (
-      <p key={key} style={portBulletPointsStyle}>
+      <p key={key} className="porfolio-bullet-points">
         {"● "}
         <a href={text}> {text} </a>
       </p>
@@ -42,17 +33,17 @@ function PortfolioCell(props) {
 
   // RETURN PORTFOLIO CELL DIV
   return (
-    <div style={portCellStyle} className="Page-text-2">
-      <div className="Header-text-3">
+    <div className="portfolio-cell">
+      <div className="header-text-3">
         <div> {projectInfoText1} </div>
-        <div className="Cell-header-info-text"> {projectInfoText2} </div>
+        <div className="cell-header-info-text"> {projectInfoText2} </div>
       </div>
-      <div className="Cell-info">
-        <div className="Cell-icon-container">
+      <div className="cell-info">
+        <div className="cell-icon-container">
           {pressableObject}
         </div>
-        <div className="Cell-bullet-points-container">
-          <div className="Cell-bull-points">
+        <div className="cell-bullet-points-container">
+          <div className="cell-bull-points">
             {bulletPointObjects}
             {linkObjects}
           </div>

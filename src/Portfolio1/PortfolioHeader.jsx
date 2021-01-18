@@ -1,12 +1,14 @@
 import React from 'react';
 
-import '../ConstantStyles.css';
+import * as Constants from '../JsxConstants';
+
+import '../ConstantStyles.scss';
 
 function PortfolioHeader(props) {
   // RETURN PROFILEHEADER DIV
   return (
-    <div className="Header">
-      <p> {"PORTFOLIO"} </p>
+    <div className="header">
+      <p> {Constants.portfolioText} </p>
     </div>
   );
 }

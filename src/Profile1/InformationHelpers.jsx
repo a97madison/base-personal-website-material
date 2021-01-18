@@ -1,19 +1,16 @@
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem'
-import {makePressableObject, getImage} from '../GlobalHelpers';
+import {makePressableObject} from '../GlobalHelpers';
 
-import '../ConstantStyles.css';
+import * as Constants from '../JsxConstants';
 
-// DEFINE STYLE CONSTANTS
-const singleInfoCellStyle = {
-  display: "flex",
-  marginLeft: "0.6vmin"
-};
+import './Information.scss';
+import '../StyleConstants.scss';
 
 function makePressableText(text, link) {
 
   return (
-    <ListItem className={"Information-button"} onClick={() => window.open(link)} button>
+    <ListItem className={"icon-button"} onClick={() => window.open(link)} button>
       <div>{text}</div>
     </ListItem>
   );
@@ -22,7 +19,7 @@ function makePressableText(text, link) {
 // creates div for value text for simple key/value information cells
 function secondDivBaseHelper(text) {
   return (
-    <div key={1} style={singleInfoCellStyle} className="Profile-text"> {text} </div>
+    <div key={1} className="social-info-cell-1"> {text} </div>
   );
 }
 
@@ -30,32 +27,8 @@ function secondDivBaseHelper(text) {
 function secondDivEmailHelper(email) {
   const emailLink = "mailto:" + email
   return (
-    <div key={1} style={singleInfoCellStyle} className="Profile-text-2">
+    <div key={1} className="social-info-cell-2">
       {makePressableText(email, emailLink)}
-    </div>
-  );
-}
-
-function makeSocialMediaObject(name, company) {
-  // image constant uses getImage helper
-  const buttonImg = getImage(company);
-  const text = name.length > 0? "(" + name + ")" : "";
-
-  const imageObject = (
-    <div key={"image"} className={"Social-image-container"}>
-      <img className={"Social-image"} src={buttonImg} alt={"..."}></img>
-    </div>
-  );
-  const textObject = (
-    <div key="text" className={"Social-media-icon-text"}>
-        <div> {text} </div>
-    </div>
-  );
-  const objects = [imageObject, textObject];
-
-  return (
-    <div key={1} className="Social-media-icon">
-      {objects}
     </div>
   );
 }
@@ -64,15 +37,11 @@ function secondDivSocialButtonHelper(pair) {
   const text = pair.length === 4 ? pair[pair.length-2] : ""
   const imageName =  pair[0]
   const link = pair[1]
-  const pressableType = "Social"
+  const pressableType = Constants.socialPressableType;
   const pressableObject = makePressableObject(text,imageName,link,pressableType)
 
-  const socialListItemStyle = {
-    marginLeft: "2px !important"
-  }
-
   return (
-    <div key={1} style={socialListItemStyle} className="Profile-text-2">
+    <div key={1} className="social-info-cell-2">
       {pressableObject}
     </div>
   );
@@ -80,7 +49,7 @@ function secondDivSocialButtonHelper(pair) {
 
 function secondDivLinkHelper(informationWithLink) {
   return (
-    <div key={1} style={singleInfoCellStyle} className="Profile-text-2">
+    <div key={1} className="social-info-cell-2">
       {makePressableText(informationWithLink[0], informationWithLink[1])}
     </div>
   );
@@ -89,7 +58,7 @@ function secondDivLinkHelper(informationWithLink) {
 
 export function myPairToStringFunction(pair) {
   const firstDiv = (
-    <p key={0} className="Profile-text"> {pair[0] + ":"} </p>
+    <p key={0} className="profile-text"> {pair[0] + ":"} </p>
   );
 
   let secondDiv = null;
@@ -155,7 +124,7 @@ export function myPairToStringFunction(pair) {
 
   return (
     <div key={key} className={"Information-cell"}>
-      <div style={singleInfoCellStyle}>
+      <div className="social-info-cell">
         {infoCell}
       </div>
     </div>

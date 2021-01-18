@@ -1,0 +1,124 @@
+@import 'StyleConstants';
+
+.header {
+  @extend %headerFont;
+  align-items: center;
+  border-bottom: $const-seperator-line-width solid $const-lines-color;
+  display: inline-grid;
+  font-size: $const-header-font-size;
+  height: $const-header-height;
+  margin-right: $const-main-margin-right;
+}
+
+.header-text-2 {
+  @extend %headerFont;
+  font-size: $const-header-2-font-size;
+  text-align: center;
+}
+
+.header-text-3 {
+  display: flex;
+  font-size: $const-header-3-font-size-a;
+  justify-content: center;
+  margin-block: $const-header-text-3-margin-block;
+  text-align: left;
+}
+
+.page-text-1 {
+  align-items: center;
+  display: flex;
+  font-size: $const-page-1-font-size-a;
+}
+
+.page-text-2 {
+  font-family: $const-page-font;
+  font-size: $const-page-2-font-size-a;
+}
+
+.cell-style {
+  border-bottom: $const-detail-border-width solid $const-detail-border-color;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $const-cell-padding-bottom;
+}
+
+.cell-header-info-text {
+  padding-left: $const-cell-header-padding-left;
+}
+
+.cell-info {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.cell-icon-container {
+  padding-right: $const-cell-icon-padding-right;
+}
+
+.cell-image {
+  border-radius: $const-border-radius;
+  display: inline-block;
+  float: left;
+  height: $const-cell-image-height;
+}
+
+.cell-bullet-points-container {
+  align-items: center;
+  display: flex;
+}
+
+.cell-bullet-points {
+  display: table;
+}
+
+.cell-bullet-point-parent {
+  display: table;
+  text-align: left;
+}
+
+.cell-bullet-point-text {
+  display: table-cell;
+  margin: $zero;
+  vertical-align: middle;
+}
+
+.pressable-image-container {
+  align-items: center;
+  border-radius: $const-border-radius;
+  display: flex;
+  justify-content: center;
+  padding-left: $zero;
+}
+
+.pressable-icon {
+  display: inline-flex;
+}
+
+@media (max-aspect-ratio: $const-aspect-ratio-1) {
+  .page-text-2,
+  .header-text-3 {
+    font-size: $const-font-size-b;
+  }
+}
+@media (max-aspect-ratio: $const-aspect-ratio-2) {
+  .page-text-2,
+  .header-text-3 {
+    font-size: $const-font-size-c;
+  }
+}
+@media (max-aspect-ratio: $const-aspect-ratio-3) {
+  .page-text-2,
+  .header-text-3 {
+    font-size: $const-font-size-d;
+  }
+
+  .page-text-1 {
+    font-size: $const-page-1-font-size-b;
+  }
+}
+@media (max-aspect-ratio: $const-aspect-ratio-4) {
+  .page-text-1 {
+    font-size: $const-page-1-font-size-c;
+  }
+}

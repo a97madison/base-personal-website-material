@@ -1,0 +1,30 @@
+@import '../StyleConstants';
+@import '../ConstantStyles';
+
+.work-experience {
+  @extend %constWorkExperienceColor;
+  display: flex;
+  flex-direction: column;
+  left: $zero;
+  min-height: $const-main-height;
+  overflow-y: scroll;
+  width: $window-width;
+}
+
+.work-experience-cells {
+  border-bottom: $const-detail-border-width solid $const-detail-border-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $const-work-experience-cells-margin-bottom;
+  margin-right: $const-main-margin-right;
+  min-height: $const-main-height;
+  right: $const-cells-right;
+}
+
+.work-experience-cell {
+  @extend .page-text-2;
+  border-bottom: $const-detail-border-width solid $const-detail-border-color;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $const-work-experience-cell-padding-bottom;
+}

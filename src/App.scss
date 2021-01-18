@@ -1,0 +1,21 @@
+@import 'StyleConstants';
+
+.app {
+  @extend %pageFont;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+}
+
+.ad-container {
+  background-color: $const-ad-container-color;
+  height: 100vh - $const-main-height;
+  position: fixed;
+  top: $const-main-height;
+  width: 100vw;
+}
+
+.sections {
+  position: relative;
+}

@@ -8,9 +8,9 @@ import Portfolio from './Portfolio1/Portfolio';
 import Sidebar from './Sidebar';
 
 // import font
-import './Fonts/fonts.css';
+import './Fonts/fonts.scss';
 
-// import css
+import './App.scss';
 
 function App() {
 
@@ -154,25 +154,9 @@ function App() {
     }
   ];
 
-  const headerFont = "ModestoW01-Open";
-  const appHeight = "90vh", appWidth = "80vw";
-
-  // page colours
-  const color1 = "rgb(244,240,226)";
-  const color2 = "rgb(231,255,221)";
-  const color3 = "rgb(244,223,223)";
-  const color4 = "rgb(237,230,255)";
-  const color5 = "rgb(216, 245, 253)";
-  const color6 = "rgb(240, 230, 210)";
-
   // DEFINE REACT OBJECTS
   const homePageObject = (
     <HomePage
-      textFont={headerFont}
-      color1={color2}
-      color2={color1}
-      appHeight={appHeight}
-      appWidth={appWidth}
       fullName={fullNameText}
       introText={introText}
     />
@@ -180,9 +164,6 @@ function App() {
 
   const profileObject = (
     <Profile
-      color1={color3}
-      color2={color2}
-      appHeight={appHeight}
       informationPairs={informationPairs}
       aboutMeText={aboutMeText}
     />
@@ -190,28 +171,18 @@ function App() {
 
   const workExperienceObject = (
     <WorkExperience
-      color1={color4}
-      color2={color3}
-      appHeight={appHeight}
       cellsProps={workExperienceCells}
     />
   );
 
   const educationObject = (
     <Education
-      color1={color5}
-      color2={color4}
-      appHeight={appHeight}
       educationProps={educationProps}
     />
   );
 
   const portfolioObject = (
     <Portfolio
-      color1={color6}
-      color2={color5}
-      appHeight={appHeight}
-      appWidth={appWidth}
       cellsProps={portfolioCells}
     />
   );
@@ -228,45 +199,21 @@ function App() {
   const sidebarObject = (
     <Sidebar
       items={items}
-      appHeight={appHeight}
-      appWidth={appWidth}
     />
   );
 
-  // DEFINE STYLE CONSTANTS
-  const appStyle = {
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    margin: "0px 0px 0px 0px",
-    fontFamily: 'Geneva',
-    color: 'grey'
-  };
-
-  const adContainerStyle = {
-    height: "10vh",
-    width: "100vw",
-    position: "fixed",
-    top: "90vh",
-    backgroundColor: "white"
-  }
-
-  const mainSectionStyle = {
-    position: "relative",
-  }
-
   // RETURN APP COMPONENT
   return (
-    <div style={appStyle}>
+    <div className="app">
       {sidebarObject}
-      <div style={mainSectionStyle}>
+      <div className = "sections">
         {homePageObject}
         {profileObject}
         {workExperienceObject}
         {educationObject}
         {portfolioObject}
       </div>
-    <div style={adContainerStyle}></div>
+    <div className="ad-container"></div>
     </div>
   );
 }

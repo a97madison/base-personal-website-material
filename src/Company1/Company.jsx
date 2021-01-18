@@ -1,7 +1,9 @@
 import React from 'react';
 import CompanyHeader from './CompanyHeader';
 
-import '../ConstantStyles.css';
+import * as Constants from '../JsxConstants';
+
+import '../ConstantStyles.scss';
 
 function Company(props) {
   const color1 = props.color1, color2 = props.color2, appWidth = props.appWidth;
@@ -31,7 +33,7 @@ function Company(props) {
   return (
     <div id="company" style={companyStyle}>
       <CompanyHeader />
-      <div style={companyTextStyle} className="Page-text-1">{"COMING SOON"}</div>
+      <div style={companyTextStyle} className="page-text-1">{Constants.comingSoonText}</div>
     </div>
   );
 }

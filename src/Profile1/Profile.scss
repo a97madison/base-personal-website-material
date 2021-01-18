@@ -1,0 +1,53 @@
+@import '../StyleConstants';
+@import '../ConstantStyles';
+
+.profile {
+  @extend %constProfileColor;
+  display: flex;
+  flex-direction: column;
+  min-height: $const-main-height;
+  width: $window-width;
+}
+
+.profile-sections {
+  display: flex;
+  height: $const-profile-height;
+  justify-content: center;
+  margin-block: $const-profile-section-margin-block;
+  margin-right: $const-main-margin-right;
+}
+
+.profile-section {
+  width: $const-profile-section-width;
+}
+
+.profile-section-parent {
+  @extend .page-text-2;
+  border: $const-profile-section-border-width solid $const-lines-color;
+  border-radius: $const-border-radius;
+  height: $const-profile-section-height;
+  margin-block: $const-profile-section-margin-block-2;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  padding: $const-profile-section-padding;
+}
+
+.profile-photo {
+  @extend .profile-section;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  border: $const-profile-section-border-width solid $const-lines-color;
+  border-radius: $const-profile-photo-border-radius;
+  height: $const-profile-img-height;
+  max-height: $const-profile-img-max-height;
+}
+
+.profile-about-me-text {
+  @extend .page-text-1;
+  margin-block: $const-profile-about-me-margin-block;
+  text-align: left;
+}

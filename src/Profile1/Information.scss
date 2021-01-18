@@ -1,0 +1,68 @@
+@import '../StyleConstants';
+
+// sass-lint:disable no-important
+
+.social-icon-image {
+  border-radius: $const-border-radius;
+  display: inline-block;
+  float: left;
+  height: $const-social-image-height;
+  width: $const-social-image-height;
+}
+
+.pressable-button {
+  border-radius: $const-border-radius !important;
+  display: inline-flex !important;
+  float: left !important;
+  padding: $const-pressable-button-padding !important;
+  width: auto !important;
+}
+
+.icon-button {
+  border-radius: $const-border-radius !important;
+  display: inline-flex !important;
+  float: left !important;
+  padding: $const-icon-button-padding !important;
+  width: auto !important;
+}
+
+.social-media-button-container {
+  display: inline-flex;
+}
+
+.social-icon-text {
+  display: flex;
+  height: $const-icon-text-height;
+}
+
+.social-info-cell {
+  display: flex;
+  margin-left: .6vmin;
+}
+
+.profile-text {
+  margin-block: $const-profile-text-margin-block;
+}
+
+.profile-text-2 {
+  margin-block: calc($const-profile-text-margin-block - $const-icon-button-padding);
+}
+
+.social-info-cell-1 {
+  @extend .profile-text;
+  @extend .social-info-cell;
+}
+
+.social-info-cell-2 {
+  @extend .profile-text-2;
+  @extend .social-info-cell;
+}
+
+// .social-list-item {
+//   margin-left: 2px !important; //sass-lint: disable-line no-important
+// }
+
+.profile-info-cell-style {
+  display: flex;
+  margin-left: $const-profile-info-cell-margin-left;
+}

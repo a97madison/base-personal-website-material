@@ -1,26 +1,13 @@
 import React from 'react';
 import profilePhoto from '../Images/profilePhoto.png';
 
+import './Profile.scss';
+
 function ProfilePhoto(props) {
-  // DEFINE STYLE CONSTANTS
-  const profilePhotoStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "25vw",
-  }
-
-  const profileImgStyle = {
-    height: "20vw",
-    maxHeight: "94%",
-    borderRadius: "50%",
-    border: "0.25vh solid darkgrey"
-  }
-
   // RETURN PROFILEPHOTO DIV
   return (
-    <div style={profilePhotoStyle}>
-      <img style={profileImgStyle} src={profilePhoto} alt={"..."}></img>
+    <div className="profile-photo">
+      <img className="profile-img" src={profilePhoto} alt={"..."}></img>
     </div>
   );
 }

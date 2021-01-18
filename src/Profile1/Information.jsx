@@ -4,18 +4,18 @@ import {
   myPairToStringFunction
 } from './InformationHelpers';
 
-import "./Information.css";
-import '../ConstantStyles.css';
+import "./Information.scss";
+import '../ConstantStyles.scss';
 
 function Information(props) {
-  const sectionStyle = props.sectionStyle, sectionParentStyle = props.sectionParentStyle, informationPairs = props.informationPairs;
-
+  const informationPairs = props.informationPairs;
   const informationCells = informationPairs.map(myPairToStringFunction)
+
   // RETURN INFORMATION DIV
   return (
-    <div style={sectionStyle}>
-      <div style={sectionParentStyle} className="Page-text-2">
-        <p className="Header-text-2"> {"INFORMATION"} </p>
+    <div className="profile-section">
+      <div className="profile-section-parent">
+        <p className="header-text-2"> {"INFORMATION"} </p>
         <div>
           {informationCells}
         </div>

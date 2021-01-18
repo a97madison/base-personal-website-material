@@ -1,0 +1,21 @@
+@import 'StyleConstants';
+@import 'ConstantStyles';
+
+.sidebar-list-item {
+  border: $const-detail-border-width solid $const-lines-color !important; // sass-lint:disable-line no-important
+  height: $const-sidebar-item-height;
+}
+
+.sidebar {
+  height: $const-main-height;
+  left: $const-main-width;
+  position: fixed;
+  right: $zero;
+  top: $zero;
+  z-index: 1;
+}
+
+.sidebar-text {
+  @extend .header-text-2;
+  text-align: center;
+}

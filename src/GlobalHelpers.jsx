@@ -20,7 +20,8 @@ import SwishLogo from './Images/SwishLogo.png';
 import Twitch from './Images/Twitch.jpg';
 import Instagram from './Images/Instagram.jpg';
 
-import './ConstantStyles.css';
+import './Profile1/Information.scss';
+import './StyleConstants.scss';
 
 export function getImage(name) {
   if (name === "LINKEDIN") {
@@ -67,22 +68,22 @@ export function makePressableObject(text, imageName, link, pressableType) {
   const imageClassName = pressableType + "-image"
 
   const imageObject = (
-    <div key={"image"} className={"Pressable-image-container"}>
+    <div key={"image"} className={"pressable-image-container"}>
       <img className={imageClassName} src={buttonImg} alt={"..."}></img>
     </div>
   );
   const textObject = (
-    <div key="text" className={"Social-icon-text"}>
+    <div key="text" className={"social-icon-text"}>
         <div> {iconText} </div>
     </div>
   );
 
   const objects = [imageObject, textObject];
-  const className = pressableType === "Social" ? "Information-button" : "Pressable-button";
+  const className = pressableType === "social" ? "icon-button" : "pressable-button";
 
   return (
     <ListItem className={className} onClick={() => window.open(link)} button>
-      <div key={1} className="Pressable-icon">
+      <div key={1} className="pressable-icon">
         {objects}
       </div>
     </ListItem>
@@ -93,8 +94,8 @@ export function textToObjectFunction(textObject) {
   const key = textObject[1]
   const text = textObject[0]
   return (
-    <div key={key} className="Cell-bullet-point-parent">
-      <div className="Cell-bullet-point-text"> {text} </div>
+    <div key={key} className="cell-bullet-point-parent">
+      <div className="cell-bullet-point-text"> {text} </div>
     </div>
   );
 }

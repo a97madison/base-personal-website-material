@@ -1,0 +1,31 @@
+@import '../StyleConstants';
+@import '../ConstantStyles';
+
+.home-page {
+  @extend %constHomePageColor;
+  height: $const-main-height;
+  width: 100vw;
+}
+
+.home-page-parent {
+  align-items: center;
+  display: flex;
+  height: $const-main-height;
+  position: absolute;
+}
+
+.home-page-text {
+  @extend %headerFont;
+  font-size: 5vw;
+  left: $zero;
+  position: absolute;
+  width: $const-main-width;
+}
+
+.intro-text {
+  @extend .page-text-1;
+  align-items: center;
+  display: block;
+  padding-top: $const-home-page-intro-padding-top;
+  width: $const-main-width;
+}

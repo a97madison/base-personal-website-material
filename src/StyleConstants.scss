@@ -1,0 +1,134 @@
+// VARIABLES/CONSTANTS
+$number-of-sections: 5;
+
+$zero: 0;
+
+$window-height: 100vh;
+$window-width: 100vw;
+$const-main-height: 90vh;
+$const-main-width: 80vw;
+
+// media aspect ratio
+$const-aspect-ratio-1: 39 / 20;
+$const-aspect-ratio-2: 33 / 20;
+$const-aspect-ratio-3: 10 / 7;
+$const-aspect-ratio-4: 30 / 29;
+
+// border
+$const-seperator-line-width: .4vh;
+$const-detail-border-width: .1vh;
+$const-profile-section-border-width: .25vmin;
+$const-border-radius: 4.5%;
+$const-profile-photo-border-radius: 50%;
+
+// margins / padding
+$const-main-margin-right: 100vw - $const-main-width;
+$const-header-text-3-margin-block: .5vmin;
+$const-cell-padding-bottom: 5px;
+$const-cell-header-padding-left: 10px;
+$const-cell-icon-padding-right: 5px;
+$const-home-page-intro-padding-top: 10vw;
+$const-profile-section-margin-block: 1vh;
+$const-profile-section-margin-block-2: 3vh;
+$const-profile-section-padding: 4px;
+$const-profile-about-me-margin-block: .6vmin;
+$const-profile-info-cell-margin-left: .6vmin;
+$const-pressable-button-padding: 8px;
+$const-icon-button-padding: 2.5px;
+$const-profile-text-margin-block: .7em;
+$const-work-experience-cells-margin-bottom: 5vh;
+$const-education-padding-inline: 20px;
+$const-cells-right: .4vmin;
+$const-work-experience-cell-padding-bottom: 5px;
+$const-education-bullet-points: 1vh 5%;
+$const-portfolio-text-margin-top: 2.2vh;
+$const-portfolio-cell-padding-bottom: 5px;
+
+// dimensions
+$const-sidebar-item-height: $const-main-height / $number-of-sections;
+$const-profile-main-height: 70vh;
+$const-header-height: $const-sidebar-item-height - .2vh;
+$const-cell-image-height: 6em;
+$const-profile-section-width: 25vw;
+$const-profile-img-height: 20vw;
+$const-profile-img-max-height: 92%;
+$const-social-image-height: 1.27em;
+$const-icon-text-height: 67%;
+$const-education-image-dim: 23vw;
+$const-profile-height: $const-profile-main-height - (2 * $const-profile-section-margin-block);
+$const-profile-section-height: $const-profile-height - (2 * $const-profile-section-margin-block-2);
+
+// fonts
+$const-header-font: 'ModestoW01-Open';
+$const-header-font-size: 4vmin;
+$const-header-2-font-size: 1.25vw;
+$const-header-3-font-size-a: 2vmin;
+$const-page-font: 'Geneva';
+$const-page-1-font-size-a: 2.15vmin;
+$const-page-1-font-size-b: 1.6vmin;
+$const-page-1-font-size-c: 1.25vmin;
+$const-page-2-font-size-a: 2vmin;
+$const-font-size-b: 1.6vmin;
+$const-font-size-c: 1.4vmin;
+$const-font-size-d: 1.1vmin;
+$const-education-header-font-size: 4vmin;
+
+// colors
+$const-font-color: rgb(33, 33, 33);
+$const-ad-container-color: rgb(255, 255, 255);
+$const-lines-color: rgba(0, 0, 0, .1);
+$const-detail-border-color: rgb(169, 169, 169);
+$const-color-1: rgb(244, 240, 226);
+$const-color-2: rgb(231, 255, 221);
+$const-color-3: rgb(244, 223, 223);
+$const-color-4: rgb(237, 230, 255);
+$const-color-5: rgb(216,  245,  253);
+$const-color-6: rgb(240,  230,  210);
+
+// MIXINS
+// linear-gradient mixin sets up gradient background color for each section
+@mixin linear-gradient($color1, $color2) {
+  background: linear-gradient(0deg, $color1 31%, $color2 100%);
+}
+
+// @extend CLASSES
+// main screen dimensions
+%mainHeight {
+  height: $const-main-height;
+}
+
+%mainWidth {
+  width: $const-main-width;
+}
+
+// fonts
+%headerFont {
+  color: $const-font-color;
+  font-family: $const-header-font;
+}
+
+%pageFont {
+  color: $const-font-color;
+  font-family: $const-page-font;
+}
+
+// background colors
+%constHomePageColor {
+  @include linear-gradient($const-color-2, $const-color-1);
+}
+
+%constProfileColor {
+  @include linear-gradient($const-color-3, $const-color-2);
+}
+
+%constWorkExperienceColor {
+  @include linear-gradient($const-color-4, $const-color-3);
+}
+
+%constEducationColor {
+  @include linear-gradient($const-color-5, $const-color-4);
+}
+
+%constPortfolioColor {
+  @include linear-gradient($const-color-6, $const-color-5);
+}

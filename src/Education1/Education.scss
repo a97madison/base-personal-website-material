@@ -1,0 +1,56 @@
+@import '../StyleConstants';
+@import '../ConstantStyles';
+
+.education {
+  @extend %constEducationColor;
+  display: flex;
+  flex-direction: column;
+  left: $zero;
+  min-height: $const-main-height;
+  overflow-y: scroll;
+  width: $window-width;
+}
+
+.education-header {
+  @extend %headerFont;
+  font-size: $const-education-header-font-size;
+}
+
+.education-info {
+  @extend .page-text-1;
+  display: flex;
+  flex-direction: column;
+  height: $const-profile-section-height;
+  margin-block: $const-profile-section-margin-block;
+  margin-right: $const-main-margin-right;
+}
+
+
+.education-information {
+  display: flex;
+}
+
+.education-image-parent {
+  padding-inline: $const-education-padding-inline;
+}
+
+.education-image {
+  border-radius: $const-border-radius;
+  display: inline-block;
+  float: left;
+  height: $const-education-image-dim;
+  width: $const-education-image-dim;
+}
+
+.education-image-container {
+  height: auto;
+  margin: $zero;
+  vertical-align: middle;
+}
+
+.education-bullet-points {
+  display: flex;
+  flex-direction: column;
+  margin: $const-education-bullet-points;
+  text-align: left;
+}

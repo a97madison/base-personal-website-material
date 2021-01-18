@@ -1,12 +1,14 @@
 import React from 'react';
 
-import '../ConstantStyles.css';
+import * as Constants from '../JsxConstants';
+
+import '../ConstantStyles.scss';
 
 function WorkExperienceHeader(props) {
   // RETURN PROFILEHEADER DIV
   return (
-    <div className="Header">
-        <p> {"WORK EXPERIENCE"} </p>
+    <div className="header">
+        <p> {Constants.workExperienceText} </p>
     </div>
   );
 }
