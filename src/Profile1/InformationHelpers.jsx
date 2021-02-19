@@ -82,7 +82,7 @@ export function myPairToStringFunction(pair) {
     case "Brand":
     secondDiv = secondDivSocialButtonHelper(pair);
       break;
-    case "Personal Company":
+    case "Business":
       secondDiv = secondDivSocialButtonHelper(pair);
       break;
     case "LinkedIn":

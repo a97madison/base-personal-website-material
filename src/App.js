@@ -15,8 +15,8 @@ import './App.scss';
 function App() {
 
   // DEFINE DATA VARIABLES
-  const introText = "IOS / React / Full-Stack / Native Mobile Software Engineer";
-  const aboutMeText = "I am a recent Math/CS grad from University of Waterloo and I have a variety of experience working and becoming knowledgeable in software development. During my time at LinkedIn, I was an iOS Engineer on the Profile Page Team and one project I completed was a code migration for Profile Page cards, which you can see on the profile page of the mobile application. While I was a co-op student at Inkling, I assisted with the pilot release of the company's React Native (native mobile) mobile app. Don't hesitate to contact me if my skills can help solve any of your problems!";
+  const introText = "Entreneur and IOS, Front-End, Mobile Software Engineer";
+  const aboutMeText = "I have recently graduated from University of Waterloo with a Math and Computer Science degree and I am an experienced software engineer; I am most comfortable with iOS developement, front-end work and using React or React Native. I own the business Swish Studio 2020, a company that specializes in clothing manufacturing and mobile/web application development. During my time at LinkedIn, I was on their Profile Page Team and I completed a code migration for a large part of the profile page in the iOS app. While I was a co-op student at Inkling, I assisted with the pilot release of the company's React Native mobile app. Please reach out and I would be happy to share more and learn about new work opportunities.";
   const fullNameText = "Anthony Madison";
   const emailAddressText = "a97madison@gmail.com";
   const linkedInLinkText = "https://www.linkedin.com/in/anthony-madison-a3417a109/";
@@ -33,8 +33,8 @@ function App() {
   const birthdateText = day + ", " + month + " " + date + ", " + year;
   const ageDate = new Date(ageDifMs); // miliseconds from epoch
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-  const city = "Waterloo, Ontario, Canada";
-  const cityGoogleMapsLink = "https://www.google.com/maps/place/Waterloo,+ON/@43.4823217,-80.6167598,12z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096";
+  const city = "Toronto, Ontario, Canada";
+  const cityGoogleMapsLink = "https://www.google.com/maps/place/Toronto,+ON/data=!4m2!3m1!1s0x89d4cb90d7c63ba5:0x323555502ab4c477?sa=X&ved=2ahUKEwiulKfFjPbuAhVPV80KHfHLBv4Q8gEwAHoECAUQAQ";
 
   const informationPairs = [
     ["Age", age, "age"],
@@ -44,7 +44,7 @@ function App() {
     ["Github", githubLinkText, githubUsername, "github"],
     ["Phone #", "1-(226)-808-9619", "phoneNumber"],
     ["City", [city, cityGoogleMapsLink], "city"],
-    ["Personal Company", personalCompanyLinkText, personalCompanyName, "swish"]
+    ["Business", personalCompanyLinkText, personalCompanyName, "swish"]
   ];
 
   const workExperienceCells = [
@@ -128,13 +128,14 @@ function App() {
 
   const portfolioCells = [
     {
-      key:"chess",
-      title: "Two player chess game web application",
-      time: "Jun. 2020",
-      projectLink: "https://github.com/a97madison/chess-with-react-redux",
-      bulletPointsArray:[["● Web app is built using React with Redux for local and global store of data alongside JavaScript, HTML, CSS and PHP.",0],
-                         ["● N4js is used for type checking of React elements and all of the chess game logic implemented within React components.",1]],
-      linksArray:[["https://github.com/a97madison/chess-with-react-redux",0]]
+      key:"cardCalculator",
+      title: "24 / 20-Something Card Game Application",
+      time: "Feb. 2021",
+      projectLink: "https://github.com/a97madison/24CardGameCalculator",
+      bulletPointsArray:[["● iOS calculator application is coded in SWIFT, currently working on releasing this application to the iOS Application Store",0],
+                         ["● Currently building partner calculator web application, also developing a full application for the card game", 1],
+                         ["● Full card game app will be available as an iOS app, web app and a game pigeon app for iMessage users to play via text; Card game rules in github's ReadMe file!",2]],
+      linksArray:[["https://github.com/a97madison/24CardGameCalculator",0]]
     },
     {
       key:"personalSite",
@@ -143,6 +144,15 @@ function App() {
       projectLink: "http://localhost:3000/",
       bulletPointsArray:[["● This website is built entirely using React with Redux",0]],
       linksArray:[]
+    },
+    {
+      key:"chess",
+      title: "Two player chess game web application",
+      time: "Jun. 2020",
+      projectLink: "https://github.com/a97madison/chess-with-react-redux",
+      bulletPointsArray:[["● Web app is built using React with Redux for local and global store of data alongside JavaScript, HTML, CSS and PHP",0],
+                         ["● N4js is used for type checking of React elements and all of the chess game logic implemented within React components.",1]],
+      linksArray:[["https://github.com/a97madison/chess-with-react-redux",0]]
     },
     {
       key:"swishStudiosSite",
@@ -193,6 +203,7 @@ function App() {
     { name: 'work', label: 'Work Experience' },
     { name: 'education', label: 'Education' },
     { name: 'portfolio', label: 'Portfolio' },
+    { name: 'resume', label: 'Downloadable Resume' }
     // { name: 'company', label: 'Company' }
   ];
 

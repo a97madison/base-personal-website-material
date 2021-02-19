@@ -19,3 +19,8 @@
   @extend .header-text-2;
   text-align: center;
 }
+
+.sidebar-text-resume {
+  @extend .sidebar-text;
+  font-family: $const-page-font;
+}

@@ -8,7 +8,6 @@ import CIHILogo from './Images/CIHI.jpg';
 import VisionaireLogo from './Images/Visionaire.jpg';
 import PurefactsLogo from './Images/Purefacts.png';
 import Uwaterloo from './Images/UWaterloo.jpg';
-// todo: make gifs for each of these images
 import Chess from './Images/Chess.gif';
 import Personal from './Images/Personal.gif';
 import Swish from './Images/Swish.png';
@@ -19,6 +18,7 @@ import Facebook from './Images/Facebook.jpg';
 import SwishLogo from './Images/SwishLogo.png';
 import Twitch from './Images/Twitch.jpg';
 import Instagram from './Images/Instagram.jpg';
+import CardCalculator from './Images/CardCalculator.gif'
 
 import './Profile1/Information.scss';
 import './StyleConstants.scss';
@@ -56,6 +56,8 @@ export function getImage(name) {
     return Instagram;
   } else if (name === "Swish Studio's website") {
     return Swish;
+  } else if (name === "24 / 20-Something Card Game Application") {
+    return CardCalculator
   }
   return SwishLogo;
 }
