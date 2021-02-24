@@ -12,57 +12,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+## DOCUMENTATION
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This web app is composed of a **main part** and a **sidebar part**. The sidebar menu has six buttons... Five of the buttons relate to each of the five sections ins the main part of the web app. The sixth button (**"DOWNLOADABLE RESUME"**) downloads my resume.
 
-### `npm run build`
+### MAIN PART
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The main part of the web app is composed of five sections in a vertical stack view. Each section's height is at least 100% of the window's height. Each of the five sections in the vertical stack view relate to the first five buttons in the web app's sidebar menu. The sections are as follows:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-  **HomePage** shows "Anthony Madison" and a quick description about myself
+- **Profile** section contains all of my personal information, a professional summary for myself and an image of myself
+- **WorkExperience** section contains a list of all my previous work experience. Worked great co-op positions through University of Waterloo
+- **Education** section describes my University of Waterloo degree
+- **Portfolio** section contains a list of some projects that I have been able to work on and complete
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Reused code wherever posible and stylized website successfully to display on both portrait or landscape windows (any web browser and any IOS/Android app such as Safari or Chrome successfully display this application)
