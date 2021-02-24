@@ -26,4 +26,6 @@ The main part of the web app is composed of five sections in a vertical stack vi
 - **Education** section describes my University of Waterloo degree
 - **Portfolio** section contains a list of some projects that I have been able to work on and complete
 
-- Reused code wherever posible and stylized website successfully to display on both portrait or landscape windows (any web browser and any IOS/Android app such as Safari or Chrome successfully display this application)
+
+
+NOTE: Reused code wherever posible and stylized website successfully to display on both portrait or landscape windows (any web browser and any IOS/Android app such as Safari or Chrome successfully display this application)
