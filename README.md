@@ -18,7 +18,9 @@ This web app is composed of a **main part** and a **sidebar part**. The sidebar 
 
 ### MAIN PART
 
-The main part of the web app is composed of five sections in a vertical stack view. Each section's height is at least 100% of the window's height. Each of the five sections in the vertical stack view relate to the first five buttons in the web app's sidebar menu. The sections are as follows:
+The main part of the web app is composed of five sections in a vertical stack view. Each section's height is at least 100% of the window's height. Each of the five sections in the vertical stack view relate to the first five buttons in the web app's sidebar menu. 
+
+The sections are as follows:
 
 -  **HomePage** shows "Anthony Madison" and a quick description about myself
 - **Profile** section contains all of my personal information, a professional summary for myself and an image of myself
