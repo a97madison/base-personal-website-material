@@ -30,4 +30,4 @@ The sections are as follows:
 
 
 
-NOTE: Reused code wherever posible and stylized website successfully to display on both portrait or landscape windows (any web browser and any IOS/Android app such as Safari or Chrome successfully display this application)
+NOTE: Reused code wherever possible and styled website to successfully display on both portrait or landscape windows (any web browser and any IOS/Android app such as Safari or Chrome successfully display this application)
